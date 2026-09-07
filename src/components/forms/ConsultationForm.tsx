@@ -75,7 +75,7 @@ export default function ConsultationForm() {
           name="message"
           rows={4}
           placeholder="Mô tả ngắn về nhu cầu của bạn..."
-          className="w-full resize-none rounded-[var(--radius-sm)] border border-border bg-white px-3.5 py-3 text-sm text-navy placeholder:text-muted-light focus:border-primary focus:outline-none"
+          className="w-full resize-none rounded-xl border border-border bg-white px-3.5 py-3 text-sm text-navy placeholder:text-muted-light focus:border-slate-400 focus:outline-none focus:ring-0 outline-none"
         />
       </Field>
 
@@ -88,7 +88,7 @@ export default function ConsultationForm() {
 }
 
 const inputClass =
-  "h-11 w-full rounded-[var(--radius-sm)] border border-border bg-white px-3.5 text-sm text-navy placeholder:text-muted-light focus:border-primary focus:outline-none";
+  "h-11 w-full rounded-xl border border-border bg-white px-3.5 text-sm text-navy placeholder:text-muted-light focus:border-slate-400 focus:outline-none focus:ring-0 outline-none";
 
 function Field({
   label,

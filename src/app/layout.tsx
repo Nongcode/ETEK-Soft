@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { CartProvider } from "@/context/CartContext";
+import CartDrawer from "@/components/cart/CartDrawer";
 import "./globals.css";
 
 const inter = Inter({
@@ -83,9 +85,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="flex min-h-full flex-col bg-background text-text" suppressHydrationWarning>
-        <Header />
-        <main className="flex-1" suppressHydrationWarning>{children}</main>
-        <Footer />
+        <CartProvider>
+          <Header />
+          <main className="flex-1" suppressHydrationWarning>{children}</main>
+          <Footer />
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );

@@ -135,16 +135,21 @@ body {
   }
 }
 
-/* Focus visibility — accessibility */
-a:focus-visible,
-button:focus-visible,
+/* Focus visibility */
+input:focus,
 input:focus-visible,
-textarea:focus-visible,
+select:focus,
 select:focus-visible,
-[tabindex]:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-  border-radius: 4px;
+textarea:focus,
+textarea:focus-visible,
+button:focus,
+button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+a:focus-visible {
+  outline: none;
 }
 
 /* Utility: line clamp fallback (Tailwind v4 already ships line-clamp) */

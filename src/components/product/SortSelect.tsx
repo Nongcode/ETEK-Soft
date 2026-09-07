@@ -22,7 +22,7 @@ export default function SortSelect() {
         value={current}
         onChange={(e) => handleChange(e.target.value)}
         aria-label="Sắp xếp sản phẩm"
-        className="h-10 rounded-[var(--radius-sm)] border border-border bg-white px-3 text-sm font-medium text-navy focus:border-primary focus:outline-none"
+        className="h-10 rounded-lg border border-slate-200 bg-white px-3.5 text-sm font-medium text-navy shadow-xs transition-colors hover:border-slate-300 focus:border-slate-400 focus:outline-none focus:ring-0 outline-none"
       >
         {sortOptions.map((opt) => (
           <option key={opt.value} value={opt.value}>

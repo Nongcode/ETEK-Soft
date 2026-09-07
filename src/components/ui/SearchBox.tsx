@@ -50,7 +50,7 @@ export default function SearchBox({
         if (!containerRef.current?.contains(e.relatedTarget as Node)) setOpen(false);
       }}
     >
-      <div className="flex h-11 items-center rounded-[var(--radius-sm)] border border-border bg-white pl-4 pr-1.5 transition-colors focus-within:border-primary">
+      <div className="flex h-11 items-center rounded-xl border border-slate-200 bg-white pl-4 pr-1.5 transition-colors focus-within:border-slate-400 focus-within:ring-0 outline-none">
         <Search className="h-4 w-4 shrink-0 text-muted" aria-hidden />
         <input
           type="text"
@@ -62,7 +62,7 @@ export default function SearchBox({
           onFocus={() => setOpen(true)}
           placeholder={placeholder}
           aria-label="Tìm kiếm sản phẩm"
-          className="h-full w-full bg-transparent px-3 text-sm text-navy placeholder:text-muted focus:outline-none"
+          className="h-full w-full bg-transparent px-3 text-sm text-navy placeholder:text-muted focus:outline-none focus:ring-0 outline-none"
         />
         {query && (
           <button

@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
-import Breadcrumb from "@/components/layout/Breadcrumb";
-import SearchBox from "@/components/ui/SearchBox";
 import FilterSidebar from "@/components/product/FilterSidebar";
 import SortSelect from "@/components/product/SortSelect";
 import ProductGrid from "@/components/product/ProductGrid";
+import ProductBanner from "@/components/product/ProductBanner";
 import Pagination from "@/components/ui/Pagination";
 import { filterProducts, paginate, ProductQuery } from "@/lib/productFilters";
 import { buildProductSuggestions } from "@/lib/search";
 
 export const metadata: Metadata = {
-  title: "Sản phẩm phần mềm bản quyền",
-  description: "Duyệt toàn bộ danh mục phần mềm bản quyền: Microsoft, Windows, Office, Windows Server, SQL Server, Antivirus và phần mềm doanh nghiệp.",
+  title: "Sản phẩm phần mềm bản quyền chính hãng",
+  description:
+    "Duyệt toàn bộ danh mục phần mềm bản quyền: Microsoft 365, Windows, Office, Windows Server, SQL Server, Antivirus và phần mềm doanh nghiệp với hóa đơn VAT đầy đủ.",
 };
 
-const PER_PAGE = 12;
+const PER_PAGE = 9;
 
 export default async function ProductListingPage({
   searchParams,
@@ -36,6 +36,7 @@ export default async function ProductListingPage({
   const filtered = filterProducts(query);
   const currentPage = Number(rawParams.page) || 1;
   const { items, totalPages } = paginate(filtered, currentPage, PER_PAGE);
+  const suggestions = buildProductSuggestions();
 
   function buildHref(page: number) {
     const params = new URLSearchParams();
@@ -49,30 +50,43 @@ export default async function ProductListingPage({
   }
 
   return (
-    <div className="pb-16">
-      <Breadcrumb items={[{ label: "Sản phẩm" }]} />
+    <div className="min-h-screen bg-slate-50/50 pb-20">
+      {/* Dedicated Hero Banner */}
+      <ProductBanner suggestions={suggestions} />
 
       <Container className="py-8">
-        <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h1 className="h1 !text-2xl md:!text-[32px]">Sản phẩm phần mềm bản quyền</h1>
-            <p className="mt-1.5 text-sm text-muted">Tìm thấy {filtered.length} sản phẩm phù hợp</p>
-          </div>
-        </div>
-
-        <div className="mb-6 max-w-xl">
-          <SearchBox suggestions={buildProductSuggestions()} />
-        </div>
-
         <div className="flex flex-col gap-8 lg:flex-row">
+          {/* Left Sidebar Filters */}
           <FilterSidebar />
 
+          {/* Right Main Product Area (3 products per row) */}
           <div className="min-w-0 flex-1">
-            <div className="mb-5 flex items-center justify-end">
-              <SortSelect />
+            <div className="mb-6 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
+              <div>
+                <p className="text-sm text-slate-500">
+                  Tìm thấy{" "}
+                  <span className="font-bold text-navy">{filtered.length}</span> sản phẩm phù hợp
+                  {query.q && (
+                    <span>
+                      {" "}
+                      cho từ khóa <span className="font-semibold text-primary">&quot;{query.q}&quot;</span>
+                    </span>
+                  )}
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2 self-end sm:self-auto">
+                <SortSelect />
+              </div>
             </div>
-            <ProductGrid products={items} />
-            <Pagination currentPage={currentPage} totalPages={totalPages} buildHref={buildHref} />
+
+            {/* 3 products per row grid */}
+            <ProductGrid products={items} columns={3} />
+
+            {/* Pagination */}
+            <div className="mt-8">
+              <Pagination currentPage={currentPage} totalPages={totalPages} buildHref={buildHref} />
+            </div>
           </div>
         </div>
       </Container>
