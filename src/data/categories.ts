@@ -1,0 +1,68 @@
+import { Category } from "@/types";
+
+export const categories: Category[] = [
+  {
+    id: "cat-microsoft",
+    slug: "microsoft",
+    name: "Microsoft",
+    description: "Hệ sinh thái phần mềm và dịch vụ đám mây của Microsoft",
+    icon: "AppWindow",
+    productCount: 5,
+  },
+  {
+    id: "cat-windows",
+    slug: "windows",
+    name: "Windows",
+    description: "Hệ điều hành bản quyền cho máy trạm và doanh nghiệp",
+    icon: "MonitorCheck",
+    productCount: 3,
+  },
+  {
+    id: "cat-office",
+    slug: "office",
+    name: "Office",
+    description: "Bộ ứng dụng văn phòng Word, Excel, PowerPoint...",
+    icon: "FileText",
+    productCount: 2,
+  },
+  {
+    id: "cat-microsoft-365",
+    slug: "microsoft-365",
+    name: "Microsoft 365",
+    description: "Giải pháp làm việc và cộng tác dành cho doanh nghiệp",
+    icon: "CloudCog",
+    productCount: 2,
+  },
+  {
+    id: "cat-windows-server",
+    slug: "windows-server",
+    name: "Windows Server",
+    description: "Giải pháp máy chủ và quản trị hệ thống",
+    icon: "Server",
+    productCount: 1,
+  },
+  {
+    id: "cat-sql-server",
+    slug: "sql-server",
+    name: "SQL Server",
+    description: "Hệ quản trị cơ sở dữ liệu cho doanh nghiệp",
+    icon: "Database",
+    productCount: 1,
+  },
+  {
+    id: "cat-antivirus",
+    slug: "antivirus",
+    name: "Antivirus",
+    description: "Giải pháp bảo mật và diệt virus chuyên nghiệp",
+    icon: "ShieldCheck",
+    productCount: 3,
+  },
+  {
+    id: "cat-doanh-nghiep",
+    slug: "phan-mem-doanh-nghiep",
+    name: "Phần mềm doanh nghiệp",
+    description: "Thiết kế, thi công và quản trị dự án chuyên nghiệp",
+    icon: "Building2",
+    productCount: 3,
+  },
+];
