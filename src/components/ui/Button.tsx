@@ -36,6 +36,7 @@ interface ButtonAsLink extends CommonProps {
   href: string;
   target?: string;
   rel?: string;
+  onClick?: () => void;
 }
 
 type ButtonProps = ButtonAsButton | ButtonAsLink;
@@ -44,9 +45,9 @@ export default function Button({ variant = "primary", size = "md", className, ch
   const classes = cn(base, variantClasses[variant], sizeClasses[size], className);
 
   if ("href" in props && props.href) {
-    const { href, target, rel } = props;
+    const { href, target, rel, onClick } = props;
     return (
-      <Link href={href} target={target} rel={rel} className={classes}>
+      <Link href={href} target={target} rel={rel} onClick={onClick} className={classes}>
         {children}
       </Link>
     );

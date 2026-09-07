@@ -19,7 +19,7 @@ export default function FeaturedProducts() {
           </Link>
         </div>
         <div className="mt-10">
-          <ProductGrid products={featured} />
+          <ProductGrid products={featured} columns={4} />
         </div>
       </Container>
     </section>

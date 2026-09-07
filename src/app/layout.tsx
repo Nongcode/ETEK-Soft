@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+
 import { AuthProvider } from "@/context/AuthContext";
 import RevealEngine from "@/components/ui/RevealEngine";
+
 import "./globals.css";
 
 
@@ -101,6 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="flex-1 w-full max-w-full overflow-x-clip" suppressHydrationWarning>{children}</main>
           <Footer />
         </AuthProvider>
+
       </body>
 
 

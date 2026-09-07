@@ -56,7 +56,7 @@ export default function ContactForm() {
           required
           rows={5}
           placeholder="Bạn cần hỗ trợ điều gì?"
-          className="w-full resize-none rounded-[var(--radius-sm)] border border-border bg-white px-3.5 py-3 text-sm text-navy placeholder:text-muted-light focus:border-primary focus:outline-none"
+          className="w-full resize-none rounded-xl border border-border bg-white px-3.5 py-3 text-sm text-navy placeholder:text-muted-light focus:border-slate-400 focus:outline-none focus:ring-0 outline-none"
         />
       </div>
 
@@ -69,4 +69,4 @@ export default function ContactForm() {
 }
 
 const inputClass =
-  "h-11 w-full rounded-[var(--radius-sm)] border border-border bg-white px-3.5 text-sm text-navy placeholder:text-muted-light focus:border-primary focus:outline-none";
+  "h-11 w-full rounded-xl border border-border bg-white px-3.5 text-sm text-navy placeholder:text-muted-light focus:border-slate-400 focus:outline-none focus:ring-0 outline-none";

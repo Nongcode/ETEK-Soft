@@ -39,7 +39,7 @@ export default async function GuideListPage({
             name="q"
             defaultValue={q}
             placeholder="Tìm kiếm bài hướng dẫn..."
-            className="h-11 w-full rounded-[var(--radius-sm)] border border-border bg-white px-4 text-sm text-navy placeholder:text-muted focus:border-primary focus:outline-none"
+            className="h-11 w-full rounded-xl border border-border bg-white px-4 text-sm text-navy placeholder:text-muted focus:border-slate-400 focus:outline-none focus:ring-0 outline-none"
           />
         </form>
 

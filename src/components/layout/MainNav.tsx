@@ -21,6 +21,7 @@ import Container from "@/components/ui/Container";
 import MegaMenu from "@/components/layout/MegaMenu";
 import MobileNav from "@/components/layout/MobileNav";
 import SearchBox from "@/components/ui/SearchBox";
+import CartIcon from "@/components/cart/CartIcon";
 import { mainNav, productMegaMenu, guideMegaMenu } from "@/data/navigation";
 import { buildProductSuggestions } from "@/lib/search";
 import { cn } from "@/lib/utils";
@@ -214,6 +215,7 @@ export default function MainNav() {
               </span>
             )}
           </Link>
+
 
           {/* User Account / Auth Section */}
           {user ? (
