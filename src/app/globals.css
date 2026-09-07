@@ -50,7 +50,18 @@
   --shadow-card-hover: var(--shadow-card-hover);
   --shadow-header: var(--shadow-header);
 
+  --color-canvas-dark: #07090e;
+  --color-card-dark: #0d121c;
+  --color-card-dark-border: rgba(255, 255, 255, 0.08);
+  --color-accent-cyan: #38bdf8;
+  --color-accent-indigo: #6366f1;
+  --color-accent-violet: #a855f7;
+
   --animate-fade-up: fade-up 0.4s ease both;
+  --animate-shimmer: shimmer 3s infinite linear;
+  --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
+  --animate-float: float-slow 6s ease-in-out infinite;
+  --animate-marquee: marquee 35s linear infinite;
 
   @keyframes fade-up {
     from {
@@ -60,6 +71,44 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes float-slow {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
     }
   }
 }
@@ -155,3 +204,53 @@ select:focus-visible,
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* ================= High-End Light Tech Aesthetic Utilities ================= */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: #ffffff;
+  border-color: rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.08);
+}
+
+.text-gradient-tech {
+  background: linear-gradient(135deg, #0f172a 0%, #1e40af 60%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 60%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
