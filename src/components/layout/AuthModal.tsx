@@ -1,329 +1,386 @@
 "use client";
 
-import { useState } from "react";
-import { X, Mail, Lock, User, Building, ArrowRight, CheckCircle2, Gift, Shield } from "lucide-react";
-import { cn } from "@/lib/utils";
+import React, { useState } from "react";
+import { useAuth } from "@/context/AuthContext";
+import {
+  X,
+  Lock,
+  Mail,
+  User,
+  Building,
+  Phone,
+  ShieldCheck,
+  Sparkles,
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-react";
 
-interface AuthModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  defaultTab?: "login" | "register";
-  onLoginSuccess?: (user: { name: string; email: string; type: "business" | "individual" }) => void;
-}
+export default function AuthModal() {
+  const {
+    isAuthModalOpen,
+    authModalView,
+    closeAuthModal,
+    openLoginModal,
+    openRegisterModal,
+    login,
+    loginDemo,
+    register,
+  } = useAuth();
 
-export default function AuthModal({
-  isOpen,
-  onClose,
-  defaultTab = "login",
-  onLoginSuccess,
-}: AuthModalProps) {
-  const [activeTab, setActiveTab] = useState<"login" | "register">(defaultTab);
-  const [accountType, setAccountType] = useState<"business" | "individual">("business");
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    taxId: "",
-    email: "",
-    phone: "",
-    password: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [company, setCompany] = useState("");
+  const [phone, setPhone] = useState("");
+  const [accountType, setAccountType] = useState<"enterprise_vip" | "customer">("enterprise_vip");
+  const [loading, setLoading] = useState(false);
+  const [rememberMe, setRememberMe] = useState(true);
 
-  if (!isOpen) return null;
+  if (!isAuthModalOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    if (!email) return;
+    setLoading(true);
+    await new Promise((r) => setTimeout(r, 400));
+    await login(email, password);
+    setLoading(false);
+  };
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      const user = {
-        name: formData.name || (accountType === "business" ? formData.company || "Tập đoàn ETEK Partner" : "Quý khách hàng"),
-        email: formData.email || "partner@eteksofts.com",
-        type: accountType,
-      };
-
-      setSuccessMessage(
-        activeTab === "login"
-          ? "Đăng nhập thành công! Chào mừng bạn trở lại."
-          : "Đăng ký thành công! Đã kích hoạt Voucher 500K vào tài khoản."
-      );
-
-      if (onLoginSuccess) {
-        onLoginSuccess(user);
-      }
-
-      setTimeout(() => {
-        setSuccessMessage(null);
-        onClose();
-      }, 1400);
-    }, 600);
+  const handleRegisterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !fullName) return;
+    setLoading(true);
+    await new Promise((r) => setTimeout(r, 500));
+    await register({
+      name: fullName,
+      email,
+      company: company || "Doanh nghiệp đối tác",
+      phone,
+      role: accountType,
+    });
+    setLoading(false);
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Backdrop */}
+    <div
+      role="dialog"
+      aria-modal="true"
+      className="fixed inset-0 z-[110] flex items-center justify-center bg-slate-950/75 p-4 backdrop-blur-md animate-fade-up"
+      onClick={closeAuthModal}
+    >
       <div
-        className="fixed inset-0 bg-slate-950/60 backdrop-blur-xs transition-opacity"
-        onClick={onClose}
-      />
+        className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-[0_25px_70px_rgba(15,23,42,0.22)]"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Background glow decoration */}
+        <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-blue-500/10 blur-2xl" />
+        <div className="pointer-events-none absolute -left-16 -bottom-16 h-48 w-48 rounded-full bg-cyan-500/10 blur-2xl" />
 
-      {/* Modal Dialog */}
-      <div className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-white shadow-2xl border border-slate-100 transition-all z-10">
-        {/* Header Ribbon */}
-        <div className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 px-6 pt-6 pb-5 text-white">
-          <button
-            onClick={onClose}
-            aria-label="Đóng cửa sổ"
-            className="absolute right-4 top-4 rounded-full bg-white/10 p-1.5 text-white/80 hover:bg-white/20 hover:text-white transition-colors"
-          >
-            <X className="h-5 w-5" />
-          </button>
+        {/* Close button */}
+        <button
+          type="button"
+          onClick={closeAuthModal}
+          aria-label="Đóng cửa sổ"
+          className="absolute right-5 top-5 z-20 flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-900 transition-colors"
+        >
+          <X className="h-4 w-4" />
+        </button>
 
-          <div className="flex items-center gap-2">
-            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/20">
-              <Gift className="h-4 w-4 text-cyan-200" />
-            </span>
-            <span className="text-xs font-semibold uppercase tracking-wider text-cyan-200">
-              Cổng Thương Mại Điện Tử ETEK-SOFTS
-            </span>
+        {/* Header Branding */}
+        <div className="text-center">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 border border-blue-200/80 px-3 py-1 text-[11px] font-mono font-bold text-blue-700">
+            <Sparkles className="h-3 w-3 text-blue-600" />
+            ETEK SOFTS COMMERCE PORTAL
           </div>
-
-          <h3 className="mt-2 text-xl font-bold">
-            {activeTab === "login" ? "Đăng Nhập Tài Khoản" : "Đăng Ký Khách Hàng / Doanh Nghiệp"}
-          </h3>
-          <p className="mt-1 text-xs text-blue-100">
-            {activeTab === "login"
-              ? "Quản lý bản quyền, lịch sử giao dịch và kho voucher sự kiện"
-              : "Tặng ngay Voucher 500.000đ khi tạo tài khoản Doanh Nghiệp hôm nay"}
+          <h2 className="mt-3 text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            {authModalView === "login" ? "Đăng Nhập Tài Khoản" : "Đăng Ký Doanh Nghiệp"}
+          </h2>
+          <p className="mt-1.5 text-xs sm:text-sm text-slate-500">
+            {authModalView === "login"
+              ? "Truy cập hệ thống quản lý license bản quyền và đơn hàng doanh nghiệp."
+              : "Khởi tạo tài khoản để nhận báo giá chiết khấu và mua license chính hãng."}
           </p>
-
-          {/* Switch Tab buttons */}
-          <div className="mt-4 flex rounded-xl bg-black/20 p-1 backdrop-blur-md">
-            <button
-              type="button"
-              onClick={() => {
-                setActiveTab("login");
-                setSuccessMessage(null);
-              }}
-              className={cn(
-                "flex-1 rounded-lg py-2 text-xs font-bold transition-all",
-                activeTab === "login"
-                  ? "bg-white text-blue-800 shadow-sm"
-                  : "text-white/80 hover:text-white"
-              )}
-            >
-              Đăng Nhập
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                setActiveTab("register");
-                setSuccessMessage(null);
-              }}
-              className={cn(
-                "flex-1 rounded-lg py-2 text-xs font-bold transition-all",
-                activeTab === "register"
-                  ? "bg-white text-blue-800 shadow-sm"
-                  : "text-white/80 hover:text-white"
-              )}
-            >
-              Đăng Ký Mới (+500K)
-            </button>
-          </div>
         </div>
 
-        {/* Content Body */}
-        <div className="p-6">
-          {successMessage ? (
-            <div className="my-8 flex flex-col items-center justify-center text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
-                <CheckCircle2 className="h-10 w-10 animate-bounce" />
-              </div>
-              <h4 className="mt-4 text-lg font-bold text-slate-800">Thành Công!</h4>
-              <p className="mt-1 text-sm text-slate-600">{successMessage}</p>
+        {/* Tab Switcher */}
+        <div className="mt-6 flex rounded-xl bg-slate-100 p-1 border border-slate-200/80">
+          <button
+            type="button"
+            onClick={openLoginModal}
+            className={`flex-1 rounded-lg py-2 text-xs sm:text-sm font-bold transition-all ${
+              authModalView === "login"
+                ? "bg-white text-blue-600 shadow-sm"
+                : "text-slate-600 hover:text-slate-900"
+            }`}
+          >
+            Đăng Nhập
+          </button>
+          <button
+            type="button"
+            onClick={openRegisterModal}
+            className={`flex-1 rounded-lg py-2 text-xs sm:text-sm font-bold transition-all ${
+              authModalView === "register"
+                ? "bg-white text-blue-600 shadow-sm"
+                : "text-slate-600 hover:text-slate-900"
+            }`}
+          >
+            Tạo Tài Khoản Mới
+          </button>
+        </div>
+
+        {/* Fast Demo Login Banner */}
+        <div className="mt-4 rounded-xl border border-blue-200 bg-gradient-to-r from-blue-50/80 to-cyan-50/80 p-3 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="h-4 w-4 text-blue-600 shrink-0" />
+            <div>
+              <p className="text-xs font-bold text-blue-950">Thử nghiệm nhanh (Demo VIP):</p>
+              <p className="text-[11px] text-blue-700">Đăng nhập tài khoản mẫu doanh nghiệp</p>
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-4">
-              {activeTab === "register" && (
+          </div>
+          <button
+            type="button"
+            onClick={loginDemo}
+            className="rounded-lg bg-blue-600 px-3 py-1.5 text-xs font-bold text-white hover:bg-blue-700 shadow-sm transition-all"
+          >
+            Vào ngay
+          </button>
+        </div>
+
+        {/* LOGIN FORM */}
+        {authModalView === "login" ? (
+          <form onSubmit={handleLoginSubmit} className="mt-5 space-y-3.5">
+            <div>
+              <label className="block text-xs font-bold text-slate-700 mb-1">
+                Email Doanh Nghiệp hoặc Số Điện Thoại
+              </label>
+              <div className="relative">
+                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                  <Mail className="h-4 w-4" />
+                </span>
+                <input
+                  type="email"
+                  required
+                  placeholder="name@company.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-9 pr-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100"
+                />
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between mb-1">
+                <label className="block text-xs font-bold text-slate-700">
+                  Mật Khẩu
+                </label>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert("Tính năng gửi mã khôi phục mật khẩu qua Email đã được kích hoạt.");
+                  }}
+                  className="text-[11px] font-semibold text-blue-600 hover:underline"
+                >
+                  Quên mật khẩu?
+                </a>
+              </div>
+              <div className="relative">
+                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                  <Lock className="h-4 w-4" />
+                </span>
+                <input
+                  type="password"
+                  placeholder="••••••••"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-9 pr-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100"
+                />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between text-xs text-slate-600 pt-1">
+              <label className="flex items-center gap-2 cursor-pointer select-none">
+                <input
+                  type="checkbox"
+                  checked={rememberMe}
+                  onChange={(e) => setRememberMe(e.target.checked)}
+                  className="rounded border-slate-300 text-blue-600 focus:ring-blue-500 h-4 w-4"
+                />
+                <span>Ghi nhớ phiên đăng nhập này</span>
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 via-blue-600 to-cyan-600 py-3 text-sm font-bold text-white shadow-[0_4px_16px_rgba(37,99,235,0.25)] hover:shadow-[0_6px_22px_rgba(37,99,235,0.4)] hover:scale-[1.01] active:scale-[0.99] transition-all"
+            >
+              {loading ? (
+                <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+              ) : (
                 <>
-                  <div className="flex gap-3">
-                    <button
-                      type="button"
-                      onClick={() => setAccountType("business")}
-                      className={cn(
-                        "flex-1 flex items-center justify-center gap-2 rounded-xl border p-2.5 text-xs font-semibold transition-all",
-                        accountType === "business"
-                          ? "border-blue-500 bg-blue-50/70 text-blue-700 ring-2 ring-blue-500/20"
-                          : "border-slate-200 text-slate-600 hover:bg-slate-50"
-                      )}
-                    >
-                      <Building className="h-4 w-4" />
-                      Doanh Nghiệp (Xuất VAT)
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setAccountType("individual")}
-                      className={cn(
-                        "flex-1 flex items-center justify-center gap-2 rounded-xl border p-2.5 text-xs font-semibold transition-all",
-                        accountType === "individual"
-                          ? "border-blue-500 bg-blue-50/70 text-blue-700 ring-2 ring-blue-500/20"
-                          : "border-slate-200 text-slate-600 hover:bg-slate-50"
-                      )}
-                    >
-                      <User className="h-4 w-4" />
-                      Khách Hàng Cá Nhân
-                    </button>
-                  </div>
-
-                  {accountType === "business" ? (
-                    <div className="grid grid-cols-2 gap-3">
-                      <div>
-                        <label className="block text-xs font-medium text-slate-700 mb-1">
-                          Tên Doanh Nghiệp *
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          placeholder="CTY TNHH Công Nghệ..."
-                          value={formData.company}
-                          onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                          className="w-full rounded-xl border border-slate-200 px-3 py-2 text-xs text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:outline-none"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-medium text-slate-700 mb-1">
-                          Mã Số Thuế (MST) *
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          placeholder="0108999888"
-                          value={formData.taxId}
-                          onChange={(e) => setFormData({ ...formData, taxId: e.target.value })}
-                          className="w-full rounded-xl border border-slate-200 px-3 py-2 text-xs text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:outline-none"
-                        />
-                      </div>
-                    </div>
-                  ) : null}
-
-                  <div>
-                    <label className="block text-xs font-medium text-slate-700 mb-1">
-                      Họ và Tên Người Đại Diện *
-                    </label>
-                    <div className="relative">
-                      <User className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
-                      <input
-                        type="text"
-                        required
-                        placeholder="Nguyễn Văn A"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full rounded-xl border border-slate-200 pl-9 pr-3 py-2 text-xs text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:outline-none"
-                      />
-                    </div>
-                  </div>
+                  <span>Đăng Nhập Cổng ETEK</span>
+                  <ArrowRight className="h-4 w-4" />
                 </>
               )}
+            </button>
+          </form>
+        ) : (
+          /* REGISTER FORM */
+          <form onSubmit={handleRegisterSubmit} className="mt-5 space-y-3">
+            <div>
+              <label className="block text-xs font-bold text-slate-700 mb-1">
+                Phân Loại Tài Khoản
+              </label>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onClick={() => setAccountType("enterprise_vip")}
+                  className={`flex items-center justify-center gap-2 rounded-xl border p-2 text-xs font-bold transition-all ${
+                    accountType === "enterprise_vip"
+                      ? "border-blue-500 bg-blue-50 text-blue-700"
+                      : "border-slate-200 bg-white text-slate-600"
+                  }`}
+                >
+                  <Building className="h-3.5 w-3.5" />
+                  Doanh Nghiệp / Tổ Chức
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setAccountType("customer")}
+                  className={`flex items-center justify-center gap-2 rounded-xl border p-2 text-xs font-bold transition-all ${
+                    accountType === "customer"
+                      ? "border-blue-500 bg-blue-50 text-blue-700"
+                      : "border-slate-200 bg-white text-slate-600"
+                  }`}
+                >
+                  <User className="h-3.5 w-3.5" />
+                  Khách Hàng Cá Nhân
+                </button>
+              </div>
+            </div>
 
+            <div>
+              <label className="block text-xs font-bold text-slate-700 mb-1">
+                Họ và Tên Người Đại Diện
+              </label>
+              <div className="relative">
+                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                  <User className="h-4 w-4" />
+                </span>
+                <input
+                  type="text"
+                  required
+                  placeholder="Ví dụ: Nguyễn Văn A"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-9 pr-4 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100"
+                />
+              </div>
+            </div>
+
+            {accountType === "enterprise_vip" && (
               <div>
-                <label className="block text-xs font-medium text-slate-700 mb-1">
-                  Email Công Ty / Đăng Nhập *
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  Tên Công Ty / Đơn Vị (Xuất Hóa Đơn VAT)
                 </label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
+                  <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                    <Building className="h-4 w-4" />
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="Công Ty TNHH / Cổ Phần..."
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-9 pr-4 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100"
+                  />
+                </div>
+              </div>
+            )}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  Email Công Tác
+                </label>
+                <div className="relative">
+                  <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                    <Mail className="h-4 w-4" />
+                  </span>
                   <input
                     type="email"
                     required
-                    placeholder="contact@doanhnghiep.vn"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full rounded-xl border border-slate-200 pl-9 pr-3 py-2 text-xs text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:outline-none"
+                    placeholder="contact@domain.vn"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-9 pr-4 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100"
                   />
                 </div>
               </div>
 
               <div>
-                <div className="flex items-center justify-between mb-1">
-                  <label className="block text-xs font-medium text-slate-700">Mật khẩu *</label>
-                  {activeTab === "login" && (
-                    <a href="#forgot" className="text-[11px] font-medium text-blue-600 hover:underline">
-                      Quên mật khẩu?
-                    </a>
-                  )}
-                </div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  Số Điện Thoại
+                </label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
+                  <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                    <Phone className="h-4 w-4" />
+                  </span>
                   <input
-                    type="password"
-                    required
-                    placeholder="••••••••"
-                    value={formData.password}
-                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                    className="w-full rounded-xl border border-slate-200 pl-9 pr-3 py-2 text-xs text-slate-800 placeholder-slate-400 focus:border-blue-500 focus:outline-none"
+                    type="tel"
+                    placeholder="09xx xxx xxx"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-9 pr-4 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100"
                   />
                 </div>
               </div>
+            </div>
 
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 py-2.5 text-sm font-bold text-white shadow-md shadow-blue-500/20 hover:from-blue-700 hover:to-indigo-700 transition-all disabled:opacity-70"
-              >
-                {isSubmitting ? (
-                  <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                ) : (
-                  <>
-                    <span>{activeTab === "login" ? "Đăng Nhập Ngay" : "Đăng Ký & Nhận Voucher 500K"}</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </>
-                )}
-              </button>
-
-              <div className="relative my-3 text-center">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-slate-200" />
-                </div>
-                <span className="relative bg-white px-2 text-[11px] text-slate-400">hoặc đăng nhập nhanh</span>
+            <div>
+              <label className="block text-xs font-bold text-slate-700 mb-1">
+                Mật Khẩu Khởi Tạo
+              </label>
+              <div className="relative">
+                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                  <Lock className="h-4 w-4" />
+                </span>
+                <input
+                  type="password"
+                  required
+                  placeholder="Tối thiểu 6 ký tự"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-9 pr-4 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-100"
+                />
               </div>
+            </div>
 
-              <button
-                type="button"
-                onClick={() => {
-                  setFormData({
-                    ...formData,
-                    email: "director@etekvietnam.com",
-                    name: "Giám Đốc CNTT (Demo)",
-                  });
-                  setTimeout(() => {
-                    if (onLoginSuccess) {
-                      onLoginSuccess({
-                        name: "Giám Đốc CNTT (Demo)",
-                        email: "director@etekvietnam.com",
-                        type: "business",
-                      });
-                    }
-                    onClose();
-                  }, 300);
-                }}
-                className="w-full flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-100 transition-colors"
-              >
-                <svg className="h-4 w-4" viewBox="0 0 21 21">
-                  <path fill="#f25022" d="M1 1h9v9H1z"/>
-                  <path fill="#00a4ef" d="M1 11h9v9H1z"/>
-                  <path fill="#7fba00" d="M11 1h9v9h-9z"/>
-                  <path fill="#ffb900" d="M11 11h9v9h-9z"/>
-                </svg>
-                <span>Đăng nhập với Microsoft 365 Work Account</span>
-              </button>
+            <button
+              type="submit"
+              disabled={loading}
+              className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 via-blue-600 to-cyan-600 py-3 text-sm font-bold text-white shadow-[0_4px_16px_rgba(37,99,235,0.25)] hover:shadow-[0_6px_22px_rgba(37,99,235,0.4)] hover:scale-[1.01] active:scale-[0.99] transition-all"
+            >
+              {loading ? (
+                <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+              ) : (
+                <>
+                  <CheckCircle2 className="h-4 w-4" />
+                  <span>Hoàn Tất Đăng Ký & Kích Hoạt</span>
+                </>
+              )}
+            </button>
+          </form>
+        )}
 
-              <div className="flex items-center justify-center gap-2 pt-1 text-[11px] text-slate-500">
-                <Shield className="h-3.5 w-3.5 text-blue-600" />
-                <span>Bảo mật dữ liệu chuẩn mã hóa SSL 256-bit</span>
-              </div>
-            </form>
-          )}
+        {/* Security guarantee */}
+        <div className="mt-5 border-t border-slate-100 pt-3 text-center">
+          <p className="flex items-center justify-center gap-1.5 text-[11px] text-slate-400 font-mono">
+            <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" />
+            Bảo mật 256-bit SSL/TLS • Dữ liệu mã hóa chuẩn doanh nghiệp
+          </p>
         </div>
       </div>
     </div>

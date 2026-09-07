@@ -1,103 +1,42 @@
-"use client";
-
-import { useState } from "react";
 import Hero from "@/components/home/Hero";
 import PartnerMarquee from "@/components/home/PartnerMarquee";
-import SolutionSwitcher from "@/components/home/SolutionSwitcher";
-import TechBentoGrid from "@/components/home/TechBentoGrid";
-import MediaShowcase from "@/components/home/MediaShowcase";
-import FastQuoteCalculator from "@/components/home/FastQuoteCalculator";
+import CredibilityStats from "@/components/home/CredibilityStats";
+import CoreValueSection from "@/components/home/CoreValueSection";
+import SolutionPortfolio from "@/components/home/SolutionPortfolio";
+import ImplementationProcess from "@/components/home/ImplementationProcess";
+import PricingPlans from "@/components/home/PricingPlans";
+import AgencyQuoteSection from "@/components/home/AgencyQuoteSection";
 import InteractiveTestimonials from "@/components/home/InteractiveTestimonials";
 import FuturisticCTA from "@/components/home/FuturisticCTA";
-import ScrollReveal from "@/components/ui/ScrollReveal";
-import VoucherDrawer from "@/components/layout/VoucherDrawer";
-import AuthModal from "@/components/layout/AuthModal";
-import { X } from "lucide-react";
 
+/**
+ * Cố ý KHÔNG bọc mỗi section trong một `data-reveal`.
+ *
+ * Bọc cả section sẽ cho toàn bộ khối cao 1200–1800px hiện cùng một lúc, ngay
+ * khi mép trên của nó vừa chạm đáy màn hình — nghĩa là phần nội dung nằm sâu
+ * bên dưới đã xuất hiện xong từ lâu trước khi người xem cuộn tới. Nhìn ra thì
+ * đúng là "vừa vào trang mọi thứ đã hiện hết".
+ *
+ * Thay vào đó `data-reveal` được đặt ở từng khối con bên trong mỗi section
+ * (tiêu đề, từng thẻ, từng cột), nên nội dung nối nhau xuất hiện đúng theo
+ * nhịp cuộn. RevealEngine trong layout gom tất cả vào một observer duy nhất.
+ */
 export default function Home() {
-  const [heroVideoOpen, setHeroVideoOpen] = useState(false);
-  const [voucherDrawerOpen, setVoucherDrawerOpen] = useState(false);
-  const [authModalOpen, setAuthModalOpen] = useState(false);
-
   return (
-    <div className="bg-white text-slate-900 min-h-screen overflow-x-hidden selection:bg-teal-100 selection:text-teal-900">
-      
-      {/* 1. HERO OPENING: Miko Tech 3D Stage + Commercial e-commerce category jumps & Vouchers */}
-      <Hero
-        onOpenVideo={() => setHeroVideoOpen(true)}
-        onOpenVoucher={() => setVoucherDrawerOpen(true)}
-        onOpenAuth={() => setAuthModalOpen(true)}
-      />
+    <div className="relative min-h-screen overflow-x-clip bg-white text-slate-900 selection:bg-blue-100 selection:text-blue-900">
+      {/* Vạch chỉ dẫn cuộn dọc mép trái */}
+      <div className="scroll-indicator hidden xl:block">Scroll</div>
 
-      {/* 2. PARTNER MARQUEE: Scrolls smoothly into view as user scrolls */}
-      <ScrollReveal direction="up" delay={50} duration={700}>
-        <PartnerMarquee />
-      </ScrollReveal>
-
-      {/* 3. SOLUTION SWITCHER (HRM 4.0, Microsoft Licenses, SGIS Hospital) */}
-      <ScrollReveal direction="up" delay={80} duration={750}>
-        <SolutionSwitcher />
-      </ScrollReveal>
-
-      {/* 4. TECH BENTO GRID: FaceID live attendance, 3P salary calculator slider */}
-      <ScrollReveal direction="up" delay={80} duration={750}>
-        <TechBentoGrid />
-      </ScrollReveal>
-
-      {/* 5. MEDIA SHOWCASE: 20-Year Anniversary Video Theater */}
-      <ScrollReveal direction="up" delay={80} duration={750}>
-        <MediaShowcase />
-      </ScrollReveal>
-
-      {/* 6. FAST QUOTE & LICENSE ESTIMATOR */}
-      <ScrollReveal direction="up" delay={80} duration={750}>
-        <FastQuoteCalculator />
-      </ScrollReveal>
-
-      {/* 7. CUSTOMER TESTIMONIALS */}
-      <ScrollReveal direction="up" delay={80} duration={750}>
-        <InteractiveTestimonials />
-      </ScrollReveal>
-
-      {/* 8. REFINED MODERN COMMERCIAL CTA CARD */}
-      <ScrollReveal direction="up" delay={80} duration={750}>
-        <FuturisticCTA />
-      </ScrollReveal>
-
-      {/* Global Hero Video Modal */}
-      {heroVideoOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-md animate-fade-up">
-          <div className="relative aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-white/20 bg-black shadow-2xl">
-            <button
-              type="button"
-              aria-label="Đóng video"
-              onClick={() => setHeroVideoOpen(false)}
-              className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white backdrop-blur-md hover:bg-white hover:text-black transition-all"
-            >
-              <X className="h-5 w-5" />
-            </button>
-            <iframe
-              src="https://www.youtube.com/embed/ORv9zupc-qQ?autoplay=1&rel=0"
-              title="Tân Phát ETEK Kỷ Niệm 20 Năm Thành Lập"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="h-full w-full border-0"
-            />
-          </div>
-        </div>
-      )}
-
-      {/* Global Voucher Drawer */}
-      <VoucherDrawer
-        isOpen={voucherDrawerOpen}
-        onClose={() => setVoucherDrawerOpen(false)}
-      />
-
-      {/* Global Auth Modal */}
-      <AuthModal
-        isOpen={authModalOpen}
-        onClose={() => setAuthModalOpen(false)}
-      />
+      <Hero />
+      <PartnerMarquee />
+      <CredibilityStats />
+      <CoreValueSection />
+      <SolutionPortfolio />
+      <ImplementationProcess />
+      <PricingPlans />
+      <AgencyQuoteSection />
+      <InteractiveTestimonials />
+      <FuturisticCTA />
     </div>
   );
 }

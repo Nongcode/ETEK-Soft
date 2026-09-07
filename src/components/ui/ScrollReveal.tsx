@@ -1,94 +1,47 @@
 "use client";
 
-import { ReactNode, useEffect, useRef, useState } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface ScrollRevealProps {
   children: ReactNode;
   className?: string;
-  direction?: "up" | "down" | "left" | "right" | "fade" | "zoom";
-  delay?: number; // in ms
-  duration?: number; // in ms
+  delay?: number; // ms
+  direction?: "up" | "down" | "left" | "right" | "scale" | "none";
+  /** Giữ lại cho tương thích với các lời gọi cũ; RevealEngine dùng một ngưỡng chung. */
   threshold?: number;
   once?: boolean;
 }
 
+const DIRECTION_MAP: Record<NonNullable<ScrollRevealProps["direction"]>, string> = {
+  up: "true",
+  down: "true",
+  left: "left",
+  right: "right",
+  scale: "scale",
+  none: "fade",
+};
+
+/**
+ * Vỏ mỏng uỷ quyền cho RevealEngine (gắn một lần trong layout).
+ *
+ * Trước đây mỗi thẻ ScrollReveal tự dựng một IntersectionObserver và tự giữ
+ * state riêng — trang chủ có tới hơn 15 cái, mỗi cái kéo theo một lần render
+ * React lúc cuộn qua. Giờ tất cả dùng chung một observer duy nhất, và quan
+ * trọng hơn là dùng chung một bộ thông số nên nhịp xuất hiện của mọi khối
+ * trên site đều khớp nhau thay vì mỗi nơi một kiểu.
+ */
 export default function ScrollReveal({
   children,
-  className = "",
-  direction = "up",
+  className,
   delay = 0,
-  duration = 750,
-  threshold = 0.1,
-  once = true,
+  direction = "up",
 }: ScrollRevealProps) {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-
-    if (!("IntersectionObserver" in window)) {
-      setIsVisible(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          if (once) {
-            observer.unobserve(node);
-          }
-        } else if (!once) {
-          setIsVisible(false);
-        }
-      },
-      {
-        threshold,
-        rootMargin: "0px 0px -50px 0px",
-      }
-    );
-
-    observer.observe(node);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [threshold, once]);
-
-  const getTransform = () => {
-    if (isVisible) return "translate3d(0, 0, 0) scale(1)";
-    switch (direction) {
-      case "up":
-        return "translate3d(0, 48px, 0) scale(0.98)";
-      case "down":
-        return "translate3d(0, -48px, 0) scale(0.98)";
-      case "left":
-        return "translate3d(48px, 0, 0) scale(0.98)";
-      case "right":
-        return "translate3d(-48px, 0, 0) scale(0.98)";
-      case "zoom":
-        return "translate3d(0, 0, 0) scale(0.92)";
-      case "fade":
-      default:
-        return "translate3d(0, 0, 0)";
-    }
-  };
-
   return (
     <div
-      ref={ref}
-      className={cn("will-change-[opacity,transform]", className)}
-      style={{
-        opacity: isVisible ? 1 : 0,
-        transform: getTransform(),
-        transitionProperty: "opacity, transform",
-        transitionDuration: `${duration}ms`,
-        transitionDelay: `${delay}ms`,
-        transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
-      }}
+      data-reveal={DIRECTION_MAP[direction]}
+      style={delay ? ({ "--reveal-delay": `${delay}ms` } as CSSProperties) : undefined}
+      className={cn(className)}
     >
       {children}
     </div>

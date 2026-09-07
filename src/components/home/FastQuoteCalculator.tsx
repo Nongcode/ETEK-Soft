@@ -15,6 +15,8 @@ import {
   User
 } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
 
 interface SoftwarePlan {
   id: string;
@@ -102,28 +104,32 @@ export default function FastQuoteCalculator() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-slate-50/70 py-20 sm:py-28 border-t border-slate-200/70">
+    <section className="relative overflow-hidden bg-light-tech py-16 sm:py-24 border-t border-slate-200/80">
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
-            <Calculator className="h-3.5 w-3.5" />
-            BÁO GIÁ NHANH TRỰC TUYẾN
+        <ScrollReveal direction="up">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/90 px-4 py-1 text-xs font-bold uppercase tracking-[0.16em] text-blue-700 shadow-sm">
+              <Calculator className="h-3.5 w-3.5 text-blue-600" />
+              CÔNG CỤ DỰ TOÁN TỰ ĐỘNG
+            </div>
+            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+              Dự Toán Bản Quyền Phần Mềm{" "}
+              <span className="bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Doanh Nghiệp
+              </span>
+            </h2>
+            <p className="mt-3.5 text-base text-slate-600 leading-relaxed font-medium">
+              Ước tính ngân sách đầu tư bản quyền Microsoft chính hãng theo số lượng nhân sự, áp dụng biểu phí chiết khấu đại lý cấp 1.
+            </p>
           </div>
-          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
-            Ước Tính Ngân Sách &{" "}
-            <span className="bg-gradient-to-r from-blue-700 to-cyan-600 bg-clip-text text-transparent">
-              Chiết Khấu Doanh Nghiệp
-            </span>
-          </h2>
-          <p className="mt-3.5 text-base text-slate-600">
-            Kéo chọn quy mô người dùng để nhận ngay dự toán chi phí minh bạch và ưu đãi license theo chính sách đối tác.
-          </p>
-        </div>
+        </ScrollReveal>
 
         {/* Calculator Card Container */}
-        <div className="mx-auto max-w-5xl rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-10 shadow-[0_16px_50px_rgba(15,23,42,0.06)]">
+        <ScrollReveal direction="scale" delay={150}>
+          <div className="mx-auto max-w-5xl rounded-[2rem] border border-slate-200/90 bg-white/95 p-6 sm:p-10 shadow-[0_20px_60px_rgba(15,23,42,0.06)]">
+
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             
@@ -324,8 +330,10 @@ export default function FastQuoteCalculator() {
           </div>
 
         </div>
+        </ScrollReveal>
 
       </div>
     </section>
   );
 }
+

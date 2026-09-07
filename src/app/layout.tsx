@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { AuthProvider } from "@/context/AuthContext";
+import RevealEngine from "@/components/ui/RevealEngine";
 import "./globals.css";
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -77,16 +80,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       attributeFilter: ['bis_skin_checked']
     });
   } catch (e) {}
+
+  // Gan .reveal-ready TRUOC lan ve dau tien de noi dung khong nhay len roi moi bi an.
+  try {
+    document.documentElement.classList.add('reveal-ready');
+    // Luoi an toan: neu React khong hydrate trong 4s thi go lop an de trang van doc duoc.
+    setTimeout(function () {
+      if (!window.__etekRevealUp) document.documentElement.classList.remove('reveal-ready');
+    }, 4000);
+  } catch (e) {}
 })();
             `,
           }}
         />
       </head>
-      <body className="flex min-h-full flex-col bg-background text-text" suppressHydrationWarning>
-        <Header />
-        <main className="flex-1" suppressHydrationWarning>{children}</main>
-        <Footer />
+      <body className="flex min-h-full flex-col bg-background text-text overflow-x-clip w-full max-w-full" suppressHydrationWarning>
+        <AuthProvider>
+          <RevealEngine />
+          <Header />
+          <main className="flex-1 w-full max-w-full overflow-x-clip" suppressHydrationWarning>{children}</main>
+          <Footer />
+        </AuthProvider>
       </body>
+
+
     </html>
   );
 }
