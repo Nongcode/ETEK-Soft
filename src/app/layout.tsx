@@ -4,6 +4,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 import { AuthProvider } from "@/context/AuthContext";
+import { CartProvider } from "@/context/CartContext";
+import CartDrawer from "@/components/cart/CartDrawer";
 import RevealEngine from "@/components/ui/RevealEngine";
 
 import "./globals.css";
@@ -98,10 +100,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="flex min-h-full flex-col bg-background text-text overflow-x-clip w-full max-w-full" suppressHydrationWarning>
         <AuthProvider>
-          <RevealEngine />
-          <Header />
-          <main className="flex-1 w-full max-w-full overflow-x-clip" suppressHydrationWarning>{children}</main>
-          <Footer />
+          <CartProvider>
+            <RevealEngine />
+            <Header />
+            <CartDrawer />
+            <main className="flex-1 w-full max-w-full overflow-x-clip" suppressHydrationWarning>{children}</main>
+            <Footer />
+          </CartProvider>
         </AuthProvider>
 
       </body>
