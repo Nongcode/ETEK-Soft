@@ -4,14 +4,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ChevronDown, Mail, Phone, X } from "lucide-react";
+import { ChevronDown, Mail, Phone, X, User, LogOut, ShieldCheck } from "lucide-react";
 import { mainNav, productMegaMenu, guideMegaMenu } from "@/data/navigation";
 import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@/context/AuthContext";
 
 export default function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
   const pathname = usePathname();
+  const { user, openLoginModal, openRegisterModal, logout } = useAuth();
   const [expanded, setExpanded] = useState<string | null>(null);
+
 
   useEffect(() => {
     onClose();
@@ -108,19 +111,73 @@ export default function MobileNav({ open, onClose }: { open: boolean; onClose: (
         </ul>
       </nav>
 
-      <div className="shrink-0 border-t border-border p-4">
-        <div className="mb-3 flex flex-col gap-2 text-sm text-muted">
-          <a href="tel:19002026" className="flex items-center gap-2">
-            <Phone className="h-4 w-4 text-primary" aria-hidden /> 1900 2026
+      <div className="shrink-0 border-t border-border p-4 bg-slate-50/80">
+        {/* User Auth Section */}
+        {user ? (
+          <div className="mb-3 rounded-2xl border border-blue-200 bg-white p-3 shadow-sm">
+            <div className="flex items-center gap-2.5">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-100 font-bold text-xs text-blue-700">
+                {user.avatarText}
+              </span>
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-xs font-bold text-slate-900">{user.name}</p>
+                <p className="truncate text-[11px] text-slate-500">{user.email}</p>
+              </div>
+              <button
+                type="button"
+                onClick={logout}
+                className="flex h-8 w-8 items-center justify-center rounded-lg text-rose-600 hover:bg-rose-50"
+                title="Đăng xuất"
+              >
+                <LogOut className="h-4 w-4" />
+              </button>
+            </div>
+            <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px]">
+              <span className="text-emerald-700 font-semibold flex items-center gap-1">
+                <ShieldCheck className="h-3 w-3" /> Doanh Nghiệp VIP
+              </span>
+              <span className="font-mono text-blue-600 font-bold">{user.licenseCount} License</span>
+            </div>
+          </div>
+        ) : (
+          <div className="mb-3 flex gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                onClose();
+                openLoginModal();
+              }}
+              className="flex-1 flex items-center justify-center gap-1.5 rounded-xl border border-slate-300 bg-white py-2.5 text-xs font-bold text-slate-800 shadow-sm"
+            >
+              <User className="h-3.5 w-3.5 text-slate-500" />
+              Đăng nhập
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                onClose();
+                openRegisterModal();
+              }}
+              className="flex-1 flex items-center justify-center rounded-xl bg-blue-600 py-2.5 text-xs font-bold text-white shadow-sm"
+            >
+              Tạo tài khoản
+            </button>
+          </div>
+        )}
+
+        <div className="mb-3 flex flex-col gap-2 text-xs text-muted">
+          <a href="tel:19002026" className="flex items-center gap-2 font-medium">
+            <Phone className="h-3.5 w-3.5 text-primary" aria-hidden /> Hotline: 1900 2026
           </a>
-          <a href="mailto:sales@etek-soft.vn" className="flex items-center gap-2">
-            <Mail className="h-4 w-4 text-primary" aria-hidden /> sales@etek-soft.vn
+          <a href="mailto:sales@etek-soft.vn" className="flex items-center gap-2 font-medium">
+            <Mail className="h-3.5 w-3.5 text-primary" aria-hidden /> sales@etek-soft.vn
           </a>
         </div>
         <Button href="/tu-van" className="w-full">
-          Nhận tư vấn
+          Nhận tư vấn ngay
         </Button>
       </div>
     </div>
   );
 }
+

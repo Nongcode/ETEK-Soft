@@ -1,0 +1,2356 @@
+{
+  "crawledAt": "2026-09-07T03:28:36.162Z",
+  "totalImages": 171,
+  "downloadedImages": [
+    {
+      "sourceUrl": "https://eteksofts.com/storage/logo/logo.png",
+      "originalUrl": "https://eteksofts.com/storage/logo/logo.png",
+      "isHighRes": false,
+      "alt": "Công ty cổ phần công nghệ thiết bị Tân Phát",
+      "category": "company",
+      "localPath": "/legacy-media/company/logo.png",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/",
+        "https://eteksofts.com/post/tan-phat-etek-tham-du-hoi-thao-dao-tao-nguon-nhan-luc-cong-nghiep-gan-voi-nhu-cau-su-dung-lao-dong-cua-doanh-nghiep",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40",
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-va-tu-van-chuyen-doi-so-doi-voi-tu-dong-hoa-etek",
+        "https://eteksofts.com/post/chinh-sach-luong-cong-cu-dieu-huong-nhan-su-theo-muc-tieu",
+        "https://eteksofts.com/post/yeu-to-then-chot-chuyen-doi-so",
+        "https://eteksofts.com/post/quy-trinh-va-cong-nghe-chuyen-doi-so-doanh-nghiep",
+        "https://eteksofts.com/post/luong-3p-la-gi-lam-sao-de-ap-dung-luong-3p-hieu-qua-nhat",
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep",
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-he-thong-luong-3p",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-khung-nang-luc",
+        "https://eteksofts.com/gioi-thieu",
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm",
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong",
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong",
+        "https://eteksofts.com/san-pham/quan-ly-don-tu",
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su",
+        "https://eteksofts.com/san-pham/quan-ly-cong-tac",
+        "https://eteksofts.com/san-pham/giai-phap-quan-ly-tong-the-benh-vien",
+        "https://eteksofts.com/san-pham/gioi-thieu-chung-ve-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/cac-chuc-nang-chinh-cua-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/uu-diem-vuot-troi-cua-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/benh-vien-ung-dung",
+        "https://eteksofts.com/san-pham/phan-mem-ban-quyen-chinh-hang",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office",
+        "https://eteksofts.com/san-pham/phan-mem-microsft-windows",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-visio",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-project",
+        "https://eteksofts.com/danh-muc-tin/tin-tuc",
+        "https://eteksofts.com/danh-muc-tin/huong-dan",
+        "https://eteksofts.com/danh-muc-video/video-huong-dan",
+        "https://eteksofts.com/danh-muc-tin/tuyen-dung",
+        "https://eteksofts.com/lien-he",
+        "https://eteksofts.com/post/huong-dan-thiet-lap-co-cau-to-chuc",
+        "https://eteksofts.com/video",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-365-business-standard-retail-esd-klq-00209",
+        "https://eteksofts.com/san-pham/phan-mem-m365-family-subscr-pk-lic-1yr-online-apac-em-esd-ep2-36890",
+        "https://eteksofts.com/san-pham/phan-mem-m365-personal-subscr-pk-lic-1yr-online-apac-em-esd-ep2-32313",
+        "https://eteksofts.com/san-pham/phan-mem-office-microsoft-365-family-fpp-ep2-36878",
+        "https://eteksofts.com/san-pham/phan-mem-m365-personal-english-apac-subscr-1yr-medialess-ep2-32409",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-2024-all-lng-apac-em-retail-online-esd-ep2-06796",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-business-2024-all-lng-apac-em-retail-online-esd-ep2-06604",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-2024-english-apac-em-medialess-ep2-06811-fppbox",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-business-2024-english-apac-em-medialess-ep2-06630-fppbox",
+        "https://eteksofts.com/san-pham/phan-mem-windows-11-pro-64-bit-all-lng-pk-lic-online-dwnld-nr-fqc-10572",
+        "https://eteksofts.com/san-pham/phan-mem-win-home-fpp-11-64-bit-eng-intl-usb-haj-00090",
+        "https://eteksofts.com/san-pham/he-dieu-hanh-windows-11-pro-fpp-64-bit-eng-intl-usb-hav-00163",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-windows-home-11-64bit-eng-intl-1pk-dsp-oei-dvd-kw9-00632",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-windows-pro-11-64bit-eng-intl-1pk-dsp-oei-dvd-fqc-10528",
+        "https://eteksofts.com/san-pham/phan-mem-windows-server-standard-2025-64bit-english-1pk-dsp-oei-dvd-16-core-ep2-25187",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-visio-std-2024-all-lng-retail-online-esd-ep2-07167",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-project-standard-2024-all-lng-retail-online-esd-ep2-07057",
+        "https://eteksofts.com/clip/phan-men-quan-tri-nhan-su-toan-dien",
+        "https://eteksofts.com/clip/tan-phat-etek-ky-niem-20-nam-thanh-lap",
+        "https://eteksofts.com/clip/cau-hoi-nao-gay-uc-che-nhat-cho-nhan-vien",
+        "https://eteksofts.com/clip/eteksofts-giai-phap-quan-tri-nguon-nhan-luc-40",
+        "https://eteksofts.com/clip/10-dau-hieu-nhan-biet-nhan-vien-co-tiem-nang-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/Vector-2.svg",
+      "originalUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/Vector-2.svg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "theme",
+      "localPath": "/legacy-media/theme/Vector-2.svg",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/",
+        "https://eteksofts.com/post/tan-phat-etek-tham-du-hoi-thao-dao-tao-nguon-nhan-luc-cong-nghiep-gan-voi-nhu-cau-su-dung-lao-dong-cua-doanh-nghiep",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40",
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-va-tu-van-chuyen-doi-so-doi-voi-tu-dong-hoa-etek",
+        "https://eteksofts.com/post/chinh-sach-luong-cong-cu-dieu-huong-nhan-su-theo-muc-tieu",
+        "https://eteksofts.com/post/yeu-to-then-chot-chuyen-doi-so",
+        "https://eteksofts.com/post/quy-trinh-va-cong-nghe-chuyen-doi-so-doanh-nghiep",
+        "https://eteksofts.com/post/luong-3p-la-gi-lam-sao-de-ap-dung-luong-3p-hieu-qua-nhat",
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep",
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-he-thong-luong-3p",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-khung-nang-luc",
+        "https://eteksofts.com/gioi-thieu",
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm",
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong",
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong",
+        "https://eteksofts.com/san-pham/quan-ly-don-tu",
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su",
+        "https://eteksofts.com/san-pham/quan-ly-cong-tac",
+        "https://eteksofts.com/san-pham/giai-phap-quan-ly-tong-the-benh-vien",
+        "https://eteksofts.com/san-pham/gioi-thieu-chung-ve-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/cac-chuc-nang-chinh-cua-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/uu-diem-vuot-troi-cua-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/benh-vien-ung-dung",
+        "https://eteksofts.com/san-pham/phan-mem-ban-quyen-chinh-hang",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office",
+        "https://eteksofts.com/san-pham/phan-mem-microsft-windows",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-visio",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-project",
+        "https://eteksofts.com/danh-muc-tin/tin-tuc",
+        "https://eteksofts.com/danh-muc-tin/huong-dan",
+        "https://eteksofts.com/danh-muc-video/video-huong-dan",
+        "https://eteksofts.com/danh-muc-tin/tuyen-dung",
+        "https://eteksofts.com/lien-he",
+        "https://eteksofts.com/post/huong-dan-thiet-lap-co-cau-to-chuc",
+        "https://eteksofts.com/video",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-365-business-standard-retail-esd-klq-00209",
+        "https://eteksofts.com/san-pham/phan-mem-m365-family-subscr-pk-lic-1yr-online-apac-em-esd-ep2-36890",
+        "https://eteksofts.com/san-pham/phan-mem-m365-personal-subscr-pk-lic-1yr-online-apac-em-esd-ep2-32313",
+        "https://eteksofts.com/san-pham/phan-mem-office-microsoft-365-family-fpp-ep2-36878",
+        "https://eteksofts.com/san-pham/phan-mem-m365-personal-english-apac-subscr-1yr-medialess-ep2-32409",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-2024-all-lng-apac-em-retail-online-esd-ep2-06796",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-business-2024-all-lng-apac-em-retail-online-esd-ep2-06604",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-2024-english-apac-em-medialess-ep2-06811-fppbox",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-business-2024-english-apac-em-medialess-ep2-06630-fppbox",
+        "https://eteksofts.com/san-pham/phan-mem-windows-11-pro-64-bit-all-lng-pk-lic-online-dwnld-nr-fqc-10572",
+        "https://eteksofts.com/san-pham/phan-mem-win-home-fpp-11-64-bit-eng-intl-usb-haj-00090",
+        "https://eteksofts.com/san-pham/he-dieu-hanh-windows-11-pro-fpp-64-bit-eng-intl-usb-hav-00163",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-windows-home-11-64bit-eng-intl-1pk-dsp-oei-dvd-kw9-00632",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-windows-pro-11-64bit-eng-intl-1pk-dsp-oei-dvd-fqc-10528",
+        "https://eteksofts.com/san-pham/phan-mem-windows-server-standard-2025-64bit-english-1pk-dsp-oei-dvd-16-core-ep2-25187",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-visio-std-2024-all-lng-retail-online-esd-ep2-07167",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-project-standard-2024-all-lng-retail-online-esd-ep2-07057",
+        "https://eteksofts.com/clip/phan-men-quan-tri-nhan-su-toan-dien",
+        "https://eteksofts.com/clip/tan-phat-etek-ky-niem-20-nam-thanh-lap",
+        "https://eteksofts.com/clip/cau-hoi-nao-gay-uc-che-nhat-cho-nhan-vien",
+        "https://eteksofts.com/clip/eteksofts-giai-phap-quan-tri-nguon-nhan-luc-40",
+        "https://eteksofts.com/clip/10-dau-hieu-nhan-biet-nhan-vien-co-tiem-nang-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/Vector.svg",
+      "originalUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/Vector.svg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "theme",
+      "localPath": "/legacy-media/theme/Vector.svg",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/kha-nang-tich-hop.png",
+      "originalUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/kha-nang-tich-hop.png",
+      "isHighRes": false,
+      "alt": "null",
+      "category": "theme",
+      "localPath": "/legacy-media/theme/kha-nang-tich-hop.png",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/tiet-kiem-chi-phi.png",
+      "originalUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/tiet-kiem-chi-phi.png",
+      "isHighRes": false,
+      "alt": "null",
+      "category": "theme",
+      "localPath": "/legacy-media/theme/tiet-kiem-chi-phi.png",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/ai.png",
+      "originalUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/ai.png",
+      "isHighRes": false,
+      "alt": "null",
+      "category": "theme",
+      "localPath": "/legacy-media/theme/ai.png",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/doi-ngu-tu-van.png",
+      "originalUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/doi-ngu-tu-van.png",
+      "isHighRes": false,
+      "alt": "null",
+      "category": "theme",
+      "localPath": "/legacy-media/theme/doi-ngu-tu-van.png",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/ho-tro-247.png",
+      "originalUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/ho-tro-247.png",
+      "isHighRes": false,
+      "alt": "null",
+      "category": "theme",
+      "localPath": "/legacy-media/theme/ho-tro-247.png",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/bg-comment.svg",
+      "originalUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/bg-comment.svg",
+      "isHighRes": false,
+      "alt": "Chị Phạm Phương Oanh",
+      "category": "theme",
+      "localPath": "/legacy-media/theme/bg-comment.svg",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/avatar/etek.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/avatar/etek_70x.webp",
+      "isHighRes": true,
+      "alt": "Chị Nguyễn Thị Lan",
+      "category": "avatars",
+      "localPath": "/legacy-media/avatars/etek.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/avatar/1166716503-612x612.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/avatar/1166716503-612x612_70x.webp",
+      "isHighRes": true,
+      "alt": "Chị Đỗ Thị Tuyết Mai",
+      "category": "avatars",
+      "localPath": "/legacy-media/avatars/1166716503-612x612.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/quan-ly-hanh-chinh-nhan-su.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/quan-ly-hanh-chinh-nhan-su_320x.webp",
+      "isHighRes": true,
+      "alt": "HƯỚNG DẪN THIẾT LẬP CƠ CẤU TỔ CHỨC",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/quan-ly-hanh-chinh-nhan-su.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/xay-dung-khung-nang-luc.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/xay-dung-khung-nang-luc_320x.webp",
+      "isHighRes": true,
+      "alt": "Các bước xây dựng khung năng lực",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/xay-dung-khung-nang-luc.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/he-thong-luong-3P.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/he-thong-luong-3P_320x.webp",
+      "isHighRes": true,
+      "alt": "Các bước xây dựng hệ thống lương 3P",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/he-thong-luong-3P.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/top-7-hanh-vi-xuat-hien-o-network-hieu-qua1.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/top-7-hanh-vi-xuat-hien-o-network-hieu-qua1_320x.webp",
+      "isHighRes": true,
+      "alt": "Networking là gì ? 7 kỹ năng Networking xuất sắc của các lãnh đạo",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/top-7-hanh-vi-xuat-hien-o-network-hieu-qua1.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/thanh-to-cua-totalreward%202.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/thanh-to-cua-totalreward%202_320x.webp",
+      "isHighRes": true,
+      "alt": "Total Reward là gì? Tác dụng của Total Reward với doanh nghiệp.",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/thanh-to-cua-totalreward_2.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/luong-%203p.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/luong-%203p_320x.webp",
+      "isHighRes": true,
+      "alt": "Lương 3P là gì? Làm sao để áp dụng lương 3P hiệu quả nhất.",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/luong-_3p.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/video/1699238101.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/video/1699238101_158x.webp",
+      "isHighRes": true,
+      "alt": "Phần mền quản trị nhân sự toàn diện",
+      "category": "videos",
+      "localPath": "/legacy-media/videos/1699238101.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/video/1698253177.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/video/1698253177_158x.webp",
+      "isHighRes": true,
+      "alt": "Eteksofts - Giải pháp quản trị nguồn nhân lực 4.0",
+      "category": "videos",
+      "localPath": "/legacy-media/videos/1698253177.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/video/1698252994.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/video/1698252994_158x.webp",
+      "isHighRes": true,
+      "alt": "Câu hỏi nào gây ức chế nhất cho nhân viên",
+      "category": "videos",
+      "localPath": "/legacy-media/videos/1698252994.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/video/1698252441.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/video/1698252441_158x.webp",
+      "isHighRes": true,
+      "alt": "10 dấu hiệu nhận biết nhân viên có tiềm năng lãnh đạo",
+      "category": "videos",
+      "localPath": "/legacy-media/videos/1698252441.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/banner/1705650752.png",
+      "originalUrl": "https://eteksofts.com/storage/banner/1705650752.png",
+      "isHighRes": false,
+      "alt": "",
+      "category": "banners",
+      "localPath": "/legacy-media/banners/1705650752.png",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/banner/1698833462.webp",
+      "originalUrl": "https://eteksofts.com/storage/banner/1698833462.webp",
+      "isHighRes": false,
+      "alt": "",
+      "category": "banners",
+      "localPath": "/legacy-media/banners/1698833462.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/banner/1698834940.png",
+      "originalUrl": "https://eteksofts.com/storage/banner/1698834940.png",
+      "isHighRes": false,
+      "alt": "",
+      "category": "banners",
+      "localPath": "/legacy-media/banners/1698834940.png",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/banner/1704246923.webp",
+      "originalUrl": "https://eteksofts.com/storage/banner/1704246923.webp",
+      "isHighRes": false,
+      "alt": "",
+      "category": "banners",
+      "localPath": "/legacy-media/banners/1704246923.webp",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/themes/frontend/eteksofts/images/etek-soft-logo.png",
+      "originalUrl": "https://eteksofts.com/themes/frontend/eteksofts/images/etek-soft-logo.png",
+      "isHighRes": false,
+      "alt": "Công ty cổ phần công nghệ thiết bị Tân Phát",
+      "category": "theme",
+      "localPath": "/legacy-media/theme/etek-soft-logo.png",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/",
+        "https://eteksofts.com/post/tan-phat-etek-tham-du-hoi-thao-dao-tao-nguon-nhan-luc-cong-nghiep-gan-voi-nhu-cau-su-dung-lao-dong-cua-doanh-nghiep",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40",
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-va-tu-van-chuyen-doi-so-doi-voi-tu-dong-hoa-etek",
+        "https://eteksofts.com/post/chinh-sach-luong-cong-cu-dieu-huong-nhan-su-theo-muc-tieu",
+        "https://eteksofts.com/post/yeu-to-then-chot-chuyen-doi-so",
+        "https://eteksofts.com/post/quy-trinh-va-cong-nghe-chuyen-doi-so-doanh-nghiep",
+        "https://eteksofts.com/post/luong-3p-la-gi-lam-sao-de-ap-dung-luong-3p-hieu-qua-nhat",
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep",
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-he-thong-luong-3p",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-khung-nang-luc",
+        "https://eteksofts.com/gioi-thieu",
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm",
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong",
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong",
+        "https://eteksofts.com/san-pham/quan-ly-don-tu",
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su",
+        "https://eteksofts.com/san-pham/quan-ly-cong-tac",
+        "https://eteksofts.com/san-pham/giai-phap-quan-ly-tong-the-benh-vien",
+        "https://eteksofts.com/san-pham/gioi-thieu-chung-ve-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/cac-chuc-nang-chinh-cua-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/uu-diem-vuot-troi-cua-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/benh-vien-ung-dung",
+        "https://eteksofts.com/san-pham/phan-mem-ban-quyen-chinh-hang",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office",
+        "https://eteksofts.com/san-pham/phan-mem-microsft-windows",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-visio",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-project",
+        "https://eteksofts.com/danh-muc-tin/tin-tuc",
+        "https://eteksofts.com/danh-muc-tin/huong-dan",
+        "https://eteksofts.com/danh-muc-video/video-huong-dan",
+        "https://eteksofts.com/danh-muc-tin/tuyen-dung",
+        "https://eteksofts.com/lien-he",
+        "https://eteksofts.com/post/huong-dan-thiet-lap-co-cau-to-chuc",
+        "https://eteksofts.com/video",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-365-business-standard-retail-esd-klq-00209",
+        "https://eteksofts.com/san-pham/phan-mem-m365-family-subscr-pk-lic-1yr-online-apac-em-esd-ep2-36890",
+        "https://eteksofts.com/san-pham/phan-mem-m365-personal-subscr-pk-lic-1yr-online-apac-em-esd-ep2-32313",
+        "https://eteksofts.com/san-pham/phan-mem-office-microsoft-365-family-fpp-ep2-36878",
+        "https://eteksofts.com/san-pham/phan-mem-m365-personal-english-apac-subscr-1yr-medialess-ep2-32409",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-2024-all-lng-apac-em-retail-online-esd-ep2-06796",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-business-2024-all-lng-apac-em-retail-online-esd-ep2-06604",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-2024-english-apac-em-medialess-ep2-06811-fppbox",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-business-2024-english-apac-em-medialess-ep2-06630-fppbox",
+        "https://eteksofts.com/san-pham/phan-mem-windows-11-pro-64-bit-all-lng-pk-lic-online-dwnld-nr-fqc-10572",
+        "https://eteksofts.com/san-pham/phan-mem-win-home-fpp-11-64-bit-eng-intl-usb-haj-00090",
+        "https://eteksofts.com/san-pham/he-dieu-hanh-windows-11-pro-fpp-64-bit-eng-intl-usb-hav-00163",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-windows-home-11-64bit-eng-intl-1pk-dsp-oei-dvd-kw9-00632",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-windows-pro-11-64bit-eng-intl-1pk-dsp-oei-dvd-fqc-10528",
+        "https://eteksofts.com/san-pham/phan-mem-windows-server-standard-2025-64bit-english-1pk-dsp-oei-dvd-16-core-ep2-25187",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-visio-std-2024-all-lng-retail-online-esd-ep2-07167",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-project-standard-2024-all-lng-retail-online-esd-ep2-07057",
+        "https://eteksofts.com/clip/phan-men-quan-tri-nhan-su-toan-dien",
+        "https://eteksofts.com/clip/tan-phat-etek-ky-niem-20-nam-thanh-lap",
+        "https://eteksofts.com/clip/cau-hoi-nao-gay-uc-che-nhat-cho-nhan-vien",
+        "https://eteksofts.com/clip/eteksofts-giai-phap-quan-tri-nguon-nhan-luc-40",
+        "https://eteksofts.com/clip/10-dau-hieu-nhan-biet-nhan-vien-co-tiem-nang-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://luatdonga.com/wp-content/uploads/2021/03/logoSaleNoti.png",
+      "originalUrl": "https://luatdonga.com/wp-content/uploads/2021/03/logoSaleNoti.png",
+      "isHighRes": false,
+      "alt": "",
+      "category": "misc",
+      "localPath": "/legacy-media/misc/logoSaleNoti.png",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/",
+        "https://eteksofts.com/post/tan-phat-etek-tham-du-hoi-thao-dao-tao-nguon-nhan-luc-cong-nghiep-gan-voi-nhu-cau-su-dung-lao-dong-cua-doanh-nghiep",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40",
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-va-tu-van-chuyen-doi-so-doi-voi-tu-dong-hoa-etek",
+        "https://eteksofts.com/post/chinh-sach-luong-cong-cu-dieu-huong-nhan-su-theo-muc-tieu",
+        "https://eteksofts.com/post/yeu-to-then-chot-chuyen-doi-so",
+        "https://eteksofts.com/post/quy-trinh-va-cong-nghe-chuyen-doi-so-doanh-nghiep",
+        "https://eteksofts.com/post/luong-3p-la-gi-lam-sao-de-ap-dung-luong-3p-hieu-qua-nhat",
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep",
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-he-thong-luong-3p",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-khung-nang-luc",
+        "https://eteksofts.com/gioi-thieu",
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm",
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong",
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong",
+        "https://eteksofts.com/san-pham/quan-ly-don-tu",
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su",
+        "https://eteksofts.com/san-pham/quan-ly-cong-tac",
+        "https://eteksofts.com/san-pham/giai-phap-quan-ly-tong-the-benh-vien",
+        "https://eteksofts.com/san-pham/gioi-thieu-chung-ve-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/cac-chuc-nang-chinh-cua-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/uu-diem-vuot-troi-cua-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/benh-vien-ung-dung",
+        "https://eteksofts.com/san-pham/phan-mem-ban-quyen-chinh-hang",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office",
+        "https://eteksofts.com/san-pham/phan-mem-microsft-windows",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-visio",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-project",
+        "https://eteksofts.com/danh-muc-tin/tin-tuc",
+        "https://eteksofts.com/danh-muc-tin/huong-dan",
+        "https://eteksofts.com/danh-muc-video/video-huong-dan",
+        "https://eteksofts.com/danh-muc-tin/tuyen-dung",
+        "https://eteksofts.com/lien-he",
+        "https://eteksofts.com/post/huong-dan-thiet-lap-co-cau-to-chuc",
+        "https://eteksofts.com/video",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-365-business-standard-retail-esd-klq-00209",
+        "https://eteksofts.com/san-pham/phan-mem-m365-family-subscr-pk-lic-1yr-online-apac-em-esd-ep2-36890",
+        "https://eteksofts.com/san-pham/phan-mem-m365-personal-subscr-pk-lic-1yr-online-apac-em-esd-ep2-32313",
+        "https://eteksofts.com/san-pham/phan-mem-office-microsoft-365-family-fpp-ep2-36878",
+        "https://eteksofts.com/san-pham/phan-mem-m365-personal-english-apac-subscr-1yr-medialess-ep2-32409",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-2024-all-lng-apac-em-retail-online-esd-ep2-06796",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-business-2024-all-lng-apac-em-retail-online-esd-ep2-06604",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-2024-english-apac-em-medialess-ep2-06811-fppbox",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-business-2024-english-apac-em-medialess-ep2-06630-fppbox",
+        "https://eteksofts.com/san-pham/phan-mem-windows-11-pro-64-bit-all-lng-pk-lic-online-dwnld-nr-fqc-10572",
+        "https://eteksofts.com/san-pham/phan-mem-win-home-fpp-11-64-bit-eng-intl-usb-haj-00090",
+        "https://eteksofts.com/san-pham/he-dieu-hanh-windows-11-pro-fpp-64-bit-eng-intl-usb-hav-00163",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-windows-home-11-64bit-eng-intl-1pk-dsp-oei-dvd-kw9-00632",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-windows-pro-11-64bit-eng-intl-1pk-dsp-oei-dvd-fqc-10528",
+        "https://eteksofts.com/san-pham/phan-mem-windows-server-standard-2025-64bit-english-1pk-dsp-oei-dvd-16-core-ep2-25187",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-visio-std-2024-all-lng-retail-online-esd-ep2-07167",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-project-standard-2024-all-lng-retail-online-esd-ep2-07057",
+        "https://eteksofts.com/clip/phan-men-quan-tri-nhan-su-toan-dien",
+        "https://eteksofts.com/clip/tan-phat-etek-ky-niem-20-nam-thanh-lap",
+        "https://eteksofts.com/clip/cau-hoi-nao-gay-uc-che-nhat-cho-nhan-vien",
+        "https://eteksofts.com/clip/eteksofts-giai-phap-quan-tri-nguon-nhan-luc-40",
+        "https://eteksofts.com/clip/10-dau-hieu-nhan-biet-nhan-vien-co-tiem-nang-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/zalo.svg",
+      "originalUrl": "https://eteksofts.com/themes/frontend/eteksofts/img/zalo.svg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "theme",
+      "localPath": "/legacy-media/theme/zalo.svg",
+      "usedOnPages": [
+        "https://eteksofts.com",
+        "https://eteksofts.com/",
+        "https://eteksofts.com/post/tan-phat-etek-tham-du-hoi-thao-dao-tao-nguon-nhan-luc-cong-nghiep-gan-voi-nhu-cau-su-dung-lao-dong-cua-doanh-nghiep",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40",
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-va-tu-van-chuyen-doi-so-doi-voi-tu-dong-hoa-etek",
+        "https://eteksofts.com/post/chinh-sach-luong-cong-cu-dieu-huong-nhan-su-theo-muc-tieu",
+        "https://eteksofts.com/post/yeu-to-then-chot-chuyen-doi-so",
+        "https://eteksofts.com/post/quy-trinh-va-cong-nghe-chuyen-doi-so-doanh-nghiep",
+        "https://eteksofts.com/post/luong-3p-la-gi-lam-sao-de-ap-dung-luong-3p-hieu-qua-nhat",
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep",
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-he-thong-luong-3p",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-khung-nang-luc",
+        "https://eteksofts.com/gioi-thieu",
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm",
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong",
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong",
+        "https://eteksofts.com/san-pham/quan-ly-don-tu",
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su",
+        "https://eteksofts.com/san-pham/quan-ly-cong-tac",
+        "https://eteksofts.com/san-pham/giai-phap-quan-ly-tong-the-benh-vien",
+        "https://eteksofts.com/san-pham/gioi-thieu-chung-ve-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/cac-chuc-nang-chinh-cua-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/uu-diem-vuot-troi-cua-phan-mem-quan-ly-benh-vien-sgis",
+        "https://eteksofts.com/san-pham/benh-vien-ung-dung",
+        "https://eteksofts.com/san-pham/phan-mem-ban-quyen-chinh-hang",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office",
+        "https://eteksofts.com/san-pham/phan-mem-microsft-windows",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-visio",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-project",
+        "https://eteksofts.com/danh-muc-tin/tin-tuc",
+        "https://eteksofts.com/danh-muc-tin/huong-dan",
+        "https://eteksofts.com/danh-muc-video/video-huong-dan",
+        "https://eteksofts.com/danh-muc-tin/tuyen-dung",
+        "https://eteksofts.com/lien-he",
+        "https://eteksofts.com/post/huong-dan-thiet-lap-co-cau-to-chuc",
+        "https://eteksofts.com/video",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-365-business-standard-retail-esd-klq-00209",
+        "https://eteksofts.com/san-pham/phan-mem-m365-family-subscr-pk-lic-1yr-online-apac-em-esd-ep2-36890",
+        "https://eteksofts.com/san-pham/phan-mem-m365-personal-subscr-pk-lic-1yr-online-apac-em-esd-ep2-32313",
+        "https://eteksofts.com/san-pham/phan-mem-office-microsoft-365-family-fpp-ep2-36878",
+        "https://eteksofts.com/san-pham/phan-mem-m365-personal-english-apac-subscr-1yr-medialess-ep2-32409",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-2024-all-lng-apac-em-retail-online-esd-ep2-06796",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-business-2024-all-lng-apac-em-retail-online-esd-ep2-06604",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-2024-english-apac-em-medialess-ep2-06811-fppbox",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-business-2024-english-apac-em-medialess-ep2-06630-fppbox",
+        "https://eteksofts.com/san-pham/phan-mem-windows-11-pro-64-bit-all-lng-pk-lic-online-dwnld-nr-fqc-10572",
+        "https://eteksofts.com/san-pham/phan-mem-win-home-fpp-11-64-bit-eng-intl-usb-haj-00090",
+        "https://eteksofts.com/san-pham/he-dieu-hanh-windows-11-pro-fpp-64-bit-eng-intl-usb-hav-00163",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-windows-home-11-64bit-eng-intl-1pk-dsp-oei-dvd-kw9-00632",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-windows-pro-11-64bit-eng-intl-1pk-dsp-oei-dvd-fqc-10528",
+        "https://eteksofts.com/san-pham/phan-mem-windows-server-standard-2025-64bit-english-1pk-dsp-oei-dvd-16-core-ep2-25187",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-visio-std-2024-all-lng-retail-online-esd-ep2-07167",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-project-standard-2024-all-lng-retail-online-esd-ep2-07057",
+        "https://eteksofts.com/clip/phan-men-quan-tri-nhan-su-toan-dien",
+        "https://eteksofts.com/clip/tan-phat-etek-ky-niem-20-nam-thanh-lap",
+        "https://eteksofts.com/clip/cau-hoi-nao-gay-uc-che-nhat-cho-nhan-vien",
+        "https://eteksofts.com/clip/eteksofts-giai-phap-quan-tri-nguon-nhan-luc-40",
+        "https://eteksofts.com/clip/10-dau-hieu-nhan-biet-nhan-vien-co-tiem-nang-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/banner/1688642163.png",
+      "originalUrl": "https://eteksofts.com/storage/banner/1688642163.png",
+      "isHighRes": false,
+      "alt": "Background image",
+      "category": "banners",
+      "localPath": "/legacy-media/banners/1688642163.png",
+      "usedOnPages": [
+        "https://eteksofts.com"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/banner/1688642169.png",
+      "originalUrl": "https://eteksofts.com/storage/banner/1688642169.png",
+      "isHighRes": false,
+      "alt": "Background image",
+      "category": "banners",
+      "localPath": "/legacy-media/banners/1688642169.png",
+      "usedOnPages": [
+        "https://eteksofts.com"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/banner/1688642178.png",
+      "originalUrl": "https://eteksofts.com/storage/banner/1688642178.png",
+      "isHighRes": false,
+      "alt": "Background image",
+      "category": "banners",
+      "localPath": "/legacy-media/banners/1688642178.png",
+      "usedOnPages": [
+        "https://eteksofts.com"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/quan-ly-hanh-chinh-nhan-su.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/quan-ly-hanh-chinh-nhan-su_420x.webp",
+      "isHighRes": true,
+      "alt": "HƯỚNG DẪN THIẾT LẬP CƠ CẤU TỔ CHỨC",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/quan-ly-hanh-chinh-nhan-su.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tan-phat-etek-tham-du-hoi-thao-dao-tao-nguon-nhan-luc-cong-nghiep-gan-voi-nhu-cau-su-dung-lao-dong-cua-doanh-nghiep",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40",
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-va-tu-van-chuyen-doi-so-doi-voi-tu-dong-hoa-etek",
+        "https://eteksofts.com/post/chinh-sach-luong-cong-cu-dieu-huong-nhan-su-theo-muc-tieu",
+        "https://eteksofts.com/post/yeu-to-then-chot-chuyen-doi-so",
+        "https://eteksofts.com/post/quy-trinh-va-cong-nghe-chuyen-doi-so-doanh-nghiep",
+        "https://eteksofts.com/post/luong-3p-la-gi-lam-sao-de-ap-dung-luong-3p-hieu-qua-nhat",
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep",
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-he-thong-luong-3p",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-khung-nang-luc",
+        "https://eteksofts.com/danh-muc-tin/huong-dan"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/xay-dung-khung-nang-luc.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/xay-dung-khung-nang-luc_420x.webp",
+      "isHighRes": true,
+      "alt": "Các bước xây dựng khung năng lực",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/xay-dung-khung-nang-luc.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tan-phat-etek-tham-du-hoi-thao-dao-tao-nguon-nhan-luc-cong-nghiep-gan-voi-nhu-cau-su-dung-lao-dong-cua-doanh-nghiep",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40",
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-va-tu-van-chuyen-doi-so-doi-voi-tu-dong-hoa-etek",
+        "https://eteksofts.com/post/chinh-sach-luong-cong-cu-dieu-huong-nhan-su-theo-muc-tieu",
+        "https://eteksofts.com/post/yeu-to-then-chot-chuyen-doi-so",
+        "https://eteksofts.com/post/quy-trinh-va-cong-nghe-chuyen-doi-so-doanh-nghiep",
+        "https://eteksofts.com/post/luong-3p-la-gi-lam-sao-de-ap-dung-luong-3p-hieu-qua-nhat",
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep",
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-he-thong-luong-3p",
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/post/huong-dan-thiet-lap-co-cau-to-chuc"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/he-thong-luong-3P.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/he-thong-luong-3P_420x.webp",
+      "isHighRes": true,
+      "alt": "Các bước xây dựng hệ thống lương 3P",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/he-thong-luong-3P.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tan-phat-etek-tham-du-hoi-thao-dao-tao-nguon-nhan-luc-cong-nghiep-gan-voi-nhu-cau-su-dung-lao-dong-cua-doanh-nghiep",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40",
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-va-tu-van-chuyen-doi-so-doi-voi-tu-dong-hoa-etek",
+        "https://eteksofts.com/post/chinh-sach-luong-cong-cu-dieu-huong-nhan-su-theo-muc-tieu",
+        "https://eteksofts.com/post/yeu-to-then-chot-chuyen-doi-so",
+        "https://eteksofts.com/post/quy-trinh-va-cong-nghe-chuyen-doi-so-doanh-nghiep",
+        "https://eteksofts.com/post/luong-3p-la-gi-lam-sao-de-ap-dung-luong-3p-hieu-qua-nhat",
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep",
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-khung-nang-luc",
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/post/huong-dan-thiet-lap-co-cau-to-chuc"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/top-7-hanh-vi-xuat-hien-o-network-hieu-qua1.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/top-7-hanh-vi-xuat-hien-o-network-hieu-qua1_420x.webp",
+      "isHighRes": true,
+      "alt": "Networking là gì ? 7 kỹ năng Networking xuất sắc của các lãnh đạo",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/top-7-hanh-vi-xuat-hien-o-network-hieu-qua1.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tan-phat-etek-tham-du-hoi-thao-dao-tao-nguon-nhan-luc-cong-nghiep-gan-voi-nhu-cau-su-dung-lao-dong-cua-doanh-nghiep",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40",
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-va-tu-van-chuyen-doi-so-doi-voi-tu-dong-hoa-etek",
+        "https://eteksofts.com/post/chinh-sach-luong-cong-cu-dieu-huong-nhan-su-theo-muc-tieu",
+        "https://eteksofts.com/post/yeu-to-then-chot-chuyen-doi-so",
+        "https://eteksofts.com/post/quy-trinh-va-cong-nghe-chuyen-doi-so-doanh-nghiep",
+        "https://eteksofts.com/post/luong-3p-la-gi-lam-sao-de-ap-dung-luong-3p-hieu-qua-nhat",
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-he-thong-luong-3p",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-khung-nang-luc",
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/post/huong-dan-thiet-lap-co-cau-to-chuc"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/thanh-to-cua-totalreward%202.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/thanh-to-cua-totalreward%202_420x.webp",
+      "isHighRes": true,
+      "alt": "Total Reward là gì? Tác dụng của Total Reward với doanh nghiệp.",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/thanh-to-cua-totalreward_2.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tan-phat-etek-tham-du-hoi-thao-dao-tao-nguon-nhan-luc-cong-nghiep-gan-voi-nhu-cau-su-dung-lao-dong-cua-doanh-nghiep",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40",
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis",
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-va-tu-van-chuyen-doi-so-doi-voi-tu-dong-hoa-etek",
+        "https://eteksofts.com/post/chinh-sach-luong-cong-cu-dieu-huong-nhan-su-theo-muc-tieu",
+        "https://eteksofts.com/post/yeu-to-then-chot-chuyen-doi-so",
+        "https://eteksofts.com/post/quy-trinh-va-cong-nghe-chuyen-doi-so-doanh-nghiep",
+        "https://eteksofts.com/post/luong-3p-la-gi-lam-sao-de-ap-dung-luong-3p-hieu-qua-nhat",
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-he-thong-luong-3p",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-khung-nang-luc",
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/post/huong-dan-thiet-lap-co-cau-to-chuc"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/tu%20van%20luong_1.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/tu%20van%20luong_1.jpg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "products",
+      "localPath": "/legacy-media/products/tu_van_luong_1.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40"
+      ]
+    },
+    {
+      "sourceUrl": "https://1office.vn/wp-content/themes/1office/images/icons/commons/bullet.png",
+      "originalUrl": "https://1office.vn/wp-content/themes/1office/images/icons/commons/bullet.png",
+      "isHighRes": false,
+      "alt": "",
+      "category": "misc",
+      "localPath": "/legacy-media/misc/bullet.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/tu%20van%20luong_2.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/tu%20van%20luong_2.jpg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "products",
+      "localPath": "/legacy-media/products/tu_van_luong_2.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-40"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/Hop%20tac_SGIS1.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/Hop%20tac_SGIS1.jpg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "products",
+      "localPath": "/legacy-media/products/Hop_tac_SGIS1.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis"
+      ]
+    },
+    {
+      "sourceUrl": "https://static.xx.fbcdn.net/images/emoji.php/v9/t8c/1/16/1f389.png",
+      "originalUrl": "https://static.xx.fbcdn.net/images/emoji.php/v9/t8c/1/16/1f389.png",
+      "isHighRes": false,
+      "alt": "🎉",
+      "category": "misc",
+      "localPath": "/legacy-media/misc/1f389.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/hop%20tac_SGIS2.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/hop%20tac_SGIS2.jpg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "products",
+      "localPath": "/legacy-media/products/hop_tac_SGIS2.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tan-phat-etek-ky-ket-hop-dong-hop-tac-kinh-doanh-voi-cong-ty-tnhh-tin-hoc-sgis"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/tpa.png",
+      "originalUrl": "https://eteksofts.com/storage/product/tpa.png",
+      "isHighRes": false,
+      "alt": "tu van chuyen do so etek",
+      "category": "products",
+      "localPath": "/legacy-media/products/tpa.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-va-tu-van-chuyen-doi-so-doi-voi-tu-dong-hoa-etek"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/tpa_2.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/tpa_2.jpg",
+      "isHighRes": false,
+      "alt": "tu van chuyen doi so etek 2",
+      "category": "products",
+      "localPath": "/legacy-media/products/tpa_2.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/tu-van-quan-tri-nhan-su-va-tu-van-chuyen-doi-so-doi-voi-tu-dong-hoa-etek"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/post-1.png",
+      "originalUrl": "https://eteksofts.com/storage/product/post-1.png",
+      "isHighRes": false,
+      "alt": "phan men tu dong tinh luong",
+      "category": "products",
+      "localPath": "/legacy-media/products/post-1.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/chinh-sach-luong-cong-cu-dieu-huong-nhan-su-theo-muc-tieu"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/yeu-to-then-chot-chuyen-doi-so.png",
+      "originalUrl": "https://eteksofts.com/storage/product/yeu-to-then-chot-chuyen-doi-so.png",
+      "isHighRes": false,
+      "alt": "Nhung yeu to then chot chuyen doi so",
+      "category": "products",
+      "localPath": "/legacy-media/products/yeu-to-then-chot-chuyen-doi-so.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/yeu-to-then-chot-chuyen-doi-so"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/so-lieu-chuyen-doi-so.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/so-lieu-chuyen-doi-so.jpg",
+      "isHighRes": false,
+      "alt": "so lieu chuyen doi so",
+      "category": "products",
+      "localPath": "/legacy-media/products/so-lieu-chuyen-doi-so.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/yeu-to-then-chot-chuyen-doi-so"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/quy-trinh-chuyen-doi-so-doanh-nghiep.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/quy-trinh-chuyen-doi-so-doanh-nghiep.jpg",
+      "isHighRes": false,
+      "alt": "quy trinh chuyen doi so doanh nghiep",
+      "category": "products",
+      "localPath": "/legacy-media/products/quy-trinh-chuyen-doi-so-doanh-nghiep.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/quy-trinh-va-cong-nghe-chuyen-doi-so-doanh-nghiep"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/luong-3p.png",
+      "originalUrl": "https://eteksofts.com/storage/product/luong-3p.png",
+      "isHighRes": false,
+      "alt": "Lương 3P là gì?",
+      "category": "products",
+      "localPath": "/legacy-media/products/luong-3p.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/luong-3p-la-gi-lam-sao-de-ap-dung-luong-3p-hieu-qua-nhat"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/thanh-to-cua-totalreward.png",
+      "originalUrl": "https://eteksofts.com/storage/product/thanh-to-cua-totalreward.png",
+      "isHighRes": false,
+      "alt": "thanh to cua total reward",
+      "category": "products",
+      "localPath": "/legacy-media/products/thanh-to-cua-totalreward.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/tin-tuc-cs-luong.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/tin-tuc-cs-luong.jpg",
+      "isHighRes": false,
+      "alt": "tin tuc chinh sach luong",
+      "category": "products",
+      "localPath": "/legacy-media/products/tin-tuc-cs-luong.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/total-reward-pic2.png",
+      "originalUrl": "https://eteksofts.com/storage/product/total-reward-pic2.png",
+      "isHighRes": false,
+      "alt": "total reward là gì?",
+      "category": "products",
+      "localPath": "/legacy-media/products/total-reward-pic2.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/total-reward-can-bang-cuoc-song.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/total-reward-can-bang-cuoc-song.jpg",
+      "isHighRes": false,
+      "alt": "total reward can bang cuoc song",
+      "category": "products",
+      "localPath": "/legacy-media/products/total-reward-can-bang-cuoc-song.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/lo-trinh-thang-tien15.09.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/lo-trinh-thang-tien15.09.jpg",
+      "isHighRes": false,
+      "alt": "lo trinh thang tien",
+      "category": "products",
+      "localPath": "/legacy-media/products/lo-trinh-thang-tien15.09.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep",
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/luong-%203p.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/luong-%203p_420x.webp",
+      "isHighRes": true,
+      "alt": "Lương 3P là gì? Làm sao để áp dụng lương 3P hiệu quả nhất.",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/luong-_3p.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/post/total-reward-la-gi-tac-dung-cua-total-reward-voi-doanh-nghiep",
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-he-thong-luong-3p",
+        "https://eteksofts.com/post/cac-buoc-xay-dung-khung-nang-luc",
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/post/huong-dan-thiet-lap-co-cau-to-chuc"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/hop-tac-cong-nghe.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/hop-tac-cong-nghe.jpg",
+      "isHighRes": false,
+      "alt": "networking-la-gi&gt;",
+      "category": "products",
+      "localPath": "/legacy-media/products/hop-tac-cong-nghe.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/networking-la-gi.png",
+      "originalUrl": "https://eteksofts.com/storage/product/networking-la-gi.png",
+      "isHighRes": false,
+      "alt": "networking-nen-tang-chia-se-kien-thuc",
+      "category": "products",
+      "localPath": "/legacy-media/products/networking-la-gi.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/top-7-hanh-vi-xuat-hien-o-network-hieu-qua1.png",
+      "originalUrl": "https://eteksofts.com/storage/product/top-7-hanh-vi-xuat-hien-o-network-hieu-qua1.png",
+      "isHighRes": false,
+      "alt": "top-7-hanh-vi-xuat-hien-o-networking",
+      "category": "products",
+      "localPath": "/legacy-media/products/top-7-hanh-vi-xuat-hien-o-network-hieu-qua1.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/networking-pic3.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/networking-pic3.jpg",
+      "isHighRes": false,
+      "alt": "giu-lien-lac-voi-doi-tac",
+      "category": "products",
+      "localPath": "/legacy-media/products/networking-pic3.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/networking-pic4.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/networking-pic4.jpg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "products",
+      "localPath": "/legacy-media/products/networking-pic4.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/danh-thiep-netwk5.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/danh-thiep-netwk5.jpg",
+      "isHighRes": false,
+      "alt": "danh-thiep",
+      "category": "products",
+      "localPath": "/legacy-media/products/danh-thiep-netwk5.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/mang-xa-hoi.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/mang-xa-hoi.jpg",
+      "isHighRes": false,
+      "alt": "mang-xa-hoi",
+      "category": "products",
+      "localPath": "/legacy-media/products/mang-xa-hoi.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/post/networking-la-gi-7-ky-nang-networking-xuat-sac-cua-cac-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/he-thong-luong-3P.png",
+      "originalUrl": "https://eteksofts.com/storage/product/he-thong-luong-3P.png",
+      "isHighRes": false,
+      "alt": "xay dung he thong luong 3P",
+      "category": "products",
+      "localPath": "/legacy-media/products/he-thong-luong-3P.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/cac-buoc-xay-dung-he-thong-luong-3p"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/xay-dung-khung-nang-luc.png",
+      "originalUrl": "https://eteksofts.com/storage/product/xay-dung-khung-nang-luc.png",
+      "isHighRes": false,
+      "alt": "cau truc cua khung nang luc",
+      "category": "products",
+      "localPath": "/legacy-media/products/xay-dung-khung-nang-luc.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/cac-buoc-xay-dung-khung-nang-luc"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/company/happy-team.jpg",
+      "originalUrl": "https://eteksofts.com/storage/company/happy-team.jpg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "company",
+      "localPath": "/legacy-media/company/happy-team.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/gioi-thieu"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/quy-trinh-chuyen-doi-so-doanh-nghiep.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/quy-trinh-chuyen-doi-so-doanh-nghiep_420x.webp",
+      "isHighRes": true,
+      "alt": "Quy trình và công nghệ chuyển đổi số doanh nghiệp",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/quy-trinh-chuyen-doi-so-doanh-nghiep.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-tin/tu-van"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/chuyen-doi-so.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/chuyen-doi-so_420x.webp",
+      "isHighRes": true,
+      "alt": "Yếu tố then chốt chuyển đổi số",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/chuyen-doi-so.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-tin/tu-van"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/post-1.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/post-1_420x.webp",
+      "isHighRes": true,
+      "alt": "Chính sách lương – Công cụ điều hướng nhân sự theo mục tiêu",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/post-1.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-tin/tu-van"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/tu%20van_tpa.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/tu%20van_tpa_420x.webp",
+      "isHighRes": true,
+      "alt": "Tư vấn quản trị nhân sự và Tư vấn chuyển đổi số đối với Tự động hoá Etek",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/tu_van_tpa.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-tin/tu-van"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/Quan%20tri%20nhan%20su%204.0.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/Quan%20tri%20nhan%20su%204.0_420x.webp",
+      "isHighRes": true,
+      "alt": "Tư vấn quản trị nhân sự 4.0",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/Quan_tri_nhan_su_4.0.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-tin/tu-van"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/quan-ly-hanh-chinh-nhan-su.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/quan-ly-hanh-chinh-nhan-su_120x.webp",
+      "isHighRes": true,
+      "alt": "HƯỚNG DẪN THIẾT LẬP CƠ CẤU TỔ CHỨC",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/quan-ly-hanh-chinh-nhan-su.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/danh-muc-tin/tin-tuc",
+        "https://eteksofts.com/danh-muc-tin/huong-dan",
+        "https://eteksofts.com/danh-muc-tin/tuyen-dung"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/xay-dung-khung-nang-luc.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/xay-dung-khung-nang-luc_120x.webp",
+      "isHighRes": true,
+      "alt": "Các bước xây dựng khung năng lực",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/xay-dung-khung-nang-luc.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/danh-muc-tin/tin-tuc",
+        "https://eteksofts.com/danh-muc-tin/huong-dan",
+        "https://eteksofts.com/danh-muc-tin/tuyen-dung"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/he-thong-luong-3P.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/he-thong-luong-3P_120x.webp",
+      "isHighRes": true,
+      "alt": "Các bước xây dựng hệ thống lương 3P",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/he-thong-luong-3P.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/danh-muc-tin/tin-tuc",
+        "https://eteksofts.com/danh-muc-tin/huong-dan",
+        "https://eteksofts.com/danh-muc-tin/tuyen-dung"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/top-7-hanh-vi-xuat-hien-o-network-hieu-qua1.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/top-7-hanh-vi-xuat-hien-o-network-hieu-qua1_120x.webp",
+      "isHighRes": true,
+      "alt": "Networking là gì ? 7 kỹ năng Networking xuất sắc của các lãnh đạo",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/top-7-hanh-vi-xuat-hien-o-network-hieu-qua1.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/danh-muc-tin/tin-tuc",
+        "https://eteksofts.com/danh-muc-tin/huong-dan",
+        "https://eteksofts.com/danh-muc-tin/tuyen-dung"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/thanh-to-cua-totalreward%202.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/thanh-to-cua-totalreward%202_120x.webp",
+      "isHighRes": true,
+      "alt": "Total Reward là gì? Tác dụng của Total Reward với doanh nghiệp.",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/thanh-to-cua-totalreward_2.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-tin/tu-van",
+        "https://eteksofts.com/danh-muc-tin/tin-tuc",
+        "https://eteksofts.com/danh-muc-tin/huong-dan",
+        "https://eteksofts.com/danh-muc-tin/tuyen-dung"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/banner-1689128898.png",
+      "originalUrl": "https://eteksofts.com/storage/product/banner-1689128898.png",
+      "isHighRes": false,
+      "alt": "Giải pháp quản trị nhân sự toàn diện HRM",
+      "category": "products",
+      "localPath": "/legacy-media/products/banner-1689128898.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/dang-ky-trai-nghiem.png",
+      "originalUrl": "https://eteksofts.com/storage/product/dang-ky-trai-nghiem.png",
+      "isHighRes": false,
+      "alt": "",
+      "category": "products",
+      "localPath": "/legacy-media/products/dang-ky-trai-nghiem.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/stress3.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/stress3.jpg",
+      "isHighRes": false,
+      "alt": "dau dau bai toan tuyen dung",
+      "category": "products",
+      "localPath": "/legacy-media/products/stress3.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/lo-trinh-thang-bac.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/lo-trinh-thang-bac.jpg",
+      "isHighRes": false,
+      "alt": "thang bang luong chua phu hop",
+      "category": "products",
+      "localPath": "/legacy-media/products/lo-trinh-thang-bac.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/he-tho-danh-gia.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/he-tho-danh-gia.jpg",
+      "isHighRes": false,
+      "alt": "chua co he thong danh gia",
+      "category": "products",
+      "localPath": "/legacy-media/products/he-tho-danh-gia.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/quy-luong.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/quy-luong.jpg",
+      "isHighRes": false,
+      "alt": "quy luong",
+      "category": "products",
+      "localPath": "/legacy-media/products/quy-luong.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/tranh-luan-posthrm.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/tranh-luan-posthrm.jpg",
+      "isHighRes": false,
+      "alt": "tranh luan",
+      "category": "products",
+      "localPath": "/legacy-media/products/tranh-luan-posthrm.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/sai-sot-tinh-luon-posthrm.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/sai-sot-tinh-luon-posthrm.jpg",
+      "isHighRes": false,
+      "alt": "sai sot trong tinh- cong -luong",
+      "category": "products",
+      "localPath": "/legacy-media/products/sai-sot-tinh-luon-posthrm.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/banner.hrmpost.png",
+      "originalUrl": "https://eteksofts.com/storage/product/banner.hrmpost.png",
+      "isHighRes": false,
+      "alt": "hrm post",
+      "category": "products",
+      "localPath": "/legacy-media/products/banner.hrmpost.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/banner-1689128969.png",
+      "originalUrl": "https://eteksofts.com/storage/product/banner-1689128969.png",
+      "isHighRes": false,
+      "alt": "Quản lý chấm công",
+      "category": "products",
+      "localPath": "/legacy-media/products/banner-1689128969.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/gio-lam-viec.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/gio-lam-viec.jpg",
+      "isHighRes": false,
+      "alt": "gio lam viec",
+      "category": "products",
+      "localPath": "/legacy-media/products/gio-lam-viec.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/hinh-thuc-cham-cong.icon.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/hinh-thuc-cham-cong.icon.jpg",
+      "isHighRes": false,
+      "alt": "hinh thuc cham cong",
+      "category": "products",
+      "localPath": "/legacy-media/products/hinh-thuc-cham-cong.icon.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/ca-linh-ho%E1%BA%A1t.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/ca-linh-ho%E1%BA%A1t.jpg",
+      "isHighRes": false,
+      "alt": "xep ca linh hoat",
+      "category": "products",
+      "localPath": "/legacy-media/products/ca-linh-ho_t.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/bang-tong-hop-cong.icon.png",
+      "originalUrl": "https://eteksofts.com/storage/product/bang-tong-hop-cong.icon.png",
+      "isHighRes": false,
+      "alt": "bang tong hop cong icon",
+      "category": "products",
+      "localPath": "/legacy-media/products/bang-tong-hop-cong.icon.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/bao%20-cao-cong.icon2.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/bao%20-cao-cong.icon2.jpg",
+      "isHighRes": false,
+      "alt": "bao cao cong icon 2",
+      "category": "products",
+      "localPath": "/legacy-media/products/bao_-cao-cong.icon2.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/bang-phan-ca.png",
+      "originalUrl": "https://eteksofts.com/storage/product/bang-phan-ca.png",
+      "isHighRes": false,
+      "alt": "bang phan ca",
+      "category": "products",
+      "localPath": "/legacy-media/products/bang-phan-ca.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/hinh-thuc-cham-cong.png",
+      "originalUrl": "https://eteksofts.com/storage/product/hinh-thuc-cham-cong.png",
+      "isHighRes": false,
+      "alt": "hinh thuc cham cong cong tac",
+      "category": "products",
+      "localPath": "/legacy-media/products/hinh-thuc-cham-cong.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong",
+        "https://eteksofts.com/san-pham/quan-ly-cong-tac"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/bang-tong-hop-cong.png",
+      "originalUrl": "https://eteksofts.com/storage/product/bang-tong-hop-cong.png",
+      "isHighRes": false,
+      "alt": "bang tong-hop-cong",
+      "category": "products",
+      "localPath": "/legacy-media/products/bang-tong-hop-cong.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/bao-cao-cong.png",
+      "originalUrl": "https://eteksofts.com/storage/product/bao-cao-cong.png",
+      "isHighRes": false,
+      "alt": "bao cao cong",
+      "category": "products",
+      "localPath": "/legacy-media/products/bao-cao-cong.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cham-cong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/banner-1689225062.png",
+      "originalUrl": "https://eteksofts.com/storage/product/banner-1689225062.png",
+      "isHighRes": false,
+      "alt": "Quản lý tính lương",
+      "category": "products",
+      "localPath": "/legacy-media/products/banner-1689225062.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/cong-thuc-luong.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/cong-thuc-luong.jpg",
+      "isHighRes": false,
+      "alt": "cong thuc tinh luong",
+      "category": "products",
+      "localPath": "/legacy-media/products/cong-thuc-luong.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/mau-bang-luong.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/mau-bang-luong.jpg",
+      "isHighRes": false,
+      "alt": "mau bang luong",
+      "category": "products",
+      "localPath": "/legacy-media/products/mau-bang-luong.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/dong-bo-cham-cong-icon.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/dong-bo-cham-cong-icon.jpg",
+      "isHighRes": false,
+      "alt": "dong bo du lieu cham cong",
+      "category": "products",
+      "localPath": "/legacy-media/products/dong-bo-cham-cong-icon.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/gui-phieu-luong-icon.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/gui-phieu-luong-icon.jpg",
+      "isHighRes": false,
+      "alt": "gui phieu lương",
+      "category": "products",
+      "localPath": "/legacy-media/products/gui-phieu-luong-icon.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/chi-luong.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/chi-luong.jpg",
+      "isHighRes": false,
+      "alt": "kiem soat chi luong",
+      "category": "products",
+      "localPath": "/legacy-media/products/chi-luong.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/he-thong-bao-cao.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/he-thong-bao-cao.jpg",
+      "isHighRes": false,
+      "alt": "he thong bao cao",
+      "category": "products",
+      "localPath": "/legacy-media/products/he-thong-bao-cao.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong",
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/cong-thuc-va-mau-bang-luong.png",
+      "originalUrl": "https://eteksofts.com/storage/product/cong-thuc-va-mau-bang-luong.png",
+      "isHighRes": false,
+      "alt": "cong thuc luong va mau bang luong",
+      "category": "products",
+      "localPath": "/legacy-media/products/cong-thuc-va-mau-bang-luong.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/dong-bo-cham-cong-tinh-luong.png",
+      "originalUrl": "https://eteksofts.com/storage/product/dong-bo-cham-cong-tinh-luong.png",
+      "isHighRes": false,
+      "alt": "dong bo cham cong tinh luong",
+      "category": "products",
+      "localPath": "/legacy-media/products/dong-bo-cham-cong-tinh-luong.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/gui-phieu-luong.png",
+      "originalUrl": "https://eteksofts.com/storage/product/gui-phieu-luong.png",
+      "isHighRes": false,
+      "alt": "tu dong gui phieu luong",
+      "category": "products",
+      "localPath": "/legacy-media/products/gui-phieu-luong.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/bang-chi-tra-l%C6%B0%C6%A1ng.png",
+      "originalUrl": "https://eteksofts.com/storage/product/bang-chi-tra-l%C6%B0%C6%A1ng.png",
+      "isHighRes": false,
+      "alt": "bang chi tra luong",
+      "category": "products",
+      "localPath": "/legacy-media/products/bang-chi-tra-l__ng.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/bao-cao-luong.png",
+      "originalUrl": "https://eteksofts.com/storage/product/bao-cao-luong.png",
+      "isHighRes": false,
+      "alt": "bang bao cao luong",
+      "category": "products",
+      "localPath": "/legacy-media/products/bao-cao-luong.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-tinh-luong"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/banner-1698914377.png",
+      "originalUrl": "https://eteksofts.com/storage/product/banner-1698914377.png",
+      "isHighRes": false,
+      "alt": "Quản lý Đơn từ",
+      "category": "products",
+      "localPath": "/legacy-media/products/banner-1698914377.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-don-tu"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/38.png",
+      "originalUrl": "https://eteksofts.com/storage/product/38.png",
+      "isHighRes": false,
+      "alt": "Quan ly nghi phep",
+      "category": "products",
+      "localPath": "/legacy-media/products/38.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-don-tu"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/don-nghi-phep.png",
+      "originalUrl": "https://eteksofts.com/storage/product/don-nghi-phep.png",
+      "isHighRes": false,
+      "alt": "quan ly don nghi phep",
+      "category": "products",
+      "localPath": "/legacy-media/products/don-nghi-phep.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-don-tu"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/de-nghi-tra-soat-cong.png",
+      "originalUrl": "https://eteksofts.com/storage/product/de-nghi-tra-soat-cong.png",
+      "isHighRes": false,
+      "alt": "de nghi tra soat cong",
+      "category": "products",
+      "localPath": "/legacy-media/products/de-nghi-tra-soat-cong.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-don-tu"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/phieu-di-cong-tac.png",
+      "originalUrl": "https://eteksofts.com/storage/product/phieu-di-cong-tac.png",
+      "isHighRes": false,
+      "alt": "phieu di cong tac",
+      "category": "products",
+      "localPath": "/legacy-media/products/phieu-di-cong-tac.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-don-tu"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/banner-1691377041.png",
+      "originalUrl": "https://eteksofts.com/storage/product/banner-1691377041.png",
+      "isHighRes": false,
+      "alt": "Quản lý thông tin nhân sự",
+      "category": "products",
+      "localPath": "/legacy-media/products/banner-1691377041.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/co-so-du-lieu15.09.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/co-so-du-lieu15.09.jpg",
+      "isHighRes": false,
+      "alt": "co so du lieu",
+      "category": "products",
+      "localPath": "/legacy-media/products/co-so-du-lieu15.09.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/co-cau-to-chuc456.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/co-cau-to-chuc456.jpg",
+      "isHighRes": false,
+      "alt": "co cau to chuc",
+      "category": "products",
+      "localPath": "/legacy-media/products/co-cau-to-chuc456.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/chinh-sach-nhan-su.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/chinh-sach-nhan-su.jpg",
+      "isHighRes": false,
+      "alt": "chinh sach nhan su",
+      "category": "products",
+      "localPath": "/legacy-media/products/chinh-sach-nhan-su.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/chinh-sach-c%26b.jpg",
+      "originalUrl": "https://eteksofts.com/storage/product/chinh-sach-c%26b.jpg",
+      "isHighRes": false,
+      "alt": "cap bac nhan vien",
+      "category": "products",
+      "localPath": "/legacy-media/products/chinh-sach-c_b.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/bai-viet1.png",
+      "originalUrl": "https://eteksofts.com/storage/product/bai-viet1.png",
+      "isHighRes": false,
+      "alt": "",
+      "category": "products",
+      "localPath": "/legacy-media/products/bai-viet1.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/so-do-to-chuc.png",
+      "originalUrl": "https://eteksofts.com/storage/product/so-do-to-chuc.png",
+      "isHighRes": false,
+      "alt": "so do to chuc",
+      "category": "products",
+      "localPath": "/legacy-media/products/so-do-to-chuc.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/quy-dinh-chinh-sach.png",
+      "originalUrl": "https://eteksofts.com/storage/product/quy-dinh-chinh-sach.png",
+      "isHighRes": false,
+      "alt": "quy dinh chinh sach",
+      "category": "products",
+      "localPath": "/legacy-media/products/quy-dinh-chinh-sach.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/dinh-bien-nhan-su.png",
+      "originalUrl": "https://eteksofts.com/storage/product/dinh-bien-nhan-su.png",
+      "isHighRes": false,
+      "alt": "dinh bien nhan su",
+      "category": "products",
+      "localPath": "/legacy-media/products/dinh-bien-nhan-su.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/thong-tin-thu-nhap.png",
+      "originalUrl": "https://eteksofts.com/storage/product/thong-tin-thu-nhap.png",
+      "isHighRes": false,
+      "alt": "thong tin thu nhap",
+      "category": "products",
+      "localPath": "/legacy-media/products/thong-tin-thu-nhap.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/bao-cao.png",
+      "originalUrl": "https://eteksofts.com/storage/product/bao-cao.png",
+      "isHighRes": false,
+      "alt": "he thong bao cao tu dong",
+      "category": "products",
+      "localPath": "/legacy-media/products/bao-cao.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-thong-tin-nhan-su"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/banner-1699244607.png",
+      "originalUrl": "https://eteksofts.com/storage/product/banner-1699244607.png",
+      "isHighRes": false,
+      "alt": "Quản lý công tác",
+      "category": "products",
+      "localPath": "/legacy-media/products/banner-1699244607.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cong-tac"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/thiet-lap-cong-tac.png",
+      "originalUrl": "https://eteksofts.com/storage/product/thiet-lap-cong-tac.png",
+      "isHighRes": false,
+      "alt": "thiet-lap-quy-dinh-cong-tac",
+      "category": "products",
+      "localPath": "/legacy-media/products/thiet-lap-cong-tac.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cong-tac"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/phieu-de-xuat-cong-tac.png",
+      "originalUrl": "https://eteksofts.com/storage/product/phieu-de-xuat-cong-tac.png",
+      "isHighRes": false,
+      "alt": "phieu de xuat di cong tac",
+      "category": "products",
+      "localPath": "/legacy-media/products/phieu-de-xuat-cong-tac.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cong-tac"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/phe-duyet-cong-tac.png",
+      "originalUrl": "https://eteksofts.com/storage/product/phe-duyet-cong-tac.png",
+      "isHighRes": false,
+      "alt": "phe duyet de xuat cong tac",
+      "category": "products",
+      "localPath": "/legacy-media/products/phe-duyet-cong-tac.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/quan-ly-cong-tac"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/banner-1689129087.png",
+      "originalUrl": "https://eteksofts.com/storage/product/banner-1689129087.png",
+      "isHighRes": false,
+      "alt": "Giải pháp quản lý tổng thể bệnh viện",
+      "category": "products",
+      "localPath": "/legacy-media/products/banner-1689129087.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/giai-phap-quan-ly-tong-the-benh-vien"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/tong%20the%20bv.jpg",
+      "originalUrl": "https://eteksofts.com/storage/article/tong%20the%20bv.jpg",
+      "isHighRes": false,
+      "alt": "phan men quan ly phong kham",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/tong_the_bv.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/gioi-thieu-chung-ve-phan-mem-quan-ly-benh-vien-sgis"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/tinh%20nang_SGIS.jpg",
+      "originalUrl": "https://eteksofts.com/storage/article/tinh%20nang_SGIS.jpg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/tinh_nang_SGIS.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/cac-chuc-nang-chinh-cua-phan-mem-quan-ly-benh-vien-sgis"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/SGIS_tong%20the.jpg",
+      "originalUrl": "https://eteksofts.com/storage/article/SGIS_tong%20the.jpg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/SGIS_tong_the.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/uu-diem-vuot-troi-cua-phan-mem-quan-ly-benh-vien-sgis"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/cong%20giam%20dinh.png",
+      "originalUrl": "https://eteksofts.com/storage/article/cong%20giam%20dinh.png",
+      "isHighRes": false,
+      "alt": "",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/cong_giam_dinh.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/uu-diem-vuot-troi-cua-phan-mem-quan-ly-benh-vien-sgis"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/thu%20-%20chi.jpg",
+      "originalUrl": "https://eteksofts.com/storage/article/thu%20-%20chi.jpg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/thu_-_chi.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/uu-diem-vuot-troi-cua-phan-mem-quan-ly-benh-vien-sgis"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/CDS_bv.jpg",
+      "originalUrl": "https://eteksofts.com/storage/article/CDS_bv.jpg",
+      "isHighRes": false,
+      "alt": "",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/CDS_bv.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/uu-diem-vuot-troi-cua-phan-mem-quan-ly-benh-vien-sgis"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/office-home-business.webp",
+      "originalUrl": "https://eteksofts.com/storage/product/office-home-business.webp",
+      "isHighRes": false,
+      "alt": "Microsoft Office",
+      "category": "products",
+      "localPath": "/legacy-media/products/office-home-business.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-ban-quyen-chinh-hang"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/win-11-pro.webp",
+      "originalUrl": "https://eteksofts.com/storage/product/win-11-pro.webp",
+      "isHighRes": false,
+      "alt": "Microsoft Windows",
+      "category": "products",
+      "localPath": "/legacy-media/products/win-11-pro.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-ban-quyen-chinh-hang"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/visio.webp",
+      "originalUrl": "https://eteksofts.com/storage/product/visio.webp",
+      "isHighRes": false,
+      "alt": "Microsoft Visio",
+      "category": "products",
+      "localPath": "/legacy-media/products/visio.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-ban-quyen-chinh-hang"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/project.webp",
+      "originalUrl": "https://eteksofts.com/storage/product/project.webp",
+      "isHighRes": false,
+      "alt": "Microsoft Project",
+      "category": "products",
+      "localPath": "/legacy-media/products/project.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-ban-quyen-chinh-hang"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/Ph%E1%BA%A7n%20m%E1%BB%81m%20Microsoft%C2%AE365%20Bus%20Std%20Retail%20All%20Lng%20APAC%20EM%20SubPKL%201YR%20Onln%20DwnLd%20NR.webp",
+      "originalUrl": "https://eteksofts.com/storage/PM/Ph%E1%BA%A7n%20m%E1%BB%81m%20Microsoft%C2%AE365%20Bus%20Std%20Retail%20All%20Lng%20APAC%20EM%20SubPKL%201YR%20Onln%20DwnLd%20NR.webp",
+      "isHighRes": false,
+      "alt": "Microsoft 365 Business Standard",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/Ph_n_m_m_Microsoft_365_Bus_Std_Retail_All_Lng_APAC_EM_SubPKL_1YR_Onln_DwnLd_NR.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office",
+        "https://eteksofts.com/san-pham/phan-mem-m365-family-subscr-pk-lic-1yr-online-apac-em-esd-ep2-36890",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-2024-english-apac-em-medialess-ep2-06811-fppbox"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/EP2-36890.png",
+      "originalUrl": "https://eteksofts.com/storage/PM/EP2-36890.png",
+      "isHighRes": false,
+      "alt": "Microsoft 365 Family",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/EP2-36890.png",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office",
+        "https://eteksofts.com/san-pham/phan-mem-office-microsoft-365-family-fpp-ep2-36878"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/EP2-32313.webp",
+      "originalUrl": "https://eteksofts.com/storage/PM/EP2-32313.webp",
+      "isHighRes": false,
+      "alt": "Microsoft 365 Personal",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/EP2-32313.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office",
+        "https://eteksofts.com/san-pham/phan-mem-m365-personal-subscr-pk-lic-1yr-online-apac-em-esd-ep2-32313"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/microsoft-365-persional-2021.webp",
+      "originalUrl": "https://eteksofts.com/storage/PM/microsoft-365-persional-2021.webp",
+      "isHighRes": false,
+      "alt": "M365 Personal",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/microsoft-365-persional-2021.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office",
+        "https://eteksofts.com/san-pham/phan-mem-m365-personal-english-apac-subscr-1yr-medialess-ep2-32409"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/EP2-06811.webp",
+      "originalUrl": "https://eteksofts.com/storage/PM/EP2-06811.webp",
+      "isHighRes": false,
+      "alt": "Office Home 2024",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/EP2-06811.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-2024-all-lng-apac-em-retail-online-esd-ep2-06796"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/EP2-06604.jpg",
+      "originalUrl": "https://eteksofts.com/storage/PM/EP2-06604.jpg",
+      "isHighRes": false,
+      "alt": "Office Home &amp; Business 2024",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/EP2-06604.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/EP2-06630.webp",
+      "originalUrl": "https://eteksofts.com/storage/PM/EP2-06630.webp",
+      "isHighRes": false,
+      "alt": "Office Home &amp; Business 2024 English",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/EP2-06630.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/KW9-00664.webp",
+      "originalUrl": "https://eteksofts.com/storage/PM/KW9-00664.webp",
+      "isHighRes": false,
+      "alt": "Windows 11 Home",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/KW9-00664.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsft-windows"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/FQC-10572.jpg",
+      "originalUrl": "https://eteksofts.com/storage/PM/FQC-10572.jpg",
+      "isHighRes": false,
+      "alt": "Windows 11 Pro",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/FQC-10572.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsft-windows"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/HAJ-00090.jpg",
+      "originalUrl": "https://eteksofts.com/storage/PM/HAJ-00090.jpg",
+      "isHighRes": false,
+      "alt": "Windows 11 Home FPP",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/HAJ-00090.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsft-windows",
+        "https://eteksofts.com/san-pham/phan-mem-win-home-fpp-11-64-bit-eng-intl-usb-haj-00090"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/HAV-00163.webp",
+      "originalUrl": "https://eteksofts.com/storage/PM/HAV-00163.webp",
+      "isHighRes": false,
+      "alt": "Windows 11 Pro FPP",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/HAV-00163.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsft-windows"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/KW9-00632.webp",
+      "originalUrl": "https://eteksofts.com/storage/PM/KW9-00632.webp",
+      "isHighRes": false,
+      "alt": "Windows 11 Home OEM",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/KW9-00632.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsft-windows",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-windows-home-11-64bit-eng-intl-1pk-dsp-oei-dvd-kw9-00632"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/FQC-10528.webp",
+      "originalUrl": "https://eteksofts.com/storage/PM/FQC-10528.webp",
+      "isHighRes": false,
+      "alt": "Windows 11 Pro OEM",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/FQC-10528.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsft-windows",
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-windows-pro-11-64bit-eng-intl-1pk-dsp-oei-dvd-fqc-10528"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/EP2-25187.webp",
+      "originalUrl": "https://eteksofts.com/storage/PM/EP2-25187.webp",
+      "isHighRes": false,
+      "alt": "Windows Server 2025 Standard",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/EP2-25187.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsft-windows",
+        "https://eteksofts.com/san-pham/phan-mem-windows-server-standard-2025-64bit-english-1pk-dsp-oei-dvd-16-core-ep2-25187"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/EP2-07167.jpg",
+      "originalUrl": "https://eteksofts.com/storage/PM/EP2-07167.jpg",
+      "isHighRes": false,
+      "alt": "Visio Standard 2024",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/EP2-07167.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-visio"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/PM/EP2-07057.webp",
+      "originalUrl": "https://eteksofts.com/storage/PM/EP2-07057.webp",
+      "isHighRes": false,
+      "alt": "Microsoft Project Standard 2024",
+      "category": "solutions",
+      "localPath": "/legacy-media/solutions/EP2-07057.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-project"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/sgis.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/sgis_420x.webp",
+      "isHighRes": true,
+      "alt": "Tân Phát Etek ký kết hợp đồng  hợp tác kinh doanh với công ty TNHH Tin học SGIS",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/sgis.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-tin/tin-tuc"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/article/z2442414224146_20c40d0dd06c558b0fea8c19853088e4.webp",
+      "originalUrl": "https://eteksofts.com/storage/cache/article/z2442414224146_20c40d0dd06c558b0fea8c19853088e4_420x.webp",
+      "isHighRes": true,
+      "alt": "Tân Phát ETEK tham dự Hội thảo đào tạo nguồn nhân lực công nghiệp gắn với nhu cầu sử dụng lao động của doanh nghiệp.",
+      "category": "articles",
+      "localPath": "/legacy-media/articles/z2442414224146_20c40d0dd06c558b0fea8c19853088e4.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-tin/tin-tuc"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/video/1699238101.webp",
+      "originalUrl": "https://eteksofts.com/storage/video/1699238101.webp",
+      "isHighRes": false,
+      "alt": "Phần mền quản trị nhân sự toàn diện",
+      "category": "videos",
+      "localPath": "/legacy-media/videos/1699238101.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-video/video-huong-dan",
+        "https://eteksofts.com/video",
+        "https://eteksofts.com/clip/phan-men-quan-tri-nhan-su-toan-dien",
+        "https://eteksofts.com/clip/tan-phat-etek-ky-niem-20-nam-thanh-lap",
+        "https://eteksofts.com/clip/cau-hoi-nao-gay-uc-che-nhat-cho-nhan-vien",
+        "https://eteksofts.com/clip/eteksofts-giai-phap-quan-tri-nguon-nhan-luc-40",
+        "https://eteksofts.com/clip/10-dau-hieu-nhan-biet-nhan-vien-co-tiem-nang-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/video/1688956416.webp",
+      "originalUrl": "https://eteksofts.com/storage/video/1688956416.webp",
+      "isHighRes": false,
+      "alt": "TÂN PHÁT ETEK kỷ niệm 20 năm thành lập",
+      "category": "videos",
+      "localPath": "/legacy-media/videos/1688956416.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-video/video-huong-dan",
+        "https://eteksofts.com/video",
+        "https://eteksofts.com/clip/phan-men-quan-tri-nhan-su-toan-dien",
+        "https://eteksofts.com/clip/tan-phat-etek-ky-niem-20-nam-thanh-lap",
+        "https://eteksofts.com/clip/cau-hoi-nao-gay-uc-che-nhat-cho-nhan-vien",
+        "https://eteksofts.com/clip/eteksofts-giai-phap-quan-tri-nguon-nhan-luc-40",
+        "https://eteksofts.com/clip/10-dau-hieu-nhan-biet-nhan-vien-co-tiem-nang-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/video/1698252994.webp",
+      "originalUrl": "https://eteksofts.com/storage/video/1698252994.webp",
+      "isHighRes": false,
+      "alt": "Câu hỏi nào gây ức chế nhất cho nhân viên",
+      "category": "videos",
+      "localPath": "/legacy-media/videos/1698252994.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-video/video-huong-dan",
+        "https://eteksofts.com/video",
+        "https://eteksofts.com/clip/phan-men-quan-tri-nhan-su-toan-dien",
+        "https://eteksofts.com/clip/tan-phat-etek-ky-niem-20-nam-thanh-lap",
+        "https://eteksofts.com/clip/cau-hoi-nao-gay-uc-che-nhat-cho-nhan-vien",
+        "https://eteksofts.com/clip/eteksofts-giai-phap-quan-tri-nguon-nhan-luc-40",
+        "https://eteksofts.com/clip/10-dau-hieu-nhan-biet-nhan-vien-co-tiem-nang-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/video/1698253177.webp",
+      "originalUrl": "https://eteksofts.com/storage/video/1698253177.webp",
+      "isHighRes": false,
+      "alt": "Eteksofts - Giải pháp quản trị nguồn nhân lực 4.0",
+      "category": "videos",
+      "localPath": "/legacy-media/videos/1698253177.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-video/video-huong-dan",
+        "https://eteksofts.com/video",
+        "https://eteksofts.com/clip/phan-men-quan-tri-nhan-su-toan-dien",
+        "https://eteksofts.com/clip/tan-phat-etek-ky-niem-20-nam-thanh-lap",
+        "https://eteksofts.com/clip/cau-hoi-nao-gay-uc-che-nhat-cho-nhan-vien",
+        "https://eteksofts.com/clip/eteksofts-giai-phap-quan-tri-nguon-nhan-luc-40",
+        "https://eteksofts.com/clip/10-dau-hieu-nhan-biet-nhan-vien-co-tiem-nang-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/video/1698252441.webp",
+      "originalUrl": "https://eteksofts.com/storage/video/1698252441.webp",
+      "isHighRes": false,
+      "alt": "10 dấu hiệu nhận biết nhân viên có tiềm năng lãnh đạo",
+      "category": "videos",
+      "localPath": "/legacy-media/videos/1698252441.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/danh-muc-video/video-huong-dan",
+        "https://eteksofts.com/video",
+        "https://eteksofts.com/clip/phan-men-quan-tri-nhan-su-toan-dien",
+        "https://eteksofts.com/clip/tan-phat-etek-ky-niem-20-nam-thanh-lap",
+        "https://eteksofts.com/clip/cau-hoi-nao-gay-uc-che-nhat-cho-nhan-vien",
+        "https://eteksofts.com/clip/eteksofts-giai-phap-quan-tri-nguon-nhan-luc-40",
+        "https://eteksofts.com/clip/10-dau-hieu-nhan-biet-nhan-vien-co-tiem-nang-lanh-dao"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/HDSD-base/Dang_nhap.png",
+      "originalUrl": "https://eteksofts.com/storage/HDSD-base/Dang_nhap.png",
+      "isHighRes": false,
+      "alt": "",
+      "category": "misc",
+      "localPath": "/legacy-media/misc/Dang_nhap.png",
+      "usedOnPages": [
+        "https://eteksofts.com/post/huong-dan-thiet-lap-co-cau-to-chuc"
+      ]
+    },
+    {
+      "sourceUrl": "https://eteksofts.com/storage/product/sp1.webp",
+      "originalUrl": "https://eteksofts.com/storage/product/sp1.webp",
+      "isHighRes": false,
+      "alt": "Microsoft 365 Business Standard KLQ-00209",
+      "category": "products",
+      "localPath": "/legacy-media/products/sp1.webp",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-365-business-standard-retail-esd-klq-00209"
+      ]
+    },
+    {
+      "sourceUrl": "https://anphat.com.vn/media/lib/15-10-2024/phan-mem-microsoft-office-home-business-2024-0.jpg",
+      "originalUrl": "https://anphat.com.vn/media/lib/15-10-2024/phan-mem-microsoft-office-home-business-2024-0.jpg",
+      "isHighRes": false,
+      "alt": "Microsoft Office Home &amp; Business 2024 EP2-06604",
+      "category": "misc",
+      "localPath": "/legacy-media/misc/phan-mem-microsoft-office-home-business-2024-0.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-business-2024-all-lng-apac-em-retail-online-esd-ep2-06604"
+      ]
+    },
+    {
+      "sourceUrl": "https://anphat.com.vn/media/lib/14-10-2024/phan-mem-microsoft-office-home-business-2024.jpg",
+      "originalUrl": "https://anphat.com.vn/media/lib/14-10-2024/phan-mem-microsoft-office-home-business-2024.jpg",
+      "isHighRes": false,
+      "alt": "Microsoft Office Home &amp; Business 2024 English APAC EM Medialess EP2-06630",
+      "category": "misc",
+      "localPath": "/legacy-media/misc/phan-mem-microsoft-office-home-business-2024.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-office-home-business-2024-english-apac-em-medialess-ep2-06630-fppbox"
+      ]
+    },
+    {
+      "sourceUrl": "https://anphat.com.vn/media/lib/17-05-2024/windows11pro64-bit.jpg",
+      "originalUrl": "https://anphat.com.vn/media/lib/17-05-2024/windows11pro64-bit.jpg",
+      "isHighRes": false,
+      "alt": "Windows 11 Pro 64-bit All Lng FQC-10572",
+      "category": "misc",
+      "localPath": "/legacy-media/misc/windows11pro64-bit.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-windows-11-pro-64-bit-all-lng-pk-lic-online-dwnld-nr-fqc-10572"
+      ]
+    },
+    {
+      "sourceUrl": "https://anphat.com.vn/media/lib/28-05-2026/he-dieu-hanh-windows-11-pro-64-bit-eng-6.jpg",
+      "originalUrl": "https://anphat.com.vn/media/lib/28-05-2026/he-dieu-hanh-windows-11-pro-64-bit-eng-6.jpg",
+      "isHighRes": false,
+      "alt": "Windows 11 Pro FPP 64-bit ENG INTL USB HAV-00163",
+      "category": "misc",
+      "localPath": "/legacy-media/misc/he-dieu-hanh-windows-11-pro-64-bit-eng-6.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/he-dieu-hanh-windows-11-pro-fpp-64-bit-eng-intl-usb-hav-00163"
+      ]
+    },
+    {
+      "sourceUrl": "https://anphat.com.vn/media/lib/21-10-2024/ms-visio.jpg",
+      "originalUrl": "https://anphat.com.vn/media/lib/21-10-2024/ms-visio.jpg",
+      "isHighRes": false,
+      "alt": "Microsoft Visio Standard 2024 All Lng Retail Online ESD EP2-07167",
+      "category": "misc",
+      "localPath": "/legacy-media/misc/ms-visio.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-visio-std-2024-all-lng-retail-online-esd-ep2-07167"
+      ]
+    },
+    {
+      "sourceUrl": "https://anphat.com.vn/media/lib/21-10-2024/microsoft-project.jpg",
+      "originalUrl": "https://anphat.com.vn/media/lib/21-10-2024/microsoft-project.jpg",
+      "isHighRes": false,
+      "alt": "Microsoft Project Standard 2024 All Lng Retail Online ESD EP2-07057",
+      "category": "misc",
+      "localPath": "/legacy-media/misc/microsoft-project.jpg",
+      "usedOnPages": [
+        "https://eteksofts.com/san-pham/phan-mem-microsoft-project-standard-2024-all-lng-retail-online-esd-ep2-07057"
+      ]
+    }
+  ],
+  "failedImages": [
+    {
+      "url": "https://eteksofts.com/img/Vector.svg",
+      "error": "Failed to download"
+    },
+    {
+      "url": "http://tanphat.com/storage/upload/images/Tin%20T%E1%BB%A9c/tin%208/z2442414275903_c4c7cad8ab782293e3102a572f7e1712.jpg",
+      "error": "Failed to download"
+    },
+    {
+      "url": "http://tanphat.com/storage/upload/images/Tin%20T%E1%BB%A9c/tin%208/z2442414224146_20c40d0dd06c558b0fea8c19853088e4.jpg",
+      "error": "Failed to download"
+    }
+  ],
+  "videos": [
+    {
+      "id": "xbAP9eY5OZE",
+      "title": "Video hướng dẫn ETEKSOFTS",
+      "watchUrl": "https://www.youtube.com/watch?v=xbAP9eY5OZE",
+      "embedUrl": "https://www.youtube.com/embed/xbAP9eY5OZE",
+      "thumbnailUrl": "https://img.youtube.com/vi/xbAP9eY5OZE/maxresdefault.jpg",
+      "localThumbnail": "/legacy-media/videos/yt_xbAP9eY5OZE.jpg"
+    },
+    {
+      "id": "ORv9zupc-qQ",
+      "title": "Tân Phát ETEK kỷ niệm 20 năm thành lập",
+      "watchUrl": "https://www.youtube.com/watch?v=ORv9zupc-qQ",
+      "embedUrl": "https://www.youtube.com/embed/ORv9zupc-qQ",
+      "thumbnailUrl": "https://img.youtube.com/vi/ORv9zupc-qQ/maxresdefault.jpg",
+      "localThumbnail": "/legacy-media/videos/yt_ORv9zupc-qQ.jpg"
+    },
+    {
+      "id": "8hupJgDruuo",
+      "title": "Câu hỏi nào gây ức chế nhất cho nhân viên",
+      "watchUrl": "https://www.youtube.com/watch?v=8hupJgDruuo",
+      "embedUrl": "https://www.youtube.com/embed/8hupJgDruuo",
+      "thumbnailUrl": "https://img.youtube.com/vi/8hupJgDruuo/maxresdefault.jpg",
+      "localThumbnail": "/legacy-media/videos/yt_8hupJgDruuo.jpg"
+    },
+    {
+      "id": "O9FfxDD-tFA",
+      "title": "ETEKSOFTS - Giải pháp quản trị nguồn nhân lực 4.0",
+      "watchUrl": "https://www.youtube.com/watch?v=O9FfxDD-tFA",
+      "embedUrl": "https://www.youtube.com/embed/O9FfxDD-tFA",
+      "thumbnailUrl": "https://img.youtube.com/vi/O9FfxDD-tFA/maxresdefault.jpg",
+      "localThumbnail": "/legacy-media/videos/yt_O9FfxDD-tFA.jpg"
+    },
+    {
+      "id": "Vcercw8-Y5I",
+      "title": "10 dấu hiệu nhận biết nhân viên có tiềm năng lãnh đạo",
+      "watchUrl": "https://www.youtube.com/watch?v=Vcercw8-Y5I",
+      "embedUrl": "https://www.youtube.com/embed/Vcercw8-Y5I",
+      "thumbnailUrl": "https://img.youtube.com/vi/Vcercw8-Y5I/maxresdefault.jpg",
+      "localThumbnail": "/legacy-media/videos/yt_Vcercw8-Y5I.jpg"
+    }
+  ]
+}

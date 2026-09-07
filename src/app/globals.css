@@ -50,7 +50,18 @@
   --shadow-card-hover: var(--shadow-card-hover);
   --shadow-header: var(--shadow-header);
 
+  --color-canvas-dark: #07090e;
+  --color-card-dark: #0d121c;
+  --color-card-dark-border: rgba(255, 255, 255, 0.08);
+  --color-accent-cyan: #38bdf8;
+  --color-accent-indigo: #6366f1;
+  --color-accent-violet: #a855f7;
+
   --animate-fade-up: fade-up 0.4s ease both;
+  --animate-shimmer: shimmer 3s infinite linear;
+  --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
+  --animate-float: float-slow 6s ease-in-out infinite;
+  --animate-marquee: marquee 35s linear infinite;
 
   @keyframes fade-up {
     from {
@@ -61,6 +72,53 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes float-slow {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@keyframes stepProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
   }
 }
 
@@ -160,3 +218,1307 @@ a:focus-visible {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* ================= High-End Light Tech Aesthetic Utilities ================= */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: #ffffff;
+  border-color: rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.08);
+}
+
+.text-gradient-tech {
+  background: linear-gradient(135deg, #0f172a 0%, #1e40af 55%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 50%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Dynamic Light Tech Background Patterns */
+.bg-light-tech {
+  background-color: #f5f8fc;
+  background-image:
+    radial-gradient(at 15% 15%, rgba(37, 99, 235, 0.06) 0px, transparent 55%),
+    radial-gradient(at 85% 25%, rgba(6, 182, 212, 0.05) 0px, transparent 50%),
+    radial-gradient(at 50% 82%, rgba(99, 102, 241, 0.04) 0px, transparent 55%);
+}
+
+.bg-tech-circuit {
+  background-image: radial-gradient(rgba(37, 99, 235, 0.12) 1.2px, transparent 1.2px), radial-gradient(rgba(14, 165, 233, 0.08) 1.2px, transparent 1.2px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+}
+
+/* Ambient Floating Glow Elements */
+.glow-orb-blue {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, rgba(37, 99, 235, 0) 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  animation: float-slow 10s ease-in-out infinite alternate;
+}
+
+.glow-orb-cyan {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, rgba(6, 182, 212, 0) 70%);
+  filter: blur(35px);
+  pointer-events: none;
+  animation: float-delayed 12s ease-in-out infinite alternate;
+}
+
+@keyframes float-slow {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(15px, -20px) scale(1.05);
+  }
+  100% {
+    transform: translate(-10px, 10px) scale(0.98);
+  }
+}
+
+@keyframes float-delayed {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-20px, 15px) scale(1.04);
+  }
+  100% {
+    transform: translate(12px, -15px) scale(0.95);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+/* High Performance Scroll Reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= Mikotech Agency Organic Styling & Animations ================= */
+@keyframes balloon {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(1.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes balloon-reverse {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(-1.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.animate-balloon {
+  animation: balloon 5s ease-in-out infinite;
+}
+
+.animate-balloon-slow {
+  animation: balloon 7s ease-in-out infinite 1.2s;
+}
+
+.animate-balloon-reverse {
+  animation: balloon-reverse 6s ease-in-out infinite 0.6s;
+}
+
+.bg-miko-beige {
+  background-color: #ffffff;
+}
+
+.bg-miko-sand {
+  background-color: #f1f5f9;
+}
+
+.bg-miko-cream {
+  background-color: #f8fafc;
+}
+
+.border-miko {
+  border-color: #e2e8f0;
+}
+
+.shadow-miko-card {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.05);
+}
+
+/* Vertical Scroll Indicator on left margin */
+.scroll-indicator {
+  position: fixed;
+  left: 24px;
+  bottom: 36px;
+  z-index: 40;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #64748b;
+  writing-mode: vertical-lr;
+  pointer-events: none;
+}
+.scroll-indicator::after {
+  content: "";
+  display: block;
+  width: 1.5px;
+  height: 42px;
+  background: linear-gradient(180deg, #3b82f6 0%, #06b6d4 100%);
+  margin: 10px auto 0;
+  animation: scroll-line 1.6s ease-in-out infinite alternate;
+}
+@keyframes scroll-line {
+  0% {
+    transform: scaleY(0.4);
+    transform-origin: top;
+    opacity: 0.3;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+
+
+
+/* ================= Aurora — nền gradient chuyển động cho section sáng ================= */
+/*
+ * Nguyên tắc: chỉ animate `transform` (và `filter` rất nhẹ) để trình duyệt
+ * composite trên GPU. Các mảng màu là radial-gradient nên đã mềm sẵn —
+ * không dùng `filter: blur` vốn rất tốn tài nguyên khi animate.
+ *
+ * Về độ đều màu: mỗi mảng màu để bán kính rất lớn (48–60%) và tắt dần qua
+ * ba chặng, nên vùng phủ của chúng chồng lên nhau gần như toàn bộ khung.
+ * Đó là điều kiện để dải màu chuyển liên tục thay vì vỡ thành từng đốm rời.
+ * Cũng vì vậy mà ở đây không dùng conic-gradient: nó luôn để lại vệt nối
+ * hình nan quạt, chính là thứ làm nền trông loang lổ.
+ */
+.aurora {
+  --aurora-px: 0; /* JS ghi vào: -1 → 1 theo vị trí con trỏ */
+  --aurora-py: 0;
+  --aurora-intensity: 1;
+
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #f6faff;
+  contain: layout paint style;
+}
+
+/* Hai tấm màu lớn hơn khung nhìn để khi trôi không bao giờ lộ mép */
+.aurora__layer {
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  will-change: transform, translate;
+}
+
+.aurora__layer--a {
+  background-image:
+    radial-gradient(
+      52% 58% at 20% 24%,
+      rgba(37, 99, 235, calc(0.44 * var(--aurora-intensity))) 0%,
+      rgba(37, 99, 235, calc(0.2 * var(--aurora-intensity))) 42%,
+      rgba(37, 99, 235, 0) 78%
+    ),
+    radial-gradient(
+      50% 56% at 80% 26%,
+      rgba(6, 182, 212, calc(0.42 * var(--aurora-intensity))) 0%,
+      rgba(6, 182, 212, calc(0.18 * var(--aurora-intensity))) 44%,
+      rgba(6, 182, 212, 0) 78%
+    ),
+    radial-gradient(
+      58% 60% at 52% 82%,
+      rgba(99, 102, 241, calc(0.38 * var(--aurora-intensity))) 0%,
+      rgba(99, 102, 241, calc(0.16 * var(--aurora-intensity))) 46%,
+      rgba(99, 102, 241, 0) 80%
+    );
+  /* Parallax dùng thuộc tính `translate` riêng nên không đụng `transform` của keyframes */
+  translate: calc(var(--aurora-px) * 26px) calc(var(--aurora-py) * 20px);
+  filter: hue-rotate(var(--aurora-hue, 0deg));
+  transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: aurora-drift-a 12s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+/* Lớp B đặt các mảng màu vào đúng chỗ trống của lớp A -> toàn khung đều có màu */
+.aurora__layer--b {
+  background-image:
+    radial-gradient(
+      54% 58% at 68% 58%,
+      rgba(45, 212, 191, calc(0.36 * var(--aurora-intensity))) 0%,
+      rgba(45, 212, 191, calc(0.15 * var(--aurora-intensity))) 44%,
+      rgba(45, 212, 191, 0) 78%
+    ),
+    radial-gradient(
+      56% 60% at 26% 62%,
+      rgba(56, 189, 248, calc(0.42 * var(--aurora-intensity))) 0%,
+      rgba(56, 189, 248, calc(0.18 * var(--aurora-intensity))) 44%,
+      rgba(56, 189, 248, 0) 78%
+    ),
+    radial-gradient(
+      48% 54% at 88% 88%,
+      rgba(168, 85, 247, calc(0.28 * var(--aurora-intensity))) 0%,
+      rgba(168, 85, 247, calc(0.12 * var(--aurora-intensity))) 46%,
+      rgba(168, 85, 247, 0) 80%
+    );
+  /* Dịch ngược chiều lớp A -> cảm giác chiều sâu khi rê chuột */
+  translate: calc(var(--aurora-px) * -18px) calc(var(--aurora-py) * -14px);
+  filter: hue-rotate(calc(var(--aurora-hue, 0deg) * -0.8));
+  transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: aurora-drift-b 9s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+/* Vệt sáng quét ngang, feather rất rộng nên không để lại mép */
+.aurora__sweep {
+  position: absolute;
+  top: -30%;
+  left: -80%;
+  width: 120%;
+  height: 160%;
+  opacity: calc(0.55 * var(--aurora-intensity));
+  background: linear-gradient(
+    102deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(236, 250, 255, 0.4) 26%,
+    rgba(224, 242, 254, 0.72) 50%,
+    rgba(238, 242, 255, 0.4) 74%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: aurora-sweep 13s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Điểm sáng lớn quay quanh tâm — nguồn sáng đổi hướng, không tạo nan quạt */
+.aurora__beam {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  margin: -45% 0 0 -45%;
+  opacity: calc(0.75 * var(--aurora-intensity));
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(191, 219, 254, 0.5) 0%,
+    rgba(207, 250, 254, 0.26) 38%,
+    rgba(255, 255, 255, 0) 72%
+  );
+  animation: aurora-orbit 18s linear infinite;
+  will-change: transform;
+}
+
+/*
+ * Màn phủ: làm dịu vừa đủ để chữ đậm vẫn đủ tương phản, đồng thời hoà mép dưới
+ * về trắng cho liền mạch với section kế tiếp. Cố ý để rất nhạt ở giữa —
+ * màn phủ đậm sẽ khoét một "lỗ trắng" ngay giữa khung và làm nền trông loang.
+ */
+.aurora__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      62% 48% at 50% 30%,
+      rgba(255, 255, 255, 0.36) 0%,
+      rgba(255, 255, 255, 0.14) 52%,
+      rgba(255, 255, 255, 0) 82%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.22) 0%,
+      rgba(255, 255, 255, 0) 24%,
+      rgba(255, 255, 255, 0) 62%,
+      #f8fafc 100%
+    );
+}
+
+/* Biên độ đủ lớn để thấy màu dịch chuyển, đủ nhỏ để mảng màu luôn phủ kín khung */
+@keyframes aurora-drift-a {
+  0% {
+    transform: translate3d(-9%, -6%, 0) scale(1.02) rotate(-5deg);
+  }
+  35% {
+    transform: translate3d(7%, 5%, 0) scale(1.16) rotate(3deg);
+  }
+  70% {
+    transform: translate3d(-5%, 9%, 0) scale(1.08) rotate(7deg);
+  }
+  100% {
+    transform: translate3d(10%, -4%, 0) scale(1.2) rotate(-2deg);
+  }
+}
+
+@keyframes aurora-drift-b {
+  0% {
+    transform: translate3d(10%, 7%, 0) scale(1.18) rotate(6deg);
+  }
+  40% {
+    transform: translate3d(-8%, -8%, 0) scale(1.02) rotate(-6deg);
+  }
+  75% {
+    transform: translate3d(5%, -3%, 0) scale(1.22) rotate(2deg);
+  }
+  100% {
+    transform: translate3d(-10%, 5%, 0) scale(1.06) rotate(-4deg);
+  }
+}
+
+@keyframes aurora-sweep {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) skewX(-7deg);
+  }
+  50% {
+    transform: translate3d(150%, 0, 0) skewX(-7deg);
+  }
+}
+
+/* Quay quanh tâm rồi tự xoay ngược lại -> điểm sáng đi theo quỹ đạo tròn
+   mà bản thân nó không bị méo. */
+@keyframes aurora-orbit {
+  from {
+    transform: rotate(0deg) translateX(16%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(16%) rotate(-360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora__layer,
+  .aurora__beam,
+  .aurora__sweep {
+    animation: none;
+  }
+}
+
+/*
+ * Ba quầng màu bám theo con trỏ với ĐỘ TRỄ KHÁC NHAU (lerp 0.11 / 0.065 / 0.038).
+ * Đứng yên thì chúng chồng khít lên nhau thành một quầng trắng xanh; rê chuột là
+ * chúng tách ra thành vệt cyan → lam → tím, nên màu nền đổi theo đúng hướng và
+ * tốc độ tay bạn di. Chỉ animate transform nên toàn bộ chạy trên GPU.
+ */
+.aurora__comet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  will-change: transform;
+}
+
+.aurora.is-tracking .aurora__comet {
+  opacity: 1;
+}
+
+.aurora__comet--1 {
+  width: 30rem;
+  height: 30rem;
+  margin: -15rem 0 0 -15rem;
+  background: radial-gradient(
+    circle,
+    rgba(34, 211, 238, calc(0.5 * var(--aurora-intensity))) 0%,
+    rgba(34, 211, 238, 0) 68%
+  );
+  transform: translate3d(var(--c1x, 50vw), var(--c1y, 30vh), 0);
+}
+
+.aurora__comet--2 {
+  width: 38rem;
+  height: 38rem;
+  margin: -19rem 0 0 -19rem;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, calc(0.42 * var(--aurora-intensity))) 0%,
+    rgba(59, 130, 246, 0) 68%
+  );
+  transform: translate3d(var(--c2x, 50vw), var(--c2y, 30vh), 0);
+}
+
+.aurora__comet--3 {
+  width: 46rem;
+  height: 46rem;
+  margin: -23rem 0 0 -23rem;
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 246, calc(0.34 * var(--aurora-intensity))) 0%,
+    rgba(139, 92, 246, 0) 66%
+  );
+  transform: translate3d(var(--c3x, 50vw), var(--c3y, 30vh), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora__comet {
+    display: none;
+  }
+}
+
+/* ================= Bong bóng ánh sáng nổi trong nền aurora ================= */
+.aurora__bubbles {
+  position: absolute;
+  inset: 0;
+}
+
+.bubble {
+  --dx: 18px;
+  --dur: 26s;
+  --delay: 0s;
+  --peak: 0.75;
+  position: absolute;
+  border-radius: 9999px;
+  opacity: 0;
+  animation: bubble-rise var(--dur) ease-in-out var(--delay) infinite;
+  /* Thuộc tính translate độc lập với transform của keyframes nên hai thứ cộng vào
+     nhau: bong bóng vừa tự nổi lên vừa dạt theo con trỏ. --depth do JSX đặt theo
+     kích thước quả bóng — quả to coi như ở gần nên dạt nhiều hơn. */
+  translate: calc(var(--aurora-px, 0) * var(--depth, 10px)) calc(var(--aurora-py, 0) * var(--depth, 10px));
+  will-change: transform, translate, opacity;
+}
+
+/* Bong bóng đặc: có điểm sáng cao và bóng đổ trong lòng như thuỷ tinh */
+.bubble--solid {
+  background: radial-gradient(
+    circle at 32% 28%,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(191, 219, 254, 0.9) 26%,
+    rgba(96, 165, 250, 0.62) 60%,
+    rgba(37, 99, 235, 0.38) 100%
+  );
+  box-shadow:
+    inset 0 -6px 14px rgba(37, 99, 235, 0.3),
+    inset 0 5px 12px rgba(255, 255, 255, 0.85),
+    0 12px 28px rgba(37, 99, 235, 0.16);
+}
+
+/* Bong bóng rỗng: chỉ còn viền, tạo lớp chiều sâu phía sau */
+.bubble--hollow {
+  background: radial-gradient(circle at 34% 30%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 58%);
+  border: 1.5px solid rgba(56, 189, 248, 0.45);
+  box-shadow: 0 8px 22px rgba(14, 165, 233, 0.12);
+}
+
+.bubble--cyan.bubble--solid {
+  background: radial-gradient(
+    circle at 32% 28%,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(207, 250, 254, 0.9) 26%,
+    rgba(34, 211, 238, 0.6) 60%,
+    rgba(6, 182, 212, 0.36) 100%
+  );
+  box-shadow:
+    inset 0 -6px 14px rgba(6, 182, 212, 0.3),
+    inset 0 5px 12px rgba(255, 255, 255, 0.85),
+    0 12px 28px rgba(6, 182, 212, 0.16);
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translate3d(0, 40px, 0) scale(0.82);
+    opacity: 0;
+  }
+  14% {
+    opacity: var(--peak);
+  }
+  50% {
+    transform: translate3d(var(--dx), -44px, 0) scale(1.06);
+  }
+  86% {
+    opacity: var(--peak);
+  }
+  100% {
+    transform: translate3d(calc(var(--dx) * -0.55), -104px, 0) scale(0.9);
+    opacity: 0;
+  }
+}
+
+/* ================= Hero Deck — sân khấu 3D cho bảng điều khiển ================= */
+.deck {
+  perspective: 1700px;
+  perspective-origin: 50% 42%;
+}
+
+.deck__stage {
+  position: relative;
+  transform-style: preserve-3d;
+  /* JS ghi --tilt-x / --tilt-y (-1 → 1) mỗi khung hình, đã nội suy sẵn */
+  transform: rotateX(calc(var(--tilt-y, 0) * -4.5deg)) rotateY(calc(var(--tilt-x, 0) * 6.5deg));
+  will-change: transform;
+}
+
+/* Lop boc chong the: bat buoc preserve-3d, neu khong moi translateZ ben trong bi lam phang */
+.deck__stack {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/*
+ * Sau khi JS đo được chiều cao thẻ trước, cả chồng thẻ chuyển sang chiều cao cố định
+ * và mọi thẻ đều position:absolute. Nhờ vậy lúc đổi phân hệ không có thẻ nào ra/vào
+ * luồng bố cục -> không còn cú nhảy chiều cao, chỉ còn transform và opacity trượt mượt.
+ * Trước khi JS chạy (và khi JS tắt) thẻ trước vẫn nằm trong luồng nên chiều cao luôn đúng.
+ */
+.deck__stack.is-measured {
+  height: var(--stack-h);
+  transition: height 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.deck__stack.is-measured .deck__card--active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.deck__card {
+  transform-style: preserve-3d;
+  transition:
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  backface-visibility: hidden;
+}
+
+/* Thẻ đang xem nằm trong luồng -> quyết định chiều cao của cả chồng thẻ */
+.deck__card--active {
+  position: relative;
+  z-index: 3;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Hai thẻ phía sau lùi vào chiều sâu, nhô lên trên để lộ mép */
+.deck__card--behind {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.deck__card--behind-1 {
+  z-index: 2;
+  transform: translate3d(2.5%, -26px, -190px) scale(0.97);
+  opacity: 0.6;
+  filter: blur(1.2px) saturate(0.85);
+}
+
+.deck__card--behind-2 {
+  z-index: 1;
+  transform: translate3d(-2.5%, -48px, -380px) scale(0.94);
+  opacity: 0.34;
+  filter: blur(1.8px) saturate(0.75);
+}
+
+.deck__card--behind:hover {
+  opacity: 0.85;
+  filter: blur(0.4px) saturate(1);
+}
+
+/* Chip nổi ở lớp Z cao -> khi nghiêng nó lệch nhiều hơn thân bảng = cảm giác thật */
+.deck__chip {
+  position: absolute;
+  transform: translateZ(90px);
+  transform-style: preserve-3d;
+}
+
+.deck__chip--deep {
+  transform: translateZ(58px);
+}
+
+/*
+ * Khối hình học nổi quanh bảng, mỗi khối một lớp Z khác nhau.
+ * Chúng nằm ngoài viền bảng và không mang chữ, nên không bao giờ che nội dung.
+ */
+.deck__orb,
+.deck__ring {
+  position: absolute;
+  pointer-events: none;
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .deck__orb,
+  .deck__ring {
+    display: block;
+  }
+}
+
+.deck__orb {
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at 32% 28%,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(191, 219, 254, 0.9) 30%,
+    rgba(59, 130, 246, 0.7) 68%,
+    rgba(37, 99, 235, 0.5) 100%
+  );
+  box-shadow:
+    inset 0 -5px 12px rgba(37, 99, 235, 0.35),
+    inset 0 4px 10px rgba(255, 255, 255, 0.9),
+    0 14px 30px -8px rgba(37, 99, 235, 0.45);
+}
+
+.deck__orb--a {
+  left: -58px;
+  top: 84px;
+  width: 34px;
+  height: 34px;
+  transform: translateZ(120px);
+  animation: balloon 6s ease-in-out infinite;
+}
+
+.deck__orb--b {
+  right: -46px;
+  top: 210px;
+  width: 22px;
+  height: 22px;
+  transform: translateZ(150px);
+  animation: balloon-reverse 5s ease-in-out 0.8s infinite;
+  background: radial-gradient(
+    circle at 32% 28%,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(207, 250, 254, 0.9) 30%,
+    rgba(34, 211, 238, 0.7) 68%,
+    rgba(6, 182, 212, 0.5) 100%
+  );
+  box-shadow:
+    inset 0 -4px 10px rgba(6, 182, 212, 0.35),
+    inset 0 3px 8px rgba(255, 255, 255, 0.9),
+    0 12px 26px -8px rgba(6, 182, 212, 0.45);
+}
+
+.deck__orb--c {
+  left: -34px;
+  bottom: 62px;
+  width: 15px;
+  height: 15px;
+  transform: translateZ(190px);
+  animation: balloon 4.4s ease-in-out 1.6s infinite;
+}
+
+/* Vòng rỗng lùi sâu phía sau bảng -> mắt đọc được khoảng cách giữa các lớp */
+.deck__ring {
+  border-radius: 9999px;
+  border: 1.5px solid rgba(56, 189, 248, 0.4);
+  background: radial-gradient(circle at 34% 30%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 60%);
+}
+
+.deck__ring--a {
+  right: -74px;
+  top: 52px;
+  width: 76px;
+  height: 76px;
+  transform: translateZ(-140px);
+  animation: balloon-slow-ring 9s ease-in-out infinite;
+}
+
+.deck__ring--b {
+  left: -88px;
+  bottom: 130px;
+  width: 54px;
+  height: 54px;
+  transform: translateZ(-210px);
+  animation: balloon-slow-ring 11s ease-in-out 2.2s infinite;
+}
+
+/* Biên độ nhỏ hơn balloon để vòng ở xa trông chuyển động chậm hơn (thị sai) */
+@keyframes balloon-slow-ring {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -12px;
+  }
+}
+
+/*
+ * Lớp sáng phủ mặt kính. Cố ý KHÔNG bám theo con trỏ: đổi vị trí một
+ * radial-gradient theo từng khung hình buộc trình duyệt vẽ lại cả mặt thẻ
+ * (~1024x510) 60 lần mỗi giây — đó chính là cảm giác rê chuột bị rít.
+ * Cảm giác tương tác đã do phép nghiêng 3D đảm nhiệm, thứ chỉ tốn transform.
+ */
+.deck__sheen {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  background: linear-gradient(
+    118deg,
+    rgba(255, 255, 255, 0) 22%,
+    rgba(255, 255, 255, 0.5) 42%,
+    rgba(219, 234, 254, 0.35) 54%,
+    rgba(255, 255, 255, 0) 74%
+  );
+}
+
+.deck:hover .deck__sheen {
+  opacity: 1;
+}
+
+/* Bóng phản chiếu dưới sàn */
+.deck__floor {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -46px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.22) 0%, rgba(37, 99, 235, 0) 72%);
+  filter: blur(6px);
+  transform: translateZ(-260px);
+  pointer-events: none;
+}
+
+/* Dải dữ liệu chạy ngang mép trên bảng */
+.deck__stream {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 32%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, #22d3ee 35%, #2563eb 65%, transparent);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.8);
+  animation: deck-stream 4.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes deck-stream {
+  0% {
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(420%);
+    opacity: 0;
+  }
+}
+
+
+
+/* Dưới lg: bỏ hoàn toàn 3D, chỉ hiện thẻ đang xem */
+@media (max-width: 1023px) {
+  .deck {
+    perspective: none;
+  }
+  .deck__stage {
+    transform: none;
+  }
+  .deck__stack.is-measured {
+    height: auto;
+  }
+  .deck__stack.is-measured .deck__card--active {
+    position: relative;
+  }
+  .deck__card--behind {
+    display: none;
+  }
+  .deck__floor {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deck__stage {
+    transform: none !important;
+  }
+  .bubble,
+  .deck__stream {
+    animation: none;
+  }
+  .bubble {
+    opacity: var(--peak);
+  }
+}
+
+/* ================= Khối CTA cuối trang — "Royal Deep Tech" ================= */
+.cta-stage {
+  position: relative;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  isolation: isolate;
+  /* Nền sâu nhưng có chuyển sắc rõ: chàm đêm -> xanh hoàng gia -> lam mực */
+  background:
+    radial-gradient(120% 90% at 12% 8%, #1e3a8a 0%, rgba(30, 58, 138, 0) 58%),
+    radial-gradient(110% 85% at 88% 12%, #0e7490 0%, rgba(14, 116, 144, 0) 55%),
+    radial-gradient(130% 110% at 50% 110%, #312e81 0%, rgba(49, 46, 129, 0) 60%),
+    linear-gradient(160deg, #0b1220 0%, #101a33 45%, #0a1428 100%);
+  box-shadow:
+    0 40px 90px -30px rgba(12, 22, 55, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Viền conic quay chậm — vòng sáng chạy quanh mép khối */
+.cta-stage::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(
+    from 0deg,
+    rgba(34, 211, 238, 0) 0deg,
+    rgba(34, 211, 238, 0.9) 40deg,
+    rgba(99, 102, 241, 0.5) 110deg,
+    rgba(34, 211, 238, 0) 180deg,
+    rgba(255, 255, 255, 0.45) 250deg,
+    rgba(34, 211, 238, 0) 330deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: cta-ring 9s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes cta-ring {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* Hai vầng sáng lớn trôi bên trong, chu kỳ lệch nhau */
+.cta-stage__glow {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  filter: blur(10px);
+  will-change: transform;
+}
+
+.cta-stage__glow--a {
+  top: -22%;
+  right: -12%;
+  width: 46%;
+  padding-bottom: 46%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.4) 0%, rgba(34, 211, 238, 0) 68%);
+  animation: cta-glow-a 17s ease-in-out infinite alternate;
+}
+
+.cta-stage__glow--b {
+  bottom: -28%;
+  left: -14%;
+  width: 52%;
+  padding-bottom: 52%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.42) 0%, rgba(99, 102, 241, 0) 66%);
+  animation: cta-glow-b 13s ease-in-out infinite alternate;
+}
+
+@keyframes cta-glow-a {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(-16%, 22%, 0) scale(1.25);
+  }
+}
+
+@keyframes cta-glow-b {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(20%, -18%, 0) scale(0.9);
+  }
+}
+
+/* Sàn lưới phối cảnh chạy về phía người xem */
+.cta-stage__floor {
+  position: absolute;
+  left: -25%;
+  right: -25%;
+  bottom: -10%;
+  height: 55%;
+  pointer-events: none;
+  opacity: 0.45;
+  background-image:
+    linear-gradient(to right, rgba(125, 211, 252, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(125, 211, 252, 0.35) 1px, transparent 1px);
+  background-size: 62px 62px;
+  transform: perspective(340px) rotateX(62deg);
+  transform-origin: bottom center;
+  -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.35) 45%, transparent 85%);
+  mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.35) 45%, transparent 85%);
+  animation: cta-floor 6s linear infinite;
+}
+
+@keyframes cta-floor {
+  to {
+    background-position: 0 62px;
+  }
+}
+
+/* Hạt sáng bay lên trong khối */
+.cta-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 9999px;
+  background: rgba(165, 243, 252, 0.9);
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.9);
+  opacity: 0;
+  animation: cta-particle var(--dur, 12s) linear var(--delay, 0s) infinite;
+  pointer-events: none;
+}
+
+@keyframes cta-particle {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate3d(var(--dx, 20px), -220px, 0);
+    opacity: 0;
+  }
+}
+
+/* Tiêu đề có dải sáng quét qua chữ */
+.cta-headline-accent {
+  background: linear-gradient(
+    100deg,
+    #a5f3fc 0%,
+    #7dd3fc 22%,
+    #ffffff 40%,
+    #bae6fd 58%,
+    #818cf8 80%,
+    #a5f3fc 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: cta-shine 7s ease-in-out infinite;
+}
+
+@keyframes cta-shine {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Thẻ tin cậy: nhấc lên và sáng viền khi rê chuột */
+.cta-trust {
+  position: relative;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.cta-trust:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(103, 232, 249, 0.45);
+  box-shadow: 0 16px 34px -14px rgba(34, 211, 238, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-stage::before,
+  .cta-stage__glow,
+  .cta-stage__floor,
+  .cta-particle,
+  .cta-headline-accent {
+    animation: none;
+  }
+}
+
+/* ================= Hệ thống hiện dần theo cuộn trang ================= */
+/*
+ * Chỉ ẩn nội dung khi <html> đã có .reveal-ready — class này do một script nội tuyến
+ * trong <head> gắn trước lần vẽ đầu tiên. Nếu JS lỗi hoặc bị tắt, không gì bị ẩn cả.
+ *
+ * Vì sao dùng animation với fill-mode `backwards` thay vì transition:
+ * transition buộc phải khoá `transform: none` ở trạng thái cuối, mà quy tắc đó
+ * đè lên các tiện ích `hover:-translate-y-*` của Tailwind và làm chết hiệu ứng
+ * nhấc thẻ khi rê chuột. Với `backwards`, sau khi chạy xong animation không còn
+ * áp giá trị nào nữa, phần tử trả lại quyền điều khiển transform cho hover.
+ */
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  will-change: opacity, transform, filter;
+}
+
+.reveal-ready [data-reveal].is-revealed {
+  opacity: 1;
+  will-change: auto;
+  animation: reveal-up 0.85s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms) backwards;
+}
+
+.reveal-ready [data-reveal="fade"].is-revealed {
+  animation-name: reveal-fade;
+}
+.reveal-ready [data-reveal="left"].is-revealed {
+  animation-name: reveal-left;
+}
+.reveal-ready [data-reveal="right"].is-revealed {
+  animation-name: reveal-right;
+}
+.reveal-ready [data-reveal="scale"].is-revealed {
+  animation-name: reveal-scale;
+}
+.reveal-ready [data-reveal="blur"].is-revealed {
+  animation-name: reveal-blur;
+}
+
+/* Mỗi keyframes chỉ khai báo mốc `from`; mốc cuối được suy ra từ giá trị gốc
+   của phần tử, nên hover/transform riêng của nó không bị ghi đè. */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@keyframes reveal-fade {
+  from {
+    opacity: 0;
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-34px, 0, 0);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@keyframes reveal-right {
+  from {
+    opacity: 0;
+    transform: translate3d(34px, 0, 0);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@keyframes reveal-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes reveal-blur {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    filter: blur(10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready [data-reveal] {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+}
+
+
+/* Tia laser quét dọc thẻ nhân sự khi bấm mô phỏng FaceID */
+.deck__scanline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #22d3ee 45%, #2563eb 55%, transparent);
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.9);
+  animation: deck-scan 1.1s cubic-bezier(0.5, 0, 0.5, 1);
+  pointer-events: none;
+}
+
+@keyframes deck-scan {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+}
+
+/* Hero xuất hiện lần lượt ngay khi tải trang (không chờ cuộn) */
+.hero-enter > * {
+  opacity: 0;
+  animation: hero-enter 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--enter-delay, 0ms);
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter > * {
+    opacity: 1;
+    animation: none;
+  }
+  .deck__scanline {
+    animation: none;
+  }
+}
+
+/* ================= Băng đối tác chạy ngang ================= */
+/*
+ * Dải này rộng khoảng 4000px và chứa 16 thẻ có bóng đổ. Nếu không được tách
+ * thành một lớp composite riêng, trình duyệt phải vẽ lại toàn bộ dải ở mỗi
+ * khung hình — đó là lý do nó giật. `will-change` + `translateZ(0)` ép nó
+ * lên GPU một lần rồi chỉ trượt lớp đó đi, không vẽ lại nữa.
+ */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite !important;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.333333%, 0, 0);
+  }
+}
+
+@keyframes heroTabProgress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
