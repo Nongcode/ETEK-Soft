@@ -34,12 +34,14 @@ export default function RevealEngine() {
     (window as unknown as { __etekRevealUp?: boolean }).__etekRevealUp = true;
 
     const seen = new WeakSet<Element>();
+    const revealed = new WeakSet<Element>();
 
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (!entry.isIntersecting) continue;
           entry.target.classList.add("is-revealed");
+          revealed.add(entry.target);
           observer.unobserve(entry.target); // hiện rồi thì thôi, không ẩn lại
         }
       },
@@ -78,8 +80,15 @@ export default function RevealEngine() {
     scan();
 
     // Nội dung dựng sau (đổi tab, danh sách tải thêm...) cũng được bắt tự động.
+    // Giữ lại class `is-revealed` nếu component bị React re-render ghi đè className.
     const mutations = new MutationObserver((records) => {
       for (const record of records) {
+        if (record.type === "attributes" && record.attributeName === "class") {
+          const target = record.target as Element;
+          if (revealed.has(target) && !target.classList.contains("is-revealed")) {
+            target.classList.add("is-revealed");
+          }
+        }
         for (const node of record.addedNodes) {
           if (!(node instanceof Element)) continue;
           if (node.hasAttribute("data-reveal")) register(node);
@@ -87,7 +96,12 @@ export default function RevealEngine() {
         }
       }
     });
-    mutations.observe(document.body, { childList: true, subtree: true });
+    mutations.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["class"],
+    });
 
     return () => {
       observer.disconnect();

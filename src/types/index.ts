@@ -19,6 +19,37 @@ export interface Category {
   productCount: number;
 }
 
+export interface SolutionFeatureModule {
+  title: string;
+  subtitle?: string;
+  description: string;
+  icon: string;
+  features: string[];
+  highlightBadge?: string;
+}
+
+export interface SolutionWorkflowStep {
+  step: number;
+  title: string;
+  subtitle?: string;
+  description: string;
+  duration?: string;
+  deliverables: string[];
+}
+
+export interface SolutionMetric {
+  value: string;
+  label: string;
+  sub?: string;
+}
+
+export interface SolutionBenefit {
+  metric: string;
+  title: string;
+  description: string;
+  tag: string;
+}
+
 export interface Product {
   id: string;
   slug: string;
@@ -44,6 +75,16 @@ export interface Product {
   systemRequirements: string[];
   faqs: { question: string; answer: string }[];
   createdAt: string; // ISO date, dùng để sort "Mới nhất"
+  
+  // Solution-specific rich data
+  isSolution?: boolean;
+  solutionBadge?: string;
+  solutionTagline?: string;
+  solutionHeroMetrics?: SolutionMetric[];
+  solutionModules?: SolutionFeatureModule[];
+  solutionProcess?: SolutionWorkflowStep[];
+  solutionBenefits?: SolutionBenefit[];
+  solutionTargetUsers?: string[];
 }
 
 export interface NewsArticle {
@@ -101,5 +142,5 @@ export interface NavGroup {
 export interface NavItem {
   label: string;
   href: string;
-  megaMenu?: "products" | "guide";
+  megaMenu?: "products" | "guide" | "about";
 }

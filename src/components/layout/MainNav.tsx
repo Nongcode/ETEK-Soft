@@ -12,7 +12,7 @@ import {
   ChevronDown,
   User,
   LogOut,
-  ShoppingBag,
+  ShoppingCart,
   ShieldCheck,
   FileText,
   Key,
@@ -22,7 +22,7 @@ import MegaMenu from "@/components/layout/MegaMenu";
 import MobileNav from "@/components/layout/MobileNav";
 import SearchBox from "@/components/ui/SearchBox";
 import CartIcon from "@/components/cart/CartIcon";
-import { mainNav, productMegaMenu, guideMegaMenu } from "@/data/navigation";
+import { mainNav, productMegaMenu, guideMegaMenu, aboutMegaMenu } from "@/data/navigation";
 import { buildProductSuggestions } from "@/lib/search";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/context/AuthContext";
@@ -107,23 +107,14 @@ export default function MainNav() {
         {/* Desktop Primary Navigation - Streamlined & Balanced */}
         <nav className="hidden items-center lg:flex" aria-label="Điều hướng chính">
           <ul className="flex items-center gap-1 xl:gap-2">
-            {[
-              { label: "Trang chủ", href: "/" },
-              { label: "Giới thiệu", href: "/gioi-thieu" },
-              {
-                label: "Giải pháp HRM",
-                href: "/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm",
-              },
-              { label: "Sản phẩm", href: "/san-pham", megaMenu: "products" },
-              { label: "Hướng dẫn", href: "/huong-dan", megaMenu: "guide" },
-              { label: "Tin tức", href: "/tin-tuc" },
-              { label: "Liên hệ", href: "/lien-he" },
-            ].map((item) => {
+            {mainNav.map((item) => {
               const groups =
                 item.megaMenu === "products"
                   ? productMegaMenu
                   : item.megaMenu === "guide"
                   ? guideMegaMenu
+                  : item.megaMenu === "about"
+                  ? aboutMegaMenu
                   : null;
               const isActive =
                 pathname === item.href ||
@@ -171,7 +162,11 @@ export default function MainNav() {
                     )}
                   </Link>
                   {groups && activeMenu === item.label && (
-                    <MegaMenu id={menuId} groups={groups} />
+                    <MegaMenu
+                      id={menuId}
+                      groups={groups}
+                      align="center"
+                    />
                   )}
                 </li>
               );
@@ -185,6 +180,7 @@ export default function MainNav() {
           <div className="relative hidden md:block">
             <button
               type="button"
+              suppressHydrationWarning
               aria-label={searchOpen ? "Đóng tìm kiếm" : "Tìm kiếm sản phẩm"}
               onClick={() => setSearchOpen((v) => !v)}
               className="flex h-8 w-8 items-center justify-center rounded-full text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-600"
@@ -208,7 +204,7 @@ export default function MainNav() {
             aria-label="Giỏ hàng bản quyền"
             className="relative flex h-8 w-8 items-center justify-center rounded-full text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-600"
           >
-            <ShoppingBag className="h-4 w-4" />
+            <ShoppingCart className="h-[18px] w-[18px]" />
             {cartCount > 0 && (
               <span className="absolute -top-0.5 -right-0.5 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-blue-600 px-1 font-mono text-[9px] font-bold text-white shadow-sm">
                 {cartCount}
@@ -223,6 +219,7 @@ export default function MainNav() {
             <div className="relative" ref={userDropdownRef}>
               <button
                 type="button"
+                suppressHydrationWarning
                 onClick={() => setUserDropdownOpen((v) => !v)}
                 className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50/80 p-1 pl-2 text-xs font-bold text-slate-800 transition-all hover:border-blue-300 hover:bg-blue-50/60"
               >
@@ -292,6 +289,7 @@ export default function MainNav() {
                   <div className="border-t border-slate-100 pt-1">
                     <button
                       type="button"
+                      suppressHydrationWarning
                       onClick={() => {
                         logout();
                         setUserDropdownOpen(false);
@@ -310,6 +308,7 @@ export default function MainNav() {
             <div className="flex items-center gap-1.5">
               <button
                 type="button"
+                suppressHydrationWarning
                 onClick={openLoginModal}
                 className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-700 hover:border-blue-300 hover:bg-blue-50/60 hover:text-blue-600 transition-all shadow-sm"
               >
@@ -333,6 +332,7 @@ export default function MainNav() {
           {/* Mobile hamburger menu button */}
           <button
             type="button"
+            suppressHydrationWarning
             aria-label="Mở menu"
             onClick={() => setMobileOpen(true)}
             className="flex h-8 w-8 items-center justify-center rounded-full text-slate-700 hover:bg-slate-100 lg:hidden"

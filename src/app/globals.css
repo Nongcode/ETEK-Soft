@@ -111,6 +111,32 @@
       transform: translateX(-50%);
     }
   }
+
+  @keyframes float-handwriting {
+    0%, 100% {
+      transform: translateY(0px) rotate(-5deg);
+    }
+    50% {
+      transform: translateY(-8px) rotate(-3deg);
+    }
+  }
+
+  @keyframes arrow-nudge {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(6px, -3px);
+    }
+  }
+}
+
+.animate-float-handwriting {
+  animation: float-handwriting 4.5s ease-in-out infinite;
+}
+
+.animate-arrow-nudge {
+  animation: arrow-nudge 2s ease-in-out infinite;
 }
 
 @keyframes stepProgress {
@@ -1456,8 +1482,9 @@ a:focus-visible {
   }
 }
 
-/* Hero xuất hiện lần lượt ngay khi tải trang (không chờ cuộn) */
-.hero-enter > * {
+/* Hero & Banner phần tử xuất hiện lần lượt ngay khi tải trang (không chờ cuộn) */
+.hero-enter > *,
+.banner-enter {
   opacity: 0;
   animation: hero-enter 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   animation-delay: var(--enter-delay, 0ms);
@@ -1475,7 +1502,8 @@ a:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-enter > * {
+  .hero-enter > *,
+  .banner-enter {
     opacity: 1;
     animation: none;
   }
@@ -1519,6 +1547,38 @@ a:focus-visible {
   }
   100% {
     transform: scaleX(1);
+  }
+}
+
+/* ================= Tech Beams Cascade Keyframes ================= */
+@keyframes techBeamDrop {
+  0% {
+    transform: translate3d(0, -160px, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: var(--beam-opacity, 0.7);
+  }
+  75% {
+    opacity: var(--beam-opacity, 0.7);
+  }
+  92% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translate3d(0, 840px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes beamHeadPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
   }
 }
 

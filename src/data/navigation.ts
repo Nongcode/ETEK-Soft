@@ -2,14 +2,62 @@ import { NavGroup, NavItem } from "@/types";
 
 export const mainNav: NavItem[] = [
   { label: "Trang chủ", href: "/" },
-  { label: "Giới thiệu", href: "/gioi-thieu" },
-  { label: "Tư vấn", href: "/tu-van" },
+  { label: "Giới thiệu", href: "/gioi-thieu", megaMenu: "about" },
   { label: "Sản phẩm", href: "/san-pham", megaMenu: "products" },
-  { label: "Tin tức", href: "/tin-tuc" },
   { label: "Hướng dẫn", href: "/huong-dan", megaMenu: "guide" },
-  { label: "Tuyển dụng", href: "/tuyen-dung" },
+  { label: "Tin tức", href: "/tin-tuc" },
   { label: "Liên hệ", href: "/lien-he" },
 ];
+
+export const aboutMegaMenu: NavGroup[] = [
+  {
+    title: "Về ETEK SOFTS",
+    items: [
+      {
+        label: "Về chúng tôi",
+        href: "/gioi-thieu",
+        description: "Tầm nhìn, sứ mệnh & năng lực công nghệ chuyển đổi số",
+        icon: "Building2",
+      },
+      {
+        label: "Tư vấn giải pháp",
+        href: "/tu-van",
+        description: "Khảo sát kiến trúc công nghệ & dự toán chi phí tối ưu",
+        icon: "Sparkles",
+      },
+      {
+        label: "Tuyển dụng nhân tài",
+        href: "/tuyen-dung",
+        description: "Môi trường năng động, cơ hội phát triển vượt bậc",
+        icon: "Users",
+      },
+    ],
+  },
+  {
+    title: "Giải pháp chuyển đổi số",
+    items: [
+      {
+        label: "Giải pháp HRM",
+        href: "/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm",
+        description: "Quản trị nhân sự số: Chấm công FaceID, lương 3P & KPI",
+        icon: "UserCheck",
+      },
+      {
+        label: "Giải pháp ERP",
+        href: "/san-pham/giai-phap-quan-tri-doanh-nghiep-tong-the-erp",
+        description: "Hoạch định nguồn lực: Kế toán, bán hàng, kho vận & sản xuất",
+        icon: "Layers",
+      },
+      {
+        label: "Phần mềm bản quyền",
+        href: "/san-pham",
+        description: "100% License Microsoft, Windows, Server chính ngạch",
+        icon: "ShieldCheck",
+      },
+    ],
+  },
+];
+
 
 export const productMegaMenu: NavGroup[] = [
   {

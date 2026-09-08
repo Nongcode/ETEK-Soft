@@ -8,7 +8,6 @@ import {
   Minus,
   Plus,
   ShieldCheck,
-  ShoppingBag,
   ShoppingCart,
   Trash2,
   Truck,
@@ -103,7 +102,7 @@ export default function CartPageContent() {
         {lines.length === 0 ? (
           <div className="flex flex-col items-center rounded-3xl border border-dashed border-slate-200 bg-white py-20 text-center shadow-xs">
             <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary shadow-xs">
-              <ShoppingBag className="h-8 w-8" aria-hidden />
+              <ShoppingCart className="h-8 w-8" aria-hidden />
             </span>
             <h2 className="mt-5 text-xl font-bold text-navy">Giỏ hàng của bạn đang trống</h2>
             <p className="mt-2 max-w-md text-sm text-slate-500 leading-relaxed">

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -46,15 +45,31 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="vi" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
       <head>
-        <Script
-          id="etek-bootstrap"
-          strategy="beforeInteractive"
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Patrick+Hand&display=swap" rel="stylesheet" />
+        <script
           dangerouslySetInnerHTML={{
             __html: `
 (function() {
+  // 1. Gỡ lỗi hydration do tiện ích trình duyệt chèn thuộc tính (như Bitdefender bis_skin_checked)
   try {
     var origError = console.error;
     console.error = function() {
+      for (var i = 0; i < arguments.length; i++) {
+        var arg = arguments[i];
+        if (arg) {
+          var str = typeof arg === 'string' ? arg : (arg.message || arg.stack || String(arg));
+          if (str.indexOf('bis_skin_checked') !== -1 || (str.indexOf('A tree hydrated') !== -1 && str.indexOf('hidden') !== -1)) {
+            return;
+          }
+        }
+      }
+      return origError.apply(this, arguments);
+    };
+
+    var origWarn = console.warn;
+    console.warn = function() {
       for (var i = 0; i < arguments.length; i++) {
         var arg = arguments[i];
         if (arg) {
@@ -64,7 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }
         }
       }
-      return origError.apply(this, arguments);
+      return origWarn.apply(this, arguments);
     };
 
     var origSetAttribute = Element.prototype.setAttribute;
@@ -78,20 +93,40 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         var m = mutations[i];
         if (m.type === 'attributes' && m.attributeName === 'bis_skin_checked') {
           m.target.removeAttribute('bis_skin_checked');
+        } else if (m.type === 'childList') {
+          for (var j = 0; j < m.addedNodes.length; j++) {
+            var node = m.addedNodes[j];
+            if (node.nodeType === 1) {
+              if (node.hasAttribute && node.hasAttribute('bis_skin_checked')) {
+                node.removeAttribute('bis_skin_checked');
+              }
+              var els = node.querySelectorAll ? node.querySelectorAll('[bis_skin_checked]') : [];
+              for (var k = 0; k < els.length; k++) {
+                els[k].removeAttribute('bis_skin_checked');
+              }
+            }
+          }
         }
       }
     });
     observer.observe(document.documentElement, {
       attributes: true,
       subtree: true,
+      childList: true,
       attributeFilter: ['bis_skin_checked']
     });
+
+    window.addEventListener('error', function(e) {
+      if (e && e.message && (e.message.indexOf('bis_skin_checked') !== -1 || (e.message.indexOf('hydration') !== -1 && e.message.indexOf('hidden') !== -1))) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+      }
+    }, true);
   } catch (e) {}
 
-  // Gan .reveal-ready TRUOC lan ve dau tien de noi dung khong nhay len roi moi bi an.
+  // 2. Gắn .reveal-ready trước lần vẽ đầu tiên
   try {
     document.documentElement.classList.add('reveal-ready');
-    // Luoi an toan: neu React khong hydrate trong 4s thi go lop an de trang van doc duoc.
     setTimeout(function () {
       if (!window.__etekRevealUp) document.documentElement.classList.remove('reveal-ready');
     }, 4000);

@@ -56,8 +56,8 @@ export default function ImplementationProcess() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-miko-cream py-18 sm:py-24 border-t border-b border-miko">
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-miko-cream py-14 sm:py-20 border-t border-b border-miko">
+      <div className="relative z-10 mx-auto max-w-7xl 2xl:max-w-[1440px] px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <ScrollReveal direction="up">
@@ -79,21 +79,18 @@ export default function ImplementationProcess() {
         </ScrollReveal>
 
         {/* 5-Step Connected Process Flow */}
-        <div className="mt-12 sm:mt-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 relative" data-reveal-group data-reveal-step="95">
-            
-
+        <ScrollReveal direction="up" delay={100} className="mt-10 sm:mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 lg:gap-4 xl:gap-5 relative">
             {steps.map((s, idx) => {
               const isCurrent = selectedStep === idx;
               return (
                 <div
-                  key={idx}
-                  data-reveal
+                  key={s.step}
                   onClick={() => handleSelectStep(idx)}
-                  className={`group relative rounded-3xl p-5 sm:p-6 transition-all duration-300 z-10 flex flex-col justify-between h-full min-h-[330px] cursor-pointer bg-white border-2 overflow-hidden ${
+                  className={`group relative rounded-3xl p-5 sm:p-5 xl:p-6 transition-all duration-300 z-10 flex flex-col justify-between h-full min-h-[280px] cursor-pointer bg-white border-2 overflow-hidden ${
                     isCurrent
-                      ? "border-blue-600 shadow-[0_20px_45px_-10px_rgba(37,99,235,0.25)] -translate-y-2 ring-4 ring-blue-500/15"
-                      : "border-slate-200/90 hover:border-blue-300 hover:shadow-lg hover:-translate-y-1 opacity-85 hover:opacity-100"
+                      ? "border-blue-600 shadow-[0_20px_45px_-10px_rgba(37,99,235,0.25)] -translate-y-1.5 ring-4 ring-blue-500/15 opacity-100"
+                      : "border-slate-200/90 hover:border-blue-300 hover:shadow-lg hover:-translate-y-1 opacity-90 hover:opacity-100"
                   }`}
                 >
                   {/* Subtle Top Active Glow */}
@@ -167,25 +164,24 @@ export default function ImplementationProcess() {
                 </div>
               );
             })}
-
           </div>
+        </ScrollReveal>
 
-          {/* Bottom Step Dots Indicator */}
-          <div className="mt-8 flex items-center justify-center gap-2.5">
-            {steps.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => handleSelectStep(i)}
-                aria-label={`Chuyển tới bước ${i + 1}`}
-                className={`h-2.5 rounded-full transition-all duration-300 ${
-                  selectedStep === i
-                    ? "w-9 bg-blue-600 shadow-sm"
-                    : "w-2.5 bg-slate-300 hover:bg-slate-400"
-                }`}
-              />
-            ))}
-          </div>
+        {/* Bottom Step Dots Indicator */}
+        <div className="mt-8 flex items-center justify-center gap-2.5">
+          {steps.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => handleSelectStep(i)}
+              aria-label={`Chuyển tới bước ${i + 1}`}
+              className={`h-2.5 rounded-full transition-all duration-300 ${
+                selectedStep === i
+                  ? "w-9 bg-blue-600 shadow-sm"
+                  : "w-2.5 bg-slate-300 hover:bg-slate-400"
+              }`}
+            />
+          ))}
         </div>
 
       </div>

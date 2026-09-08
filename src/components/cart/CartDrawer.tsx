@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { Minus, Plus, ShoppingBag, Trash2, X } from "lucide-react";
+import { Minus, Plus, ShoppingCart, Trash2, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { getProductById } from "@/data/products";
 import { formatPrice } from "@/lib/utils";
@@ -92,7 +92,7 @@ export default function CartDrawer() {
       <div className="absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-white shadow-2xl">
         <div className="flex h-16 shrink-0 items-center justify-between border-b border-border px-5">
           <h2 className="flex items-center gap-2 text-[15px] font-bold text-navy">
-            <ShoppingBag className="h-[18px] w-[18px] text-primary" aria-hidden />
+            <ShoppingCart className="h-[18px] w-[18px] text-primary" aria-hidden />
             Giỏ hàng {lines.length > 0 && <span className="text-muted font-medium">({lines.length})</span>}
           </h2>
           <button
@@ -108,7 +108,7 @@ export default function CartDrawer() {
         {lines.length === 0 ? (
           <div className="flex flex-1 flex-col items-center justify-center px-6 text-center">
             <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary-light text-primary">
-              <ShoppingBag className="h-6 w-6" aria-hidden />
+              <ShoppingCart className="h-6 w-6" aria-hidden />
             </span>
             <p className="mt-4 text-sm font-semibold text-navy">Giỏ hàng của bạn đang trống</p>
             <p className="mt-1.5 text-sm text-muted">Khám phá các phần mềm bản quyền phù hợp với doanh nghiệp của bạn.</p>

@@ -1,5 +1,6 @@
 import { Product } from "@/types";
 import ProductCard from "@/components/product/ProductCard";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function ProductGrid({ products, columns = 3 }: { products: Product[]; columns?: 3 | 4 }) {
   if (products.length === 0) {
@@ -11,16 +12,18 @@ export default function ProductGrid({ products, columns = 3 }: { products: Produ
   }
 
   return (
-    <div
-      className={
-        columns === 3
-          ? "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-          : "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-      }
-    >
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-    </div>
+    <ScrollReveal direction="up" delay={80}>
+      <div
+        className={
+          columns === 3
+            ? "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            : "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        }
+      >
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+    </ScrollReveal>
   );
 }

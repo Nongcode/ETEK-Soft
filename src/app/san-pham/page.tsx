@@ -4,6 +4,7 @@ import FilterSidebar from "@/components/product/FilterSidebar";
 import SortSelect from "@/components/product/SortSelect";
 import ProductGrid from "@/components/product/ProductGrid";
 import ProductBanner from "@/components/product/ProductBanner";
+import TechRainBeams from "@/components/product/TechRainBeams";
 import Pagination from "@/components/ui/Pagination";
 import { filterProducts, paginate, ProductQuery } from "@/lib/productFilters";
 import { buildProductSuggestions } from "@/lib/search";
@@ -50,11 +51,14 @@ export default async function ProductListingPage({
   }
 
   return (
-    <div className="min-h-screen bg-slate-50/50 pb-20">
-      {/* Dedicated Hero Banner */}
+    <div className="relative min-h-screen bg-slate-50/50 pb-20 overflow-x-clip">
+      {/* Dedicated Hero Banner with seamless bottom blend */}
       <ProductBanner suggestions={suggestions} />
 
-      <Container className="py-8">
+      {/* Futuristic Tech Beams cascading down deep through the product catalog */}
+      <TechRainBeams />
+
+      <Container className="relative z-10 py-8">
         <div className="flex flex-col gap-8 lg:flex-row">
           {/* Left Sidebar Filters */}
           <FilterSidebar />
@@ -63,15 +67,21 @@ export default async function ProductListingPage({
           <div className="min-w-0 flex-1">
             <div className="mb-6 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
               <div>
-                <p className="text-sm text-slate-500">
-                  Tìm thấy{" "}
-                  <span className="font-bold text-navy">{filtered.length}</span> sản phẩm phù hợp
-                  {query.q && (
-                    <span>
-                      {" "}
-                      cho từ khóa <span className="font-semibold text-primary">&quot;{query.q}&quot;</span>
-                    </span>
-                  )}
+                <p className="inline-flex items-center text-sm text-slate-500">
+                  <span className="relative flex h-2 w-2 mr-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                  </span>
+                  <span>
+                    Tìm thấy{" "}
+                    <span className="font-bold text-navy">{filtered.length}</span> sản phẩm phù hợp
+                    {query.q && (
+                      <span>
+                        {" "}
+                        cho từ khóa <span className="font-semibold text-primary">&quot;{query.q}&quot;</span>
+                      </span>
+                    )}
+                  </span>
                 </p>
               </div>
 

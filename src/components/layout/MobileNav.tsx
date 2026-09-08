@@ -5,7 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ChevronDown, Mail, Phone, X, User, LogOut, ShieldCheck } from "lucide-react";
-import { mainNav, productMegaMenu, guideMegaMenu } from "@/data/navigation";
+import { mainNav, productMegaMenu, guideMegaMenu, aboutMegaMenu } from "@/data/navigation";
 import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/context/AuthContext";
@@ -56,7 +56,14 @@ export default function MobileNav({ open, onClose }: { open: boolean; onClose: (
       <nav className="flex-1 overflow-y-auto px-2 py-3">
         <ul className="flex flex-col">
           {mainNav.map((item) => {
-            const groups = item.megaMenu === "products" ? productMegaMenu : item.megaMenu === "guide" ? guideMegaMenu : null;
+            const groups =
+              item.megaMenu === "products"
+                ? productMegaMenu
+                : item.megaMenu === "guide"
+                ? guideMegaMenu
+                : item.megaMenu === "about"
+                ? aboutMegaMenu
+                : null;
             const isExpanded = expanded === item.label;
             const isActive = pathname === item.href;
 

@@ -62,11 +62,11 @@ const plans = [
   {
     name: "HỆ THỐNG ENTERPRISE & Y TẾ",
     subtitle: "Tập đoàn lớn, bệnh viện & chuỗi phòng khám chuyên sâu",
-    price: "May Đo Theo Yêu Cầu",
+    price: "Kiến Trúc Theo Yêu Cầu",
     unit: "",
     featured: false,
     features: [
-      "May đo kiến trúc phần mềm theo đặc thù quy trình riêng",
+      "Kiến trúc phần mềm theo quy trình riêng",
       "Hệ thống quản trị tổng thể bệnh viện SGIS chuẩn Bộ Y tế",
       "Liên thông cổng giám định BHYT Quốc gia & Bệnh án EMR",
       "Tư vấn giải pháp bản quyền tổng thể Enterprise Agreement (EA)",
@@ -81,9 +81,9 @@ const plans = [
 
 export default function PricingPlans() {
   return (
-    <section className="relative overflow-hidden bg-white py-16 sm:py-24">
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        
+    <section className="relative overflow-hidden bg-white py-14 sm:py-20">
+      <div className="relative z-10 mx-auto max-w-7xl 2xl:max-w-[1440px] px-4 sm:px-6 lg:px-8">
+
         {/* Header */}
         <ScrollReveal direction="up">
           <div className="text-center max-w-3xl mx-auto">
@@ -100,104 +100,98 @@ export default function PricingPlans() {
         </ScrollReveal>
 
         {/* 4 Pricing Cards with Perfectly Aligned Bottom Footers */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch" data-reveal-group data-reveal-step="110">
-          {plans.map((p, idx) => (
-            <div
-              key={idx}
-              data-reveal
-              className={`relative flex flex-col justify-between rounded-[2.2rem] p-6 sm:p-7 transition-all duration-300 h-full ${
-                p.featured
+        <ScrollReveal direction="up" delay={100} className="mt-10 sm:mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 xl:gap-6 items-stretch">
+            {plans.map((p) => (
+              <div
+                key={p.name}
+                className={`relative flex flex-col justify-between rounded-[2.2rem] p-5 sm:p-6 xl:p-6 2xl:p-7 transition-all duration-300 h-full ${p.featured
                   ? "bg-gradient-to-b from-blue-600 via-blue-600 to-cyan-600 text-white shadow-2xl border-2 border-cyan-300 ring-4 ring-blue-500/20"
                   : "bg-white border border-slate-200 text-slate-900 hover:shadow-xl hover:border-blue-300 hover:-translate-y-1"
-              }`}
-            >
-              {/* Featured Badge */}
-              {p.featured && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-cyan-300 px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-950 shadow-md">
-                    <Sparkles className="h-3 w-3" />
-                    {p.badge}
-                  </span>
-                </div>
-              )}
-
-              {/* Top Details & Features */}
-              <div>
-                <h3
-                  className={`text-base font-extrabold uppercase tracking-tight ${
-                    p.featured ? "text-white" : "text-slate-900"
                   }`}
-                >
-                  {p.name}
-                </h3>
-                <p
-                  className={`mt-2 text-xs leading-relaxed min-h-[36px] ${
-                    p.featured ? "text-cyan-100" : "text-slate-500"
-                  }`}
-                >
-                  {p.subtitle}
-                </p>
-
-                {/* Price Display */}
-                <div className="mt-5 pb-5 border-b border-slate-200/50">
-                  <span
-                    className={`text-2xl sm:text-3xl font-extrabold tracking-tight font-mono ${
-                      p.featured ? "text-white" : "text-blue-600"
-                    }`}
-                  >
-                    {p.price}
-                  </span>
-                  {p.unit && (
-                    <span
-                      className={`text-xs font-medium ml-1 ${
-                        p.featured ? "text-cyan-100" : "text-slate-500"
-                      }`}
-                    >
-                      {p.unit}
+              >
+                {/* Featured Badge */}
+                {p.featured && (
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-cyan-300 px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-950 shadow-md">
+                      <Sparkles className="h-3 w-3" />
+                      {p.badge}
                     </span>
-                  )}
-                </div>
+                  </div>
+                )}
 
-                {/* Feature Checklist */}
-                <ul className="mt-6 space-y-3 text-xs leading-relaxed">
-                  {p.features.map((feat, i) => (
-                    <li key={i} className="flex items-start gap-2.5">
+                {/* Top Details & Features */}
+                <div>
+                  <h3
+                    className={`text-base font-extrabold uppercase tracking-tight ${p.featured ? "text-white" : "text-slate-900"
+                      }`}
+                  >
+                    {p.name}
+                  </h3>
+                  <p
+                    className={`mt-1.5 text-xs leading-relaxed min-h-[32px] ${p.featured ? "text-cyan-100" : "text-slate-500"
+                      }`}
+                  >
+                    {p.subtitle}
+                  </p>
+
+                  {/* Price Display */}
+                  <div className="mt-4 pb-4 border-b border-slate-200/50">
+                    <span
+                      className={`text-2xl sm:text-3xl font-extrabold tracking-tight font-mono ${p.featured ? "text-white" : "text-blue-600"
+                        }`}
+                    >
+                      {p.price}
+                    </span>
+                    {p.unit && (
                       <span
-                        className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full mt-0.5 ${
-                          p.featured
+                        className={`text-xs font-medium ml-1 ${p.featured ? "text-cyan-100" : "text-slate-500"
+                          }`}
+                      >
+                        {p.unit}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Feature Checklist */}
+                  <ul className="mt-5 space-y-2.5 xl:space-y-3 text-xs xl:text-[13px] leading-relaxed">
+                    {p.features.map((feat, i) => (
+                      <li key={i} className="flex items-start gap-2.5">
+                        <span
+                          className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full mt-0.5 ${p.featured
                             ? "bg-white/20 text-white"
                             : "bg-cyan-100 text-cyan-700"
-                        }`}
-                      >
-                        <Check className="h-2.5 w-2.5" />
-                      </span>
-                      <span className={p.featured ? "text-white/95" : "text-slate-700"}>
-                        {feat}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                            }`}
+                        >
+                          <Check className="h-2.5 w-2.5" />
+                        </span>
+                        <span className={p.featured ? "text-white/95" : "text-slate-700"}>
+                          {feat}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-              {/* Action Button at bottom — 100% High Contrast & Vertically Aligned */}
-              <div className="mt-8 pt-4 border-t border-slate-100/30">
-                <Link
-                  href={p.href}
-                  className={`w-full inline-flex items-center justify-center gap-2 rounded-full py-3 px-4 text-xs font-bold transition-all shadow-md active:scale-95 ${
-                    p.featured
+                {/* Action Button at bottom — 100% High Contrast & Vertically Aligned */}
+                <div className="mt-6 pt-4 border-t border-slate-100/30">
+                  <Link
+                    href={p.href}
+                    className={`w-full inline-flex items-center justify-center gap-2 rounded-full py-3 px-4 text-xs font-bold transition-all shadow-md active:scale-95 ${p.featured
                       ? "bg-white !text-blue-900 font-extrabold hover:bg-slate-100 hover:shadow-xl"
                       : "bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:opacity-95"
-                  }`}
-                >
-                  <span className={p.featured ? "!text-blue-900 font-extrabold" : "text-white"}>
-                    {p.cta}
-                  </span>
-                  <ArrowRight className={`h-3 w-3 ${p.featured ? "!text-blue-900" : "text-white"}`} />
-                </Link>
+                      }`}
+                  >
+                    <span className={p.featured ? "!text-blue-900 font-extrabold" : "text-white"}>
+                      {p.cta}
+                    </span>
+                    <ArrowRight className={`h-3 w-3 ${p.featured ? "!text-blue-900" : "text-white"}`} />
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </ScrollReveal>
 
       </div>
     </section>

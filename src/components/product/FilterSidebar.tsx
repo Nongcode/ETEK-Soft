@@ -84,9 +84,9 @@ export default function FilterSidebar() {
             <button
               type="button"
               onClick={() => router.push("/san-pham", { scroll: false })}
-              className="flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium text-primary hover:bg-primary-light transition-colors"
+              className="group flex items-center gap-1 rounded-md px-2.5 py-1 text-xs font-semibold text-primary hover:bg-blue-50 transition-all duration-200 active:scale-95"
             >
-              <RotateCcw className="h-3 w-3" aria-hidden />
+              <RotateCcw className="h-3 w-3 transition-transform duration-300 group-hover:-rotate-180" aria-hidden />
               <span>Đặt lại</span>
             </button>
           )}
@@ -220,20 +220,20 @@ function FilterDropdownGroup({
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between py-3.5 text-left text-[13.5px] font-bold text-navy transition-colors hover:text-primary"
+        className="group flex w-full items-center justify-between py-3.5 text-left text-[13.5px] font-bold text-navy transition-colors hover:text-primary"
       >
         <span className="flex items-center gap-2">
-          <span>{title}</span>
+          <span className="transition-colors group-hover:text-primary">{title}</span>
           {badgeCount > 0 && (
-            <span className="flex h-5 min-w-[20px] items-center justify-center rounded-full bg-primary px-1.5 text-[10.5px] font-extrabold text-white shadow-xs">
+            <span className="flex h-5 min-w-[20px] items-center justify-center rounded-full bg-primary px-1.5 text-[10.5px] font-extrabold text-white shadow-xs transition-transform group-hover:scale-110">
               {badgeCount}
             </span>
           )}
         </span>
         <ChevronDown
           className={cn(
-            "h-4 w-4 text-slate-400 transition-transform duration-200",
-            isOpen && "rotate-180 text-primary"
+            "h-4 w-4 text-slate-400 transition-transform duration-300",
+            isOpen ? "rotate-180 text-primary" : "group-hover:text-slate-600"
           )}
           aria-hidden
         />
@@ -258,15 +258,20 @@ function FilterCheckbox({
   onChange: () => void;
 }) {
   return (
-    <label className="group -mx-2 flex cursor-pointer items-center justify-between rounded-lg px-2.5 py-1.5 text-sm text-slate-700 transition-colors hover:bg-slate-50">
-      <span className={cn("text-[13.5px] transition-colors", checked && "font-semibold text-primary")}>
+    <label
+      className={cn(
+        "group -mx-2 flex cursor-pointer items-center justify-between rounded-lg px-2.5 py-1.5 text-sm text-slate-700 transition-all duration-200 hover:bg-blue-50/70 hover:translate-x-0.5",
+        checked && "bg-blue-50/60 font-semibold text-primary"
+      )}
+    >
+      <span className={cn("text-[13.5px] transition-colors", checked ? "font-semibold text-primary" : "group-hover:text-primary")}>
         {label}
       </span>
       <input
         type="checkbox"
         checked={checked}
         onChange={onChange}
-        className="h-4 w-4 shrink-0 rounded border-slate-300 text-primary accent-primary focus:ring-0 focus:outline-none outline-none"
+        className="h-4 w-4 shrink-0 rounded border-slate-300 text-primary accent-primary focus:ring-0 focus:outline-none outline-none cursor-pointer transition-transform group-hover:scale-110"
       />
     </label>
   );

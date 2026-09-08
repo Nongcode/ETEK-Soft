@@ -54,6 +54,7 @@ export default function SearchBox({
         <Search className="h-4 w-4 shrink-0 text-muted" aria-hidden />
         <input
           type="text"
+          suppressHydrationWarning
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
@@ -67,6 +68,7 @@ export default function SearchBox({
         {query && (
           <button
             type="button"
+            suppressHydrationWarning
             aria-label="Xóa tìm kiếm"
             onClick={() => setQuery("")}
             className="mr-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-muted hover:bg-slate-100"
@@ -76,6 +78,7 @@ export default function SearchBox({
         )}
         <button
           type="submit"
+          suppressHydrationWarning
           className="h-8 shrink-0 rounded-[6px] bg-primary px-4 text-xs font-semibold text-white transition-colors hover:bg-primary-dark"
         >
           Tìm
