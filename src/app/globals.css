@@ -1488,6 +1488,26 @@ a:focus-visible {
   }
 }
 
+/* Chỉ kích hoạt animation nội bộ khi khối đã cuộn vào tầm nhìn (Scroll-Activated) */
+.reveal-ready [data-reveal]:not(.is-revealed) .animate-scroll-active {
+  animation-play-state: paused !important;
+}
+.reveal-ready [data-reveal].is-revealed .animate-scroll-active {
+  animation-play-state: running !important;
+}
+
+@keyframes ambient-3d-drift {
+  0%, 100% {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.06) translate3d(-8px, -6px, 0);
+  }
+}
+.animate-ambient-3d {
+  animation: ambient-3d-drift 18s ease-in-out infinite alternate;
+}
+
 
 /* Tia laser quét dọc thẻ nhân sự khi bấm mô phỏng FaceID */
 .deck__scanline {
