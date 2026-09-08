@@ -56,6 +56,13 @@ export interface NewsArticle {
   date: string;
   readTime: string;
   featured?: boolean;
+  image?: string;
+  author?: {
+    name: string;
+    role: string;
+    avatar?: string;
+  };
+  tags?: string[];
 }
 
 export interface Guide {
