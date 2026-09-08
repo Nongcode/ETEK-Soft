@@ -139,6 +139,43 @@
   animation: arrow-nudge 2s ease-in-out infinite;
 }
 
+@keyframes float-tile-1 {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes float-tile-2 {
+  0%, 100% { transform: translateY(0px) rotate(3deg); }
+  50% { transform: translateY(-16px) rotate(-1deg); }
+}
+
+@keyframes float-tile-3 {
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes float-tile-4 {
+  0%, 100% { transform: translateY(0px) rotate(2deg); }
+  50% { transform: translateY(-14px) rotate(-2deg); }
+}
+
+@keyframes float-tile-5 {
+  0%, 100% { transform: translateY(0px) rotate(-3deg); }
+  50% { transform: translateY(-11px) rotate(1deg); }
+}
+
+@keyframes float-tile-6 {
+  0%, 100% { transform: translateY(0px) rotate(1deg); }
+  50% { transform: translateY(-15px) rotate(-3deg); }
+}
+
+.animate-float-tile-1 { animation: float-tile-1 5.2s ease-in-out infinite; }
+.animate-float-tile-2 { animation: float-tile-2 6.8s ease-in-out infinite; }
+.animate-float-tile-3 { animation: float-tile-3 4.5s ease-in-out infinite; }
+.animate-float-tile-4 { animation: float-tile-4 7.5s ease-in-out infinite; }
+.animate-float-tile-5 { animation: float-tile-5 5.8s ease-in-out infinite; }
+.animate-float-tile-6 { animation: float-tile-6 6.2s ease-in-out infinite; }
+
 @keyframes stepProgress {
   0% {
     width: 0%;

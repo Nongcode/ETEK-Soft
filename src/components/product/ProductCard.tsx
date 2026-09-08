@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Star, Sparkles } from "lucide-react";
+import { ArrowRight, Star, Sparkles, Headset } from "lucide-react";
 import { Product } from "@/types";
 import { formatPrice } from "@/lib/utils";
 import Badge, { productBadgeTone } from "@/components/ui/Badge";
@@ -71,6 +71,8 @@ function BrandVisual({ brand, name }: { brand: string; name: string }) {
 }
 
 export default function ProductCard({ product }: { product: Product }) {
+  const isSolution = Boolean(product.isSolution || product.price === 0);
+
   return (
     <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-[0_22px_45px_-12px_rgba(37,99,235,0.18)]">
       {/* Top Accent Gradient Line — Active on Hover */}
@@ -156,12 +158,20 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className="mt-auto pt-4">
           <div className="mb-3.5 flex items-baseline justify-between border-t border-slate-100 pt-3">
             <div>
-              <span className="block text-[11px] font-medium text-slate-400">Giá bản quyền</span>
-              <span className="text-xl font-extrabold tracking-tight text-navy transition-colors duration-200 group-hover:text-blue-600">
-                {formatPrice(product.price)}
+              <span className="block text-[11px] font-medium text-slate-400">
+                {isSolution ? "Báo giá dự án" : "Giá bản quyền"}
+              </span>
+              <span
+                className={`tracking-tight transition-colors duration-200 ${
+                  isSolution
+                    ? "text-base sm:text-lg font-extrabold text-blue-600 group-hover:text-blue-700"
+                    : "text-xl font-extrabold text-navy group-hover:text-blue-600"
+                }`}
+              >
+                {isSolution ? "Liên hệ tư vấn" : formatPrice(product.price)}
               </span>
             </div>
-            {product.originalPrice && (
+            {!isSolution && product.originalPrice && (
               <span className="text-xs font-medium text-slate-400 line-through">
                 {formatPrice(product.originalPrice)}
               </span>
@@ -177,7 +187,18 @@ export default function ProductCard({ product }: { product: Product }) {
               <span>Xem chi tiết</span>
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" aria-hidden />
             </Button>
-            <AddToCartButton product={product} />
+            {isSolution ? (
+              <Link
+                href={`/tu-van?solution=${product.slug}`}
+                aria-label={`Tư vấn giải pháp ${product.name}`}
+                title="Tư vấn giải pháp"
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-primary/25 bg-blue-50/60 text-primary hover:border-primary hover:bg-primary hover:text-white transition-all duration-200 active:scale-95"
+              >
+                <Headset className="h-[18px] w-[18px]" aria-hidden />
+              </Link>
+            ) : (
+              <AddToCartButton product={product} />
+            )}
           </div>
         </div>
       </div>

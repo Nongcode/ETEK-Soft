@@ -3,6 +3,7 @@ export function cn(...classes: Array<string | false | null | undefined>): string
 }
 
 export function formatPrice(value: number): string {
+  if (value === 0) return "Liên hệ tư vấn";
   return new Intl.NumberFormat("vi-VN").format(value) + "đ";
 }
 

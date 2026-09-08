@@ -37,6 +37,7 @@ interface ButtonAsLink extends CommonProps {
   target?: string;
   rel?: string;
   onClick?: () => void;
+  title?: string;
 }
 
 type ButtonProps = ButtonAsButton | ButtonAsLink;

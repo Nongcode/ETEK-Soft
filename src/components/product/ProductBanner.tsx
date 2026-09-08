@@ -4,6 +4,7 @@ import { Headphones, FileText, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SearchBox, { SearchSuggestion } from "@/components/ui/SearchBox";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { FloatingSoftwareLogos } from "@/components/product/FloatingSoftwareLogos";
 
 const popularKeywords = [
   { label: "Microsoft 365", href: "/san-pham?category=microsoft-365" },
@@ -43,11 +44,11 @@ export default function ProductBanner({
   suggestions?: SearchSuggestion[];
 }) {
   return (
-    <section className="relative bg-slate-50">
+    <section className="relative bg-slate-50 overflow-hidden">
       {/* Background Banner Image strictly clipped inside with smooth bottom fade */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
-          src="/images/banner-sp.png"
+          src="/images/banner-sp-base.png"
           alt="ETEK SOFTS Banner Sản phẩm"
           fill
           priority
@@ -57,6 +58,11 @@ export default function ProductBanner({
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-transparent sm:via-white/70 lg:via-white/40" />
         {/* Gentle seamless bottom blend */}
         <div className="absolute bottom-0 inset-x-0 h-14 bg-gradient-to-b from-transparent to-slate-50/70" />
+      </div>
+
+      {/* Dynamic Floating Software Logos hovering over the laptop workspace */}
+      <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[48%] z-10 pointer-events-none">
+        <FloatingSoftwareLogos />
       </div>
 
       {/* Floating 3D Geometric Accents matching Homepage Hero */}
