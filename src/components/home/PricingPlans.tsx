@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Check, Sparkles, ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
@@ -81,13 +82,28 @@ const plans = [
 
 export default function PricingPlans() {
   return (
-    <section className="relative overflow-hidden bg-white py-14 sm:py-20">
+    <section className="relative overflow-hidden py-16 sm:py-24 border-y border-slate-200/90 bg-slate-50">
+      {/* Luminous Soft Silk Wave Background Image */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <Image
+          src="/images/pricing-soft-bg.jpg"
+          alt="Hạ tầng bản quyền & phần mềm doanh nghiệp ETEK"
+          fill
+          unoptimized
+          priority
+          className="object-cover object-center scale-105 blur-[5px] opacity-70"
+        />
+        {/* Gentle protective light gradient wash */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/60" />
+      </div>
+
       <div className="relative z-10 mx-auto max-w-7xl 2xl:max-w-[1440px] px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <ScrollReveal direction="up">
           <div className="text-center max-w-3xl mx-auto">
-            <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-cyan-600 font-mono">
+            <span className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-[0.2em] text-blue-700 font-mono bg-blue-100/80 px-3.5 py-1.5 rounded-full border border-blue-200/80 shadow-xs">
+              <Sparkles className="h-3.5 w-3.5 text-blue-600" />
               BẢNG GIÁ DỊCH VỤ
             </span>
             <h2 className="mt-3 text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight uppercase leading-tight">
@@ -106,8 +122,8 @@ export default function PricingPlans() {
               <div
                 key={p.name}
                 className={`relative flex flex-col justify-between rounded-[2.2rem] p-5 sm:p-6 xl:p-6 2xl:p-7 transition-all duration-300 h-full ${p.featured
-                  ? "bg-gradient-to-b from-blue-600 via-blue-600 to-cyan-600 text-white shadow-2xl border-2 border-cyan-300 ring-4 ring-blue-500/20"
-                  : "bg-white border border-slate-200 text-slate-900 hover:shadow-xl hover:border-blue-300 hover:-translate-y-1"
+                  ? "bg-gradient-to-b from-blue-600 via-blue-600 to-cyan-600 text-white shadow-2xl border-2 border-cyan-300 ring-4 ring-blue-500/20 hover:-translate-y-1.5"
+                  : "bg-white/95 backdrop-blur-md border border-slate-200/90 text-slate-900 shadow-sm hover:shadow-2xl hover:border-blue-300 hover:-translate-y-1.5 hover:bg-white"
                   }`}
               >
                 {/* Featured Badge */}

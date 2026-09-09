@@ -56,7 +56,12 @@ export default function ImplementationProcess() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-miko-cream py-14 sm:py-20 border-t border-b border-miko">
+    <section className="relative overflow-hidden bg-slate-100 py-16 sm:py-24 border-y border-slate-200">
+      {/* Background Dot Matrix & Ambient Glows */}
+      <div className="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:24px_24px] opacity-35 pointer-events-none" />
+      <div className="absolute left-1/3 top-0 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
+      <div className="absolute right-1/3 bottom-0 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl pointer-events-none" />
+
       <div className="relative z-10 mx-auto max-w-7xl 2xl:max-w-[1440px] px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

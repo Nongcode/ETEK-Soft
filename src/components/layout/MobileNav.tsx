@@ -33,12 +33,12 @@ export default function MobileNav({ open, onClose }: { open: boolean; onClose: (
   return (
     <div className="fixed inset-0 z-[60] flex flex-col bg-white md:hidden" role="dialog" aria-modal="true">
       <div className="flex h-16 shrink-0 items-center justify-between border-b border-border px-4">
-        <Link href="/" onClick={onClose} className="flex items-center" aria-label="ETEK SOFTS Trang chủ">
+        <Link href="/" onClick={onClose} className="flex items-center" aria-label="ETEK SOLUTIONS Trang chủ">
           <Image
-            src="/images/logo.png"
-            alt="ETEK SOFTS"
+            src="/images/etek-logo.jpg"
+            alt="ETEK SOLUTIONS"
             width={135}
-            height={36}
+            height={55}
             priority
             className="h-8 w-auto object-contain"
           />
@@ -180,7 +180,7 @@ export default function MobileNav({ open, onClose }: { open: boolean; onClose: (
             <Mail className="h-3.5 w-3.5 text-primary" aria-hidden /> sales@etek-soft.vn
           </a>
         </div>
-        <Button href="/tu-van" className="w-full">
+        <Button href="/lien-he" className="w-full">
           Nhận tư vấn ngay
         </Button>
       </div>

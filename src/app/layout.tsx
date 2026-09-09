@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{
             __html: `
 (function() {
-  // 1. Gỡ lỗi hydration do tiện ích trình duyệt chèn thuộc tính (như Bitdefender bis_skin_checked)
+  // 1. Gỡ lỗi hydration do tiện ích trình duyệt chèn thuộc tính (như Bitdefender bis_skin_checked, autofill fdprocessedid, v.v.)
   try {
     var origError = console.error;
     console.error = function() {
@@ -60,7 +60,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         var arg = arguments[i];
         if (arg) {
           var str = typeof arg === 'string' ? arg : (arg.message || arg.stack || String(arg));
-          if (str.indexOf('bis_skin_checked') !== -1 || (str.indexOf('A tree hydrated') !== -1 && str.indexOf('hidden') !== -1)) {
+          if (
+            str.indexOf('bis_skin_checked') !== -1 ||
+            str.indexOf('fdprocessedid') !== -1 ||
+            (str.indexOf('A tree hydrated') !== -1 && (str.indexOf('hidden') !== -1 || str.indexOf('fdprocessedid') !== -1))
+          ) {
             return;
           }
         }
@@ -74,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         var arg = arguments[i];
         if (arg) {
           var str = typeof arg === 'string' ? arg : (arg.message || String(arg));
-          if (str.indexOf('bis_skin_checked') !== -1) {
+          if (str.indexOf('bis_skin_checked') !== -1 || str.indexOf('fdprocessedid') !== -1) {
             return;
           }
         }
@@ -84,26 +88,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
     var origSetAttribute = Element.prototype.setAttribute;
     Element.prototype.setAttribute = function(name, val) {
-      if (name === 'bis_skin_checked') return;
+      if (name === 'bis_skin_checked' || name === 'fdprocessedid') return;
       return origSetAttribute.apply(this, arguments);
     };
 
     var observer = new MutationObserver(function(mutations) {
       for (var i = 0; i < mutations.length; i++) {
         var m = mutations[i];
-        if (m.type === 'attributes' && m.attributeName === 'bis_skin_checked') {
-          m.target.removeAttribute('bis_skin_checked');
+        if (m.type === 'attributes' && (m.attributeName === 'bis_skin_checked' || m.attributeName === 'fdprocessedid')) {
+          m.target.removeAttribute(m.attributeName);
         } else if (m.type === 'childList') {
           for (var j = 0; j < m.addedNodes.length; j++) {
             var node = m.addedNodes[j];
             if (node.nodeType === 1) {
-              if (node.hasAttribute && node.hasAttribute('bis_skin_checked')) {
-                node.removeAttribute('bis_skin_checked');
-              }
-              var els = node.querySelectorAll ? node.querySelectorAll('[bis_skin_checked]') : [];
-              for (var k = 0; k < els.length; k++) {
-                els[k].removeAttribute('bis_skin_checked');
-              }
+              if (node.hasAttribute && node.hasAttribute('bis_skin_checked')) node.removeAttribute('bis_skin_checked');
+              if (node.hasAttribute && node.hasAttribute('fdprocessedid')) node.removeAttribute('fdprocessedid');
+              var els1 = node.querySelectorAll ? node.querySelectorAll('[bis_skin_checked]') : [];
+              for (var k = 0; k < els1.length; k++) els1[k].removeAttribute('bis_skin_checked');
+              var els2 = node.querySelectorAll ? node.querySelectorAll('[fdprocessedid]') : [];
+              for (var k = 0; k < els2.length; k++) els2[k].removeAttribute('fdprocessedid');
             }
           }
         }
@@ -113,11 +116,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       attributes: true,
       subtree: true,
       childList: true,
-      attributeFilter: ['bis_skin_checked']
+      attributeFilter: ['bis_skin_checked', 'fdprocessedid']
     });
 
     window.addEventListener('error', function(e) {
-      if (e && e.message && (e.message.indexOf('bis_skin_checked') !== -1 || (e.message.indexOf('hydration') !== -1 && e.message.indexOf('hidden') !== -1))) {
+      if (e && e.message && (
+        e.message.indexOf('bis_skin_checked') !== -1 ||
+        e.message.indexOf('fdprocessedid') !== -1 ||
+        (e.message.indexOf('hydration') !== -1 && (e.message.indexOf('hidden') !== -1 || e.message.indexOf('fdprocessedid') !== -1))
+      )) {
         e.stopImmediatePropagation();
         e.preventDefault();
       }

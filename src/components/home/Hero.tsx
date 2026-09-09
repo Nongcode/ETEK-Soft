@@ -43,10 +43,10 @@ export default function Hero() {
         {/* 2. Tiêu đề */}
         <div className="mx-auto mt-5 max-w-4xl" style={{ "--enter-delay": "180ms" } as React.CSSProperties}>
           <h1 className="text-2xl font-extrabold uppercase leading-[1.3] tracking-tight text-slate-900 sm:text-4xl sm:leading-[1.25] lg:text-[2.75rem]">
-            HỆ THỐNG QUẢN TRỊ NHÂN SỰ{" "}
+            HỆ THỐNG QUẢN TRỊ NHÂN SỰ SỐ{" "}
             <span className="relative mx-1 inline-block">
               <span className="bg-gradient-to-r from-blue-600 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                HRM 4.0
+                HRM - ETEK SOLUTION
               </span>
               <span className="absolute bottom-0 left-0 right-0 h-[2.5px] rounded-full bg-gradient-to-r from-blue-500 to-cyan-400" />
             </span>
@@ -60,7 +60,7 @@ export default function Hero() {
           className="mx-auto mt-4 max-w-2xl text-xs font-medium leading-relaxed text-slate-600 sm:text-sm md:text-base"
           style={{ "--enter-delay": "300ms" } as React.CSSProperties}
         >
-          Đồng hành cùng hơn 500+ doanh nghiệp trên toàn quốc: Tự động hóa chấm công AI đa chi nhánh, tính lương 3P
+          Đồng hành cùng nhiều doanh nghiệp trên toàn quốc: Tự động hóa chấm công đa chi nhánh, tính lương 3P
           chuẩn xác và phân phối 100% bản quyền phần mềm Microsoft, Windows, Server có chứng nhận CO/CQ chính hãng.
         </p>
 

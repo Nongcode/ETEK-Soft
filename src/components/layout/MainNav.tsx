@@ -77,25 +77,66 @@ export default function MainNav() {
   return (
     <div
       className={cn(
-        "transition-all duration-300 w-full",
+        "relative transition-all duration-300 w-full backdrop-blur-xl border-b",
         scrolled
-          ? "bg-white/95 border-b border-slate-200/90 shadow-[0_8px_30px_rgba(15,23,42,0.06)] py-0"
-          : "bg-white/98 border-b border-slate-100 py-1"
+          ? "bg-white/92 border-slate-200/80 shadow-[0_10px_35px_rgba(37,99,235,0.08)] py-0"
+          : "border-sky-100/70 py-1"
       )}
       onMouseLeave={() => setActiveMenu(null)}
     >
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2 lg:gap-4 transition-all duration-300 h-16 lg:h-[68px]">
-        {/* Brand Logo */}
+      {/* 100% Full-bleed Seamless Animated Silk Canvas (No white gaps or sharp cuts) */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10 select-none">
+        {/* Base full-width flowing silk gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-50/95 via-sky-50/85 via-blue-50/80 via-indigo-50/85 to-slate-50/95 animate-silk-bg" />
+
+        {/* Oversized luminous silk aura 1: extends -25% to +125% so translation never reveals borders */}
+        <div
+          className="absolute -top-16 -bottom-16 -left-[25%] -right-[25%] opacity-40 animate-silk-aurora-1 filter blur-2xl"
+          style={{
+            background:
+              "radial-gradient(ellipse 45% 60% at 30% 50%, rgba(56, 189, 248, 0.4), transparent 70%), radial-gradient(ellipse 40% 55% at 75% 50%, rgba(99, 102, 241, 0.35), transparent 70%)",
+          }}
+        />
+
+        {/* Oversized luminous silk aura 2: counter-flowing silk light */}
+        <div
+          className="absolute -top-16 -bottom-16 -left-[25%] -right-[25%] opacity-35 animate-silk-aurora-2 filter blur-3xl"
+          style={{
+            background:
+              "radial-gradient(ellipse 50% 65% at 65% 50%, rgba(14, 165, 233, 0.35), transparent 70%), radial-gradient(ellipse 40% 50% at 20% 50%, rgba(168, 85, 247, 0.25), transparent 70%)",
+          }}
+        />
+
+        {/* Subtle shimmering silk ribbon light streak across the navbar */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            background:
+              "linear-gradient(105deg, transparent 20%, rgba(255, 255, 255, 0.8) 45%, rgba(56, 189, 248, 0.35) 50%, transparent 75%)",
+            backgroundSize: "200% 100%",
+            animation: "silk-ribbon-flow 9s linear infinite",
+          }}
+        />
+      </div>
+
+      {/* Animated Bottom Silk Ribbon Accent Line */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2.5px] overflow-hidden pointer-events-none z-20">
+        <div className="h-full w-full bg-gradient-to-r from-sky-400 via-blue-600 via-indigo-500 via-cyan-400 to-sky-400 animate-silk-flow opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-400 blur-[2px] opacity-70 animate-silk-flow" />
+      </div>
+
+      <div className="relative z-20 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2 lg:gap-4 transition-all duration-300 h-16 lg:h-[68px]">
+        {/* Brand Logo - Using transparent PNG without white rectangular box */}
         <Link
           href="/"
           className="flex shrink-0 items-center gap-2 transition-transform hover:opacity-95"
-          aria-label="ETEK SOFTS Trang chủ"
+          aria-label="ETEK SOLUTIONS Trang chủ"
         >
           <Image
-            src="/images/logo.png"
-            alt="ETEK SOFTS"
-            width={145}
-            height={38}
+            src="/images/etek-logo.png"
+            alt="ETEK SOLUTIONS"
+            width={150}
+            height={62}
             priority
             className={cn(
               "w-auto object-contain transition-all duration-300",
@@ -320,7 +361,7 @@ export default function MainNav() {
 
           {/* Primary Action CTA Button */}
           <Link
-            href="/tu-van"
+            href="/lien-he"
             className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-blue-600 via-blue-600 to-cyan-500 px-4 py-2 text-xs xl:text-sm font-bold text-white shadow-[0_4px_14px_rgba(37,99,235,0.22)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_20px_rgba(37,99,235,0.35)] active:scale-95 whitespace-nowrap"
           >
             <span>Nhận tư vấn</span>

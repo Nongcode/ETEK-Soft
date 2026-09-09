@@ -14,6 +14,9 @@ import {
   MapPin,
   Calendar,
   Lock,
+  Clock,
+  Network,
+  Zap,
 } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
@@ -22,21 +25,45 @@ const values = [
     num: "01",
     title: "Tiết Kiệm 85% Thời Gian Tính Lương",
     desc: "Xóa bỏ hoàn toàn việc cộng công thủ công bằng file Excel rời rạc. Tự động hóa tính lương 3P, KPI, khấu trừ BHXH và thuế TNCN chính xác từng đồng.",
+    icon: Clock,
+    tag: "Tối Ưu 85%",
+    accentGradient: "from-blue-600 via-cyan-500 to-blue-400",
+    iconBg: "from-blue-600 to-cyan-500",
+    badgeClass: "bg-blue-50 text-blue-700 border-blue-200/80",
+    glowColor: "bg-blue-500/15",
   },
   {
     num: "02",
     title: "100% Bản Quyền Hợp Lệ & Hóa Đơn VAT",
     desc: "Đảm bảo tuân thủ Luật Sở Hữu Trí Tuệ. Cung cấp giấy chứng nhận xuất xứ CO/CQ chính hãng từ Microsoft, Autodesk, Kaspersky đầy đủ hóa đơn đỏ hợp pháp.",
+    icon: ShieldCheck,
+    tag: "Chuẩn CO/CQ",
+    accentGradient: "from-emerald-600 via-teal-500 to-emerald-400",
+    iconBg: "from-emerald-600 to-teal-500",
+    badgeClass: "bg-emerald-50 text-emerald-700 border-emerald-200/80",
+    glowColor: "bg-emerald-500/15",
   },
   {
     num: "03",
     title: "Đồng Bộ Đa Chi Nhánh Thời Gian Thực",
     desc: "Kết nối dữ liệu chấm công từ hàng chục nhà máy, chuỗi cửa hàng và văn phòng về một máy chủ trung tâm qua đường truyền mã hóa SSL 256-bit.",
+    icon: Network,
+    tag: "Realtime Sync",
+    accentGradient: "from-indigo-600 via-purple-500 to-indigo-400",
+    iconBg: "from-indigo-600 to-purple-500",
+    badgeClass: "bg-indigo-50 text-indigo-700 border-indigo-200/80",
+    glowColor: "bg-indigo-500/15",
   },
   {
     num: "04",
     title: "Kỹ Sư Đồng Hành Hỗ Trợ Dưới 15 Phút",
     desc: "Cam kết SLA phản hồi kỹ thuật nhanh nhất thị trường. Hỗ trợ từ xa qua UltraView/TeamViewer hoặc kỹ sư đến tận nơi triển khai cho doanh nghiệp.",
+    icon: Zap,
+    tag: "SLA < 15 Phút",
+    accentGradient: "from-amber-500 via-orange-500 to-amber-400",
+    iconBg: "from-amber-500 to-orange-500",
+    badgeClass: "bg-amber-50 text-amber-700 border-amber-200/80",
+    glowColor: "bg-amber-500/15",
   },
 ];
 
@@ -240,34 +267,68 @@ export default function CoreValueSection() {
         </div>
 
         {/* 4. Horizontal Numbered Benefit Cards (01, 02, 03, 04) */}
-        <div className="mt-16 sm:mt-20">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="text-lg sm:text-2xl font-extrabold text-slate-900 uppercase tracking-tight">
-              GIẢI PHÁP ETEK MANG LẠI NHỮNG GIÁ TRỊ GÌ?
-            </h3>
+        <div className="mt-16 sm:mt-24">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <div>
+              <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.2em] text-blue-700 font-mono bg-blue-100/80 px-3 py-1 rounded-full border border-blue-200/80 mb-3">
+                <Sparkles className="h-3.5 w-3.5" />
+                <span>GIÁ TRỊ THỰC TIỄN &amp; KHÁC BIỆT</span>
+              </div>
+              <h3 className="text-xl sm:text-3xl lg:text-4xl font-black text-slate-900 uppercase tracking-tight">
+                GIẢI PHÁP ETEK MANG LẠI NHỮNG GIÁ TRỊ GÌ?
+              </h3>
+              <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-2xl">
+                Được kiểm chứng qua 500+ dự án thực tế với cam kết tối ưu chi phí, đảm bảo 100% bản quyền pháp lý và tốc độ kỹ thuật dưới 15 phút.
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" data-reveal-group data-reveal-step="110">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-reveal-group data-reveal-step="110">
             {values.map((v, i) => (
               <div
                 key={i}
                 data-reveal
-                className="group relative rounded-[2rem] bg-miko-sand p-6 sm:p-7 border border-miko transition-all duration-300 hover:bg-white hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
+                className="group relative overflow-hidden rounded-[2rem] bg-white p-6 sm:p-7 border border-slate-200/90 shadow-[0_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_rgba(15,23,42,0.12)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
               >
-                <div>
-                  <span className="font-mono text-3xl sm:text-4xl font-extrabold text-slate-400/80 group-hover:text-blue-600 transition-colors">
-                    {v.num}
-                  </span>
-                  <h4 className="mt-4 text-sm sm:text-base font-bold text-slate-900 tracking-tight leading-snug">
+                {/* Top Accent Gradient Line */}
+                <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${v.accentGradient} opacity-80 group-hover:opacity-100 transition-opacity`} />
+
+                {/* Soft Ambient Corner Glow on Hover */}
+                <div className={`absolute -right-10 -top-10 h-32 w-32 rounded-full ${v.glowColor} blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
+
+                {/* Big Watermark Number */}
+                <span className="absolute right-5 top-4 font-mono text-5xl sm:text-6xl font-black text-slate-100 select-none pointer-events-none group-hover:text-slate-200/80 transition-colors">
+                  {v.num}
+                </span>
+
+                <div className="relative z-10">
+                  {/* Icon & Badge Header */}
+                  <div className="flex items-center justify-between">
+                    <div className={`flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${v.iconBg} text-white shadow-md shadow-slate-900/10 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300`}>
+                      <v.icon className="h-6 w-6" />
+                    </div>
+                    <span className={`font-mono text-[11px] font-bold px-2.5 py-1 rounded-full ${v.badgeClass} border`}>
+                      {v.tag}
+                    </span>
+                  </div>
+
+                  {/* Title & Desc */}
+                  <h4 className="mt-5 text-base font-extrabold text-slate-900 tracking-tight leading-snug group-hover:text-blue-600 transition-colors">
                     {v.title}
                   </h4>
                   <p className="mt-2.5 text-xs text-slate-600 leading-relaxed font-normal">
                     {v.desc}
                   </p>
                 </div>
-                <div className="mt-5 pt-3 border-t border-slate-300/40 flex items-center justify-between">
-                  <span className="text-[10px] font-bold text-cyan-700 font-mono">ETEK STANDARD</span>
-                  <ArrowRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
+
+                {/* Bottom Footer */}
+                <div className="relative z-10 mt-6 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+                  <span className="text-[10px] font-bold text-slate-400 font-mono tracking-wider group-hover:text-slate-700 transition-colors">
+                    ETEK STANDARD
+                  </span>
+                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-100 text-slate-500 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                    <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
                 </div>
               </div>
             ))}

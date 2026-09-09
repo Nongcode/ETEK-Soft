@@ -19,7 +19,7 @@ export default function TopBar() {
             <Mail className="h-3.5 w-3.5" aria-hidden />
             sales@etek-soft.vn
           </a>
-          <Link href="/tu-van" className="font-semibold text-white transition-colors hover:text-primary-light">
+          <Link href="/lien-he" className="font-semibold text-white transition-colors hover:text-primary-light">
             Nhận tư vấn
           </Link>
         </div>

@@ -206,10 +206,11 @@ export default function ImageLightbox({ data, onClose }: ImageLightboxProps) {
                 <Image
                   src={data.src}
                   alt={data.alt}
-                  width={1400}
-                  height={900}
+                  width={1536}
+                  height={1024}
+                  unoptimized
                   priority
-                  className="max-h-[64vh] w-auto max-w-full object-contain rounded-xl shadow-2xl ring-1 ring-white/10"
+                  className="max-h-[68vh] w-auto max-w-full object-contain rounded-xl shadow-2xl ring-1 ring-white/10 contrast-[1.05] brightness-[1.02] [image-rendering:-webkit-optimize-contrast]"
                 />
               </div>
             </div>

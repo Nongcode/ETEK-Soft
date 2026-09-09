@@ -2,18 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Headphones, FileText, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import Container from "@/components/ui/Container";
-import SearchBox, { SearchSuggestion } from "@/components/ui/SearchBox";
+import { SearchSuggestion } from "@/components/ui/SearchBox";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { FloatingSoftwareLogos } from "@/components/product/FloatingSoftwareLogos";
-
-const popularKeywords = [
-  { label: "Microsoft 365", href: "/san-pham?category=microsoft-365" },
-  { label: "Windows 11 Pro", href: "/san-pham?category=windows" },
-  { label: "Office 2024", href: "/san-pham?category=office" },
-  { label: "Kaspersky", href: "/san-pham?brand=Kaspersky" },
-  { label: "SQL Server", href: "/san-pham?category=sql-server" },
-  { label: "AutoCAD", href: "/san-pham?q=Autodesk" },
-];
 
 const trustBadges = [
   {
@@ -44,7 +34,8 @@ export default function ProductBanner({
   suggestions?: SearchSuggestion[];
 }) {
   return (
-    <section className="relative bg-slate-50 overflow-hidden">
+    <>
+      <section className="relative bg-[#ebf3fa] overflow-hidden min-h-[460px] sm:min-h-[500px] lg:min-h-[540px] xl:min-h-[580px] flex items-center">
       {/* Background Banner Image strictly clipped inside with smooth bottom fade */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
@@ -52,24 +43,15 @@ export default function ProductBanner({
           alt="ETEK SOFTS Banner Sản phẩm"
           fill
           priority
-          className="object-cover object-right lg:object-center"
+          className="object-cover object-right-bottom lg:object-[center_bottom]"
         />
         {/* Soft gradient wash to guarantee high contrast and readability on the left content area */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-transparent sm:via-white/70 lg:via-white/40" />
-        {/* Gentle seamless bottom blend */}
-        <div className="absolute bottom-0 inset-x-0 h-14 bg-gradient-to-b from-transparent to-slate-50/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-transparent sm:via-white/70 lg:via-white/35" />
+        {/* Gentle seamless bottom blend into page canvas */}
+        <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-b from-transparent via-slate-50/30 to-slate-50/80 pointer-events-none" />
       </div>
 
-      {/* Dynamic Floating Software Logos hovering over the laptop workspace */}
-      <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[48%] z-10 pointer-events-none">
-        <FloatingSoftwareLogos />
-      </div>
-
-      {/* Floating 3D Geometric Accents matching Homepage Hero */}
-      <span className="pointer-events-none absolute right-[34%] top-10 hidden h-7 w-7 rotate-12 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-500 opacity-40 shadow-lg animate-balloon lg:block" />
-      <span className="pointer-events-none absolute right-[12%] bottom-14 hidden h-8 w-8 -rotate-12 rounded-2xl bg-gradient-to-tr from-blue-500 to-teal-400 opacity-30 shadow-lg animate-balloon-slow lg:block" />
-
-      <Container className="relative z-10 py-10 lg:py-16">
+      <Container className="relative z-10 py-12 lg:py-20">
         {/* 1. Top Breadcrumb navigation */}
         <nav
           aria-label="Breadcrumb"
@@ -114,64 +96,42 @@ export default function ProductBanner({
             >
               Hệ sinh thái bản quyền Microsoft, Windows, Office, an ninh mạng và phần mềm đồ họa kỹ thuật dành riêng cho doanh nghiệp — có chứng nhận hợp lệ và hóa đơn VAT đầy đủ.
             </p>
-
-            {/* 5. Integrated Search Box */}
-            <div
-              className="banner-enter mt-6 max-w-xl transition-transform duration-300 hover:scale-[1.01]"
-              style={{ "--enter-delay": "540ms" } as React.CSSProperties}
-            >
-              <SearchBox
-                suggestions={suggestions}
-                placeholder="Tìm kiếm phần mềm (Windows, Office, Kaspersky, Autodesk...)"
-                className="shadow-md hover:shadow-lg transition-shadow"
-              />
-            </div>
-
-            {/* 6. Popular Quick Tag Pills */}
-            <div
-              className="banner-enter mt-4 flex flex-wrap items-center gap-1.5 text-xs text-slate-600"
-              style={{ "--enter-delay": "660ms" } as React.CSSProperties}
-            >
-              <span className="font-bold text-slate-800">Phổ biến:</span>
-              {popularKeywords.map((tag) => (
-                <Link
-                  key={tag.label}
-                  href={tag.href}
-                  className="rounded-full border border-slate-200/90 bg-white/95 px-2.5 py-0.5 font-medium text-slate-700 shadow-xs transition-all duration-200 hover:scale-105 hover:border-primary hover:bg-primary hover:text-white hover:shadow-sm active:scale-95"
-                >
-                  {tag.label}
-                </Link>
-              ))}
-            </div>
           </div>
 
-          {/* Right Column: Space for the 3D Laptop & Glass Icons to shine through */}
+          {/* Right Column: Space for the 3D Laptop & Office Scene to shine through */}
           <div className="hidden lg:block lg:col-span-5" />
         </div>
+      </Container>
+    </section>
 
-        {/* 7. 4 Trust Badges Floating Strip with Staggered Cascading Entrance */}
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 max-w-3xl lg:max-w-4xl pt-2">
-          {trustBadges.map((badge, idx) => {
+    {/* Dedicated Trust Badges Block with matching seamless background */}
+    <div className="relative z-10 pt-6 pb-2 sm:pt-8 sm:pb-3">
+      <Container>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+          {trustBadges.map((badge) => {
             const Icon = badge.icon;
-            const delay = 780 + idx * 120;
             return (
               <div
                 key={badge.title}
-                className="banner-enter group flex items-center gap-2.5 rounded-xl border border-white/90 bg-white/85 p-3 shadow-xs backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:bg-white hover:shadow-md cursor-pointer"
-                style={{ "--enter-delay": `${delay}ms` } as React.CSSProperties}
+                className="group flex items-center gap-3.5 rounded-2xl border border-slate-200/90 bg-white p-3.5 sm:p-4 shadow-sm transition-all duration-300 hover:border-blue-300 hover:shadow-md hover:-translate-y-0.5"
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-all duration-300 group-hover:scale-110 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white group-hover:shadow-sm">
-                  <Icon className="h-4 w-4" aria-hidden />
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 transition-all duration-300 group-hover:scale-105 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:text-white group-hover:shadow-sm">
+                  <Icon className="h-5 w-5" aria-hidden />
                 </span>
                 <div className="min-w-0">
-                  <p className="truncate text-xs font-bold text-navy group-hover:text-blue-600 transition-colors">{badge.title}</p>
-                  <p className="truncate text-[11px] font-medium text-slate-500">{badge.desc}</p>
+                  <p className="truncate text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                    {badge.title}
+                  </p>
+                  <p className="truncate text-xs font-medium text-slate-500 mt-0.5">
+                    {badge.desc}
+                  </p>
                 </div>
               </div>
             );
           })}
         </div>
       </Container>
-    </section>
+    </div>
+  </>
   );
 }

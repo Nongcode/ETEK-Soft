@@ -2,8 +2,8 @@ import { NavGroup, NavItem } from "@/types";
 
 export const mainNav: NavItem[] = [
   { label: "Trang chủ", href: "/" },
-  { label: "Giới thiệu", href: "/gioi-thieu", megaMenu: "about" },
-  { label: "Sản phẩm", href: "/san-pham", megaMenu: "products" },
+  { label: "Giải pháp số hóa", href: "/gioi-thieu", megaMenu: "about" },
+  { label: "Phần mềm bản quyền", href: "/san-pham", megaMenu: "products" },
   { label: "Hướng dẫn", href: "/huong-dan", megaMenu: "guide" },
   { label: "Tin tức", href: "/tin-tuc" },
   { label: "Liên hệ", href: "/lien-he" },
@@ -26,7 +26,7 @@ export const aboutMegaMenu: NavGroup[] = [
         icon: "Sparkles",
       },
       {
-        label: "Tuyển dụng nhân tài",
+        label: "Tuyển dụng nhân sự",
         href: "/tuyen-dung",
         description: "Môi trường năng động, cơ hội phát triển vượt bậc",
         icon: "Users",
@@ -37,21 +37,21 @@ export const aboutMegaMenu: NavGroup[] = [
     title: "Giải pháp chuyển đổi số",
     items: [
       {
-        label: "Giải pháp HRM",
+        label: "Quản trị số hóa nhân sự",
         href: "/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm",
-        description: "Quản trị nhân sự số: Chấm công FaceID, lương 3P & KPI",
+        description: "Quản trị nhân sự số: Chấm công, tính lương, quản lý cơm, bảo hiểm xã hội, ...",
         icon: "UserCheck",
       },
       {
-        label: "Giải pháp ERP",
-        href: "/san-pham/giai-phap-quan-tri-doanh-nghiep-tong-the-erp",
-        description: "Hoạch định nguồn lực: Kế toán, bán hàng, kho vận & sản xuất",
-        icon: "Layers",
+        label: "Quản trị văn phòng số",
+        href: "/san-pham/giai-phap-quan-tri-van-phong-so",
+        description: "Văn phòng số: Quản lý tài sản, pháp lý, hồ so ISO, đào tạo, meeting, ...",
+        icon: "pen",
       },
       {
-        label: "Phần mềm bản quyền",
+        label: "Số hóa kinh doanh - tài chính",
         href: "/san-pham",
-        description: "100% License Microsoft, Windows, Server chính ngạch",
+        description: "Tra cứu - thông  báo, quản lý quan hệ khách hàng CRM, quản lý bán hàng, ...",
         icon: "ShieldCheck",
       },
     ],
@@ -86,40 +86,23 @@ export const productMegaMenu: NavGroup[] = [
   {
     title: "Hạ tầng & máy chủ",
     items: [
-      {
-        label: "Windows Server",
-        href: "/san-pham?category=windows-server",
-        description: "Giải pháp máy chủ và quản trị hệ thống",
-        icon: "Server",
-      },
-      {
-        label: "SQL Server",
-        href: "/san-pham?category=sql-server",
-        description: "Hệ quản trị cơ sở dữ liệu cho doanh nghiệp",
-        icon: "Database",
-      },
+      // {
+      //   label: "Windows Server",
+      //   href: "/san-pham?category=windows-server",
+      //   description: "Giải pháp máy chủ và quản trị hệ thống",
+      //   icon: "Server",
+      // },
+      // {
+      //   label: "SQL Server",
+      //   href: "/san-pham?category=sql-server",
+      //   description: "Hệ quản trị cơ sở dữ liệu cho doanh nghiệp",
+      //   icon: "Database",
+      // },
       {
         label: "Phần mềm doanh nghiệp",
         href: "/san-pham?category=phan-mem-doanh-nghiep",
         description: "Thiết kế, kỹ thuật và quản trị dự án",
         icon: "Building2",
-      },
-    ],
-  },
-  {
-    title: "Bảo mật",
-    items: [
-      {
-        label: "Antivirus",
-        href: "/san-pham?category=antivirus",
-        description: "Giải pháp bảo mật và diệt virus chuyên nghiệp",
-        icon: "ShieldCheck",
-      },
-      {
-        label: "Microsoft",
-        href: "/san-pham?category=microsoft",
-        description: "Toàn bộ sản phẩm bản quyền của Microsoft",
-        icon: "AppWindow",
       },
       {
         label: "Xem tất cả sản phẩm",
@@ -129,6 +112,24 @@ export const productMegaMenu: NavGroup[] = [
       },
     ],
   },
+  // {
+  //   title: "Bảo mật",
+  //   items: [
+  //     {
+  //       label: "Antivirus",
+  //       href: "/san-pham?category=antivirus",
+  //       description: "Giải pháp bảo mật và diệt virus chuyên nghiệp",
+  //       icon: "ShieldCheck",
+  //     },
+  //     {
+  //       label: "Microsoft",
+  //       href: "/san-pham?category=microsoft",
+  //       description: "Toàn bộ sản phẩm bản quyền của Microsoft",
+  //       icon: "AppWindow",
+  //     },
+
+  //   ],
+  // },
 ];
 
 export const guideMegaMenu: NavGroup[] = [

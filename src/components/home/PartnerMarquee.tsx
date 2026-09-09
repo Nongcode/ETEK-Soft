@@ -30,7 +30,7 @@ export default function PartnerMarquee() {
         <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/80 bg-white/95 px-4 py-1.5 shadow-sm backdrop-blur-sm">
           <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-slate-700 sm:text-xs">
-            Được tin cậy bởi hơn <span className="text-blue-600 font-black">500+</span> doanh nghiệp &amp; tập đoàn hàng đầu Việt Nam
+            Được tin cậy bởi nhiều doanh nghiệp &amp; tập đoàn hàng đầu Việt Nam
           </p>
         </span>
       </div>

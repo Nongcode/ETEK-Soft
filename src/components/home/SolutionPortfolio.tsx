@@ -18,7 +18,7 @@ import ImageLightbox, { LightboxData } from "@/components/ui/ImageLightbox";
 
 interface Project {
   id: string;
-  category: "hrm" | "license" | "medical";
+  category: "hrm" | "office" | "finance";
   title: string;
   sector: string;
   tagline: string;
@@ -28,6 +28,7 @@ interface Project {
   appUrl: string;
   metrics: { value: string; label: string }[];
   tags: string[];
+  pillars?: { title: string; desc: string }[];
 }
 
 const projects: Project[] = [
@@ -35,57 +36,78 @@ const projects: Project[] = [
     id: "hrm-project",
     category: "hrm",
     title: "DỰ ÁN HỆ THỐNG QUẢN TRỊ NHÂN SỰ HRM 4.0",
-    sector: "Lĩnh vực: Sản Xuất, Tập Đoàn Đa Chi Nhánh",
-    tagline: "Số hóa quy trình chấm công 1,500+ nhân sự, tự động tính lương 3P và phân ca kíp sản xuất phức tạp.",
-    image: "/legacy-media/products/dong-bo-cham-cong-tinh-luong.png",
+    sector: "Lĩnh vực: Sản Xuất, Tập Đoàn Đa Chi Nhánh & Doanh Nghiệp",
+    tagline: "Hệ sinh thái HRM 4.0 đa nền tảng (Web & Mobile App): Quản lý 1,532+ nhân sự, chấm công vân tay & GPS đạt 98% đúng giờ, tự động tính lương 3P và đồng bộ BHXH.",
+    image: "/images/hrm.png",
     href: "/san-pham/giai-phap-quan-tri-nhan-su-toan-dien-hrm",
     badge: "HRM 4.0 ENTERPRISE",
-    appUrl: "app.etek-soft.vn/hrm-enterprise",
+    appUrl: "app.etek-soft.vn/hrm-4.0",
     metrics: [
-      { value: "1,500+", label: "Nhân Sự Quản Trị" },
-      { value: "-85%", label: "Thời Gian Tính Lương" },
+      { value: "1,532+", label: "Nhân Sự Quản Trị" },
+      { value: "98%", label: "Chấm Công Đúng Giờ" },
     ],
-    tags: ["AI FaceID", "GPS Geofencing", "SSL 256-Bit"],
+    tags: ["Quản Lý Nhân Sự", "Chấm Công GPS & Vân Tay", "Tính Lương 3P", "Bảo Hiểm Xã Hội", "Báo Cáo Đa Chiều"],
+    pillars: [
+      { title: "Quản lý nhân sự", desc: "Tuyển dụng • Hồ sơ • Hợp đồng" },
+      { title: "Chấm công thông minh", desc: "Vân tay • GPS • Tích hợp thiết bị" },
+      { title: "Tính lương tự động 3P", desc: "Tự động • Chính xác • Linh hoạt" },
+      { title: "Bảo hiểm xã hội", desc: "Đồng bộ • Nhanh chóng • Minh bạch" },
+      { title: "Báo cáo & Thống kê", desc: "Trực quan • Chi tiết • Đa chiều" },
+    ],
   },
   {
-    id: "license-project",
-    category: "license",
-    title: "DỰ ÁN PHẦN MỀM BẢN QUYỀN MICROSOFT & SERVER",
-    sector: "Lĩnh vực: Doanh Nghiệp Tài Chính, Bán Lẻ & FDI",
-    tagline: "Cung cấp hơn 10,000+ license Microsoft 365, Windows 11 Pro và Windows Server 2025 đầy đủ CO/CQ chính hãng.",
-    image: "/legacy-media/solutions/phan-mem-microsoft-365.jpg",
-    href: "/san-pham/phan-mem-ban-quyen-microsoft",
-    badge: "MICROSOFT GOLD CSP",
-    appUrl: "admin.microsoft.com/license-portal",
+    id: "office-project",
+    category: "office",
+    title: "DỰ ÁN HỆ THỐNG VĂN PHÒNG SỐ TOÀN DIỆN",
+    sector: "Lĩnh vực: Doanh Nghiệp, Tập Đoàn & Hành Chính Công",
+    tagline: "Số hóa quy trình vận hành không giấy tờ: Quản lý công việc, hồ sơ ISO, pháp lý, tài sản, quyết định và điều hành cuộc họp trực tuyến thông minh.",
+    image: "/images/van-phong-so.png",
+    href: "/san-pham",
+    badge: "VĂN PHÒNG SỐ 4.0",
+    appUrl: "office.etek-soft.vn/portal",
     metrics: [
-      { value: "10,000+", label: "License Kích Hoạt" },
-      { value: "100%", label: "CO/CQ & VAT Hợp Lệ" },
+      { value: "100%", label: "Không Giấy Tờ (Paperless)" },
+      { value: "-70%", label: "Thời Gian Phê Duyệt" },
     ],
-    tags: ["Microsoft CSP", "Cloud Tier 1", "SLA 99.9%"],
+    tags: ["Quản Lý Công Việc", "Hồ Sơ ISO", "Vận Hành Nghiệp Vụ", "Quản Lý Meeting", "Tài Sản & Pháp Lý"],
+    pillars: [
+      { title: "Hoạt động pháp lý & Quyết định", desc: "Soạn thảo, trình ký & Ký số điện tử" },
+      { title: "Quản lý công việc & Nghiệp vụ", desc: "Giao việc, nhắc hạn & Tự động luân chuyển" },
+      { title: "Hồ sơ ISO & Tài liệu số", desc: "Lưu trữ, phân quyền & Chuẩn hóa quy trình" },
+      { title: "Quản lý Meeting & Phòng họp", desc: "Lịch họp thông minh, tài liệu số & Biên bản" },
+      { title: "Quản lý tài sản & Đào tạo", desc: "Kiểm kê, cấp phát thiết bị & E-learning" },
+    ],
   },
   {
-    id: "sgis-project",
-    category: "medical",
-    title: "DỰ ÁN QUẢN LÝ BỆNH VIỆN VÀ PHÒNG KHÁM SGIS",
-    sector: "Lĩnh vực: Y Tế, Bệnh Viện Đa Khoa & Chuỗi Phòng Khám",
-    tagline: "Liên thông cổng giám định BHYT Quốc gia, hồ sơ bệnh án điện tử EMR và quản trị kho dược chuyên sâu.",
-    image: "/legacy-media/articles/tong_the_bv.jpg",
-    href: "/san-pham/giai-phap-quan-ly-tong-the-benh-vien",
-    badge: "CHUẨN BỘ Y TẾ",
-    appUrl: "med.sgis.vn/emr-gateway",
+    id: "finance-project",
+    category: "finance",
+    title: "DỰ ÁN HỆ THỐNG QUẢN LÝ KINH DOANH - TÀI CHÍNH",
+    sector: "Lĩnh vực: Doanh Nghiệp Thương Mại, Phân Phối & Sản Xuất",
+    tagline: "Chuẩn hóa quy trình kinh doanh và tài chính doanh nghiệp: Quản trị khách hàng tiềm năng CRM, CSKH trước bán, tự động hóa đơn hàng và kiểm soát dòng tiền chuyên sâu.",
+    image: "/images/kd-tc.png",
+    href: "/san-pham",
+    badge: "KINH DOANH & TÀI CHÍNH 4.0",
+    appUrl: "finance.etek-soft.vn/crm-portal",
     metrics: [
-      { value: "15+", label: "Bệnh Viện & Chuỗi PK" },
-      { value: "100%", label: "Liên Thông Cổng BHYT" },
+      { value: "+45%", label: "Tăng Trưởng Doanh Số" },
+      { value: "100%", label: "Kiểm Soát Dòng Tiền & Công Nợ" },
     ],
-    tags: ["Bệnh Án Điện Tử EMR", "Cổng BHYT", "Kho Dược FIFO"],
+    tags: ["CRM Khách Hàng", "Quản Lý Bán Hàng", "CSKH Trước Bán", "Quản Trị Tài Chính", "Tra Cứu & Báo Cáo"],
+    pillars: [
+      { title: "Tra cứu - thông báo", desc: "Tra cứu dữ liệu, chính sách & Thông báo tự động" },
+      { title: "Quản lý CSKH trước khi bán", desc: "Phễu khách hàng tiềm năng & Lịch tương tác" },
+      { title: "Quản lý bán hàng", desc: "Báo giá, hợp đồng & Theo dõi đơn hàng" },
+      { title: "Hệ thống CRM", desc: "Dữ liệu 360° khách hàng & Phân hạng tự động" },
+      { title: "Quản lý tài chính", desc: "Doanh thu, công nợ, chi phí & Dòng tiền" },
+    ],
   },
 ];
 
 const filterTabs = [
   { id: "all", label: "Tất Cả Hệ Thống" },
   { id: "hrm", label: "Quản Trị Nhân Sự HRM" },
-  { id: "license", label: "Bản Quyền Microsoft" },
-  { id: "medical", label: "Y Tế & Bệnh Viện SGIS" },
+  { id: "office", label: "Hệ Thống Văn Phòng Số" },
+  { id: "finance", label: "Kinh Doanh & Tài Chính" },
 ];
 
 export default function SolutionPortfolio() {
@@ -97,12 +119,12 @@ export default function SolutionPortfolio() {
     : projects.filter((p) => p.category === activeTab);
 
   return (
-    <section id="solutions" className="relative overflow-hidden bg-slate-50/70 py-20 sm:py-28 border-y border-slate-200/90">
+    <section id="solutions" className="relative overflow-hidden bg-slate-100 py-20 sm:py-28 border-y border-slate-200">
       
       {/* Background Tech Dot Matrix & Ambient Glows */}
-      <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-60 pointer-events-none" />
-      <div className="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-blue-500/8 blur-3xl pointer-events-none" />
-      <div className="absolute right-1/4 bottom-0 h-96 w-96 rounded-full bg-cyan-400/8 blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:24px_24px] opacity-35 pointer-events-none" />
+      <div className="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
+      <div className="absolute right-1/4 bottom-0 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl 2xl:max-w-[1600px] px-4 sm:px-6 lg:px-8">
         
@@ -141,6 +163,7 @@ export default function SolutionPortfolio() {
               <button
                 key={tab.id}
                 type="button"
+                suppressHydrationWarning
                 onClick={() => setActiveTab(tab.id)}
                 className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 cursor-pointer ${
                   isActive
@@ -198,7 +221,7 @@ export default function SolutionPortfolio() {
 
                 {/* Image Screenshot Showcase Container with Hover Pill Overlay */}
                 <div
-                  className="relative aspect-[16/10] w-full overflow-hidden bg-slate-950 cursor-pointer"
+                  className="relative aspect-[3/2] w-full overflow-hidden bg-slate-900 cursor-pointer"
                   onClick={() =>
                     setLightboxData({
                       src: proj.image,
@@ -214,7 +237,10 @@ export default function SolutionPortfolio() {
                     src={proj.image}
                     alt={proj.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                    unoptimized
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-100 contrast-[1.06] brightness-[1.03] saturate-[1.04] [image-rendering:-webkit-optimize-contrast]"
                   />
 
                   {/* Floating Pill on Hover */}
@@ -260,6 +286,29 @@ export default function SolutionPortfolio() {
                       </div>
                     ))}
                   </div>
+
+                  {/* 5 Phân hệ tính năng cốt lõi từ Mockup HRM 4.0 */}
+                  {proj.pillars && (
+                    <div className="mt-3.5 rounded-2xl bg-blue-50/60 border border-blue-100/80 p-3">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-blue-800 flex items-center gap-1.5 mb-2">
+                        <Sparkles className="h-3 w-3 text-blue-600" />
+                        <span>5 Phân Hệ Nghiệp Vụ Cốt Lõi</span>
+                      </p>
+                      <div className="space-y-1.5">
+                        {proj.pillars.map((p, idx) => (
+                          <div key={idx} className="flex items-center justify-between text-[11px] py-0.5 border-b border-blue-100/60 last:border-0">
+                            <span className="font-bold text-slate-800 flex items-center gap-1.5">
+                              <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                              {p.title}
+                            </span>
+                            <span className="text-[10.5px] text-slate-500 font-medium truncate max-w-[180px] text-right">
+                              {p.desc}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {/* Tech Stack Pills */}
                   <div className="mt-3.5 flex flex-wrap items-center gap-1.5">

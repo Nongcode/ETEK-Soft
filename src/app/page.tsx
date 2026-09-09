@@ -29,9 +29,9 @@ export default function Home() {
 
       <Hero />
       <PartnerMarquee />
-      <CredibilityStats />
-      <CoreValueSection />
+      {/* <CredibilityStats /> */}
       <SolutionPortfolio />
+      <CoreValueSection />
       <ImplementationProcess />
       <PricingPlans />
       <AgencyQuoteSection />

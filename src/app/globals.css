@@ -139,6 +139,73 @@
   animation: arrow-nudge 2s ease-in-out infinite;
 }
 
+/* ================= Silk Ribbon Header Animations ================= */
+@keyframes silk-bg-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes silk-ribbon-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes silk-aurora-1 {
+  0% {
+    transform: translate3d(-3%, 0, 0) scale(1, 1);
+  }
+  50% {
+    transform: translate3d(3%, -6px, 0) scale(1.04, 1.12);
+  }
+  100% {
+    transform: translate3d(-3%, 0, 0) scale(1, 1);
+  }
+}
+
+@keyframes silk-aurora-2 {
+  0% {
+    transform: translate3d(3%, 0, 0) scale(1, 1);
+  }
+  50% {
+    transform: translate3d(-3%, 6px, 0) scale(0.96, 0.9);
+  }
+  100% {
+    transform: translate3d(3%, 0, 0) scale(1, 1);
+  }
+}
+
+.animate-silk-bg {
+  background-size: 250% 100%;
+  animation: silk-bg-shift 12s ease-in-out infinite;
+}
+
+.animate-silk-flow {
+  background-size: 200% 200%;
+  animation: silk-ribbon-flow 7s ease-in-out infinite;
+}
+
+.animate-silk-aurora-1 {
+  animation: silk-aurora-1 12s ease-in-out infinite;
+}
+
+.animate-silk-aurora-2 {
+  animation: silk-aurora-2 16s ease-in-out infinite;
+}
+
 @keyframes float-tile-1 {
   0%, 100% { transform: translateY(0px) rotate(-2deg); }
   50% { transform: translateY(-12px) rotate(2deg); }

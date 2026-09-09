@@ -10,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "/gioi-thieu",
-    "/tu-van",
     "/san-pham",
     "/tin-tuc",
     "/huong-dan",

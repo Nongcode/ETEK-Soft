@@ -37,14 +37,14 @@ export default function Footer() {
         <div className="col-span-2 lg:col-span-1">
           <Link
             href="/"
-            aria-label="ETEK SOFTS Trang chủ"
+            aria-label="ETEK SOLUTIONS Trang chủ"
             className="inline-flex items-center rounded-lg bg-white px-3 py-1.5 shadow-sm transition-opacity hover:opacity-90"
           >
             <Image
-              src="/images/logo.png"
-              alt="ETEK SOFTS"
+              src="/images/etek-logo.jpg"
+              alt="ETEK SOLUTIONS"
               width={140}
-              height={38}
+              height={58}
               className="h-8 w-auto object-contain"
             />
           </Link>

@@ -125,10 +125,10 @@ export default function HeroConsole() {
               type="button"
               onClick={() => setActive(m.id)}
               aria-pressed={isActive}
-              className={`group relative flex-1 rounded-2xl border px-4 py-3.5 text-left transition-all duration-400 ease-out ${
+              className={`group relative flex-1 rounded-2xl border px-4 py-3.5 text-left transition-all duration-400 ease-out backdrop-blur-md ${
                 isActive
-                  ? "border-blue-600 bg-white shadow-[0_10px_25px_-5px_rgba(37,99,235,0.18)] ring-2 ring-blue-500/20 -translate-y-0.5"
-                  : "border-slate-200/80 bg-white/75 hover:border-blue-300 hover:bg-white hover:-translate-y-0.5"
+                  ? "border-blue-500/90 bg-white/80 shadow-[0_10px_25px_-5px_rgba(37,99,235,0.18)] ring-2 ring-blue-500/25 -translate-y-0.5"
+                  : "border-white/70 bg-white/45 hover:border-blue-300/80 hover:bg-white/70 hover:-translate-y-0.5"
               }`}
             >
               <span className="flex items-center gap-3">
@@ -161,7 +161,7 @@ export default function HeroConsole() {
       </div>
 
       {/* Khối hiển thị phân hệ chính — 100% 60fps mượt mà, chuyển cảnh êm ru */}
-      <div className="relative rounded-[2rem] border border-slate-200/90 bg-white shadow-[0_20px_60px_-15px_rgba(15,23,42,0.1)] overflow-hidden">
+      <div className="relative rounded-[2rem] border border-white/80 bg-white/35 backdrop-blur-2xl shadow-[0_20px_60px_-15px_rgba(37,99,235,0.12)] ring-1 ring-white/50 overflow-hidden">
         {/* Vầng sáng ambient mượt mà đổi màu theo phân hệ */}
         <div
           className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full opacity-15 blur-3xl transition-colors duration-1000 ease-out"
@@ -169,7 +169,7 @@ export default function HeroConsole() {
         />
 
         {/* Thanh tiêu đề bảng */}
-        <div className="relative flex items-center justify-between gap-3 overflow-hidden border-b border-slate-100 bg-gradient-to-r from-slate-50 via-white to-slate-50 px-4 py-3.5 sm:px-6">
+        <div className="relative flex items-center justify-between gap-3 overflow-hidden border-b border-white/60 bg-white/35 backdrop-blur-md px-4 py-3.5 sm:px-6">
           <span className="flex items-center gap-2.5">
             <span
               className="flex h-8 w-8 items-center justify-center rounded-xl text-white shadow-sm transition-all duration-500 ease-out"
@@ -194,7 +194,7 @@ export default function HeroConsole() {
         </div>
 
         {/* Nội dung phân hệ — Xếp lớp CSS Grid, chuyển đổi mượt mà bằng GPU */}
-        <div className="relative grid grid-cols-1 grid-rows-1 bg-gradient-to-b from-white to-slate-50/60 p-4 sm:p-6 lg:min-h-[415px]">
+        <div className="relative grid grid-cols-1 grid-rows-1 bg-transparent p-4 sm:p-6 lg:min-h-[415px]">
           {MODULES.map((m) => {
             const isActive = m.id === active;
             return (
@@ -216,7 +216,7 @@ export default function HeroConsole() {
         </div>
 
         {/* Chân bảng */}
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 bg-slate-50/90 px-4 py-3 text-xs sm:px-6">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/60 bg-white/45 backdrop-blur-md px-4 py-3 text-xs sm:px-6">
           <span className="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-slate-600">
             <span className="flex items-center gap-1.5 font-semibold text-slate-700">
               <ShieldCheck className="h-4 w-4 text-emerald-600" />
@@ -279,7 +279,7 @@ function AttendanceModule({
   return (
     <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
       {/* Thẻ nhân sự sinh trắc */}
-      <div className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:col-span-5">
+      <div className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/70 bg-white/70 backdrop-blur-md p-5 shadow-sm lg:col-span-5">
         <span className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-blue-500/10 blur-2xl" />
 
         {isScanning && <span className="deck__scanline" />}
@@ -309,7 +309,7 @@ function AttendanceModule({
             </span>
           </div>
 
-          <dl className="mt-4 space-y-2 rounded-xl border border-slate-100 bg-slate-50 p-3 text-xs">
+          <dl className="mt-4 space-y-2 rounded-xl border border-white/60 bg-white/50 p-3 text-xs">
             <div className="flex items-center justify-between">
               <dt className="text-slate-500">Trụ sở</dt>
               <dd className="font-semibold text-slate-800">Tầng 12 — Hà Nội</dd>
@@ -355,7 +355,7 @@ function AttendanceModule({
       </div>
 
       {/* Dòng chấm công thời gian thực */}
-      <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:col-span-7">
+      <div className="flex flex-col justify-between rounded-2xl border border-white/70 bg-white/70 backdrop-blur-md p-5 shadow-sm lg:col-span-7">
         <div>
           <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-3">
             <span>
@@ -372,7 +372,7 @@ function AttendanceModule({
             {feed.map((row) => (
               <li
                 key={row.initials}
-                className="flex items-center justify-between gap-3 rounded-xl border border-slate-100 bg-slate-50 p-2.5 text-xs transition-colors hover:border-blue-200 hover:bg-blue-50/50"
+                className="flex items-center justify-between gap-3 rounded-xl border border-white/60 bg-white/50 p-2.5 text-xs transition-colors hover:border-blue-200 hover:bg-white/70"
               >
                 <span className="flex min-w-0 items-center gap-2.5">
                   <span
@@ -447,9 +447,9 @@ function PayrollModule({
   return (
     <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
       {/* Phiếu lương */}
-      <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:col-span-6">
+      <div className="flex flex-col justify-between rounded-2xl border border-white/70 bg-white/70 backdrop-blur-md p-5 shadow-sm lg:col-span-6">
         <div>
-          <div className="flex items-start justify-between gap-3 border-b border-slate-200 pb-3">
+          <div className="flex items-start justify-between gap-3 border-b border-slate-200/80 pb-3">
             <span>
               <span className="block text-[11px] font-extrabold uppercase tracking-wide text-blue-900">
                 Công Ty Cổ Phần Công Nghệ ETEK
@@ -463,7 +463,7 @@ function PayrollModule({
             </span>
           </div>
 
-          <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-100 bg-slate-50 p-2.5 text-xs text-slate-600">
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-white/60 bg-white/50 p-2.5 text-xs text-slate-600">
             <span>
               Nhân sự: <strong className="text-slate-800">Hoàng Minh Quân</strong>
             </span>
@@ -497,7 +497,7 @@ function PayrollModule({
       </div>
 
       {/* Động cơ tính lương */}
-      <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:col-span-6">
+      <div className="flex flex-col justify-between rounded-2xl border border-white/70 bg-white/70 backdrop-blur-md p-5 shadow-sm lg:col-span-6">
         <div>
           <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-3">
             <span>
@@ -531,7 +531,7 @@ function PayrollModule({
             type="button"
             onClick={onSimulate}
             disabled={calculating}
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-slate-100 px-3 py-2 text-xs font-bold text-slate-800 transition-all hover:bg-slate-200/80 active:scale-[0.98] disabled:opacity-70"
+            className="flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200/60 bg-white/60 px-3 py-2 text-xs font-bold text-slate-800 transition-all hover:bg-white/85 active:scale-[0.98] disabled:opacity-70"
           >
             {calculating ? (
               <>
@@ -581,7 +581,7 @@ function LicenseModule() {
   return (
     <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
       {/* Chứng thư */}
-      <div className="relative flex flex-col justify-between overflow-hidden rounded-2xl border-2 border-blue-200 bg-gradient-to-br from-white via-blue-50/30 to-slate-50 p-5 shadow-sm lg:col-span-6">
+      <div className="relative flex flex-col justify-between overflow-hidden rounded-2xl border-2 border-blue-200/80 bg-white/70 backdrop-blur-md p-5 shadow-sm lg:col-span-6">
         <span className="pointer-events-none absolute -bottom-10 -right-10 h-28 w-28 rounded-full bg-amber-400/15 blur-xl" />
 
         <div>
@@ -603,7 +603,7 @@ function LicenseModule() {
             <p className="mt-0.5 font-mono text-[10px] text-blue-700">MPN ID #6489210 • Microsoft Partner Network</p>
           </div>
 
-          <ul className="mt-3.5 space-y-1.5 rounded-xl border border-slate-100 bg-white p-3 text-xs">
+          <ul className="mt-3.5 space-y-1.5 rounded-xl border border-white/60 bg-white/60 p-3 text-xs">
             {catalog.map((c) => (
               <li key={c.name} className="flex items-center justify-between gap-3">
                 <span className="font-medium text-slate-600">• {c.name}</span>
@@ -620,7 +620,7 @@ function LicenseModule() {
       </div>
 
       {/* Hồ sơ pháp lý */}
-      <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:col-span-6">
+      <div className="flex flex-col justify-between rounded-2xl border border-white/70 bg-white/70 backdrop-blur-md p-5 shadow-sm lg:col-span-6">
         <div>
           <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-3">
             <span>
