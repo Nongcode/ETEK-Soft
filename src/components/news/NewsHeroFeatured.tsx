@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { NewsArticle } from "@/types";
 import { formatDate } from "@/lib/utils";
+import Breadcrumb from "@/components/layout/Breadcrumb";
 
 const TRENDING_TAGS = [
   { label: "#CopilotAI", href: "/tin-tuc/microsoft-365-copilot-cho-doanh-nghiep-vua-va-nho" },
@@ -23,7 +24,7 @@ const TRENDING_TAGS = [
 
 export default function NewsHeroFeatured({ article }: { article: NewsArticle }) {
   return (
-    <section className="relative isolate overflow-hidden pt-6 pb-12 sm:pb-16 lg:pb-20 border-b border-slate-200/80 bg-slate-50/50 text-slate-900">
+    <section className="relative isolate overflow-hidden pt-4 pb-12 sm:pb-16 lg:pb-20 border-b border-slate-200/80 bg-slate-50/50 text-slate-900">
       {/* 3D Moving Architectural Canvas Layer */}
       <div className="pointer-events-none absolute inset-0 -z-20 overflow-hidden">
         <div className="relative h-full w-full animate-scroll-active animate-ambient-3d">
@@ -43,6 +44,10 @@ export default function NewsHeroFeatured({ article }: { article: NewsArticle }) 
       <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 h-[500px] w-[950px] rounded-full bg-gradient-to-r from-blue-200/40 via-sky-200/35 to-indigo-200/25 blur-3xl -z-10" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Breadcrumb inside banner */}
+        <div className="mb-4">
+          <Breadcrumb items={[{ label: "Tin tức" }]} noContainer />
+        </div>
         
         {/* Scientific Editorial Header & Telemetry Bar */}
         <div className="pb-8 space-y-4" data-reveal="fade">

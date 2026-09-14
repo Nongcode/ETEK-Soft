@@ -625,7 +625,7 @@ function LicenseModule() {
           <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-3">
             <span>
               <span className="block text-xs font-bold text-slate-800">HỒ SƠ PHÁP LÝ BẢO VỆ DOANH NGHIỆP</span>
-              <span className="block text-[11px] text-slate-500">Minh bạch tuyệt đối khi thanh kiểm tra thuế</span>
+              <span className="block text-[11px] text-slate-500">Minh bạch, an tâm khi thanh kiểm tra thuế</span>
             </span>
             <span className="flex shrink-0 items-center gap-1 rounded-full border border-blue-200 bg-blue-50 px-2.5 py-1 text-[10px] font-bold text-blue-700">
               <Lock className="h-3 w-3" />

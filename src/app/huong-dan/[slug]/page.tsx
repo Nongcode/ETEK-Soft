@@ -26,16 +26,21 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
 
   return (
     <div className="pb-16">
-      <Breadcrumb items={[{ label: "Hướng dẫn", href: "/huong-dan" }, { label: guide.title }]} />
+      <section className="border-b border-border bg-gradient-to-b from-[#ebf3fa]/60 to-white pt-5 pb-8">
+        <Container className="max-w-3xl">
+          <div className="mb-6">
+            <Breadcrumb items={[{ label: "Hướng dẫn", href: "/huong-dan" }, { label: guide.title }]} noContainer />
+          </div>
+          <div className="mb-4 flex items-center gap-2">
+            <Badge tone="primary">{categoryLabel}</Badge>
+            <span className="text-xs text-muted">{formatDate(guide.date)}</span>
+          </div>
+          <h1 className="h1 !text-2xl md:!text-[32px]">{guide.title}</h1>
+          <p className="body-lg mt-4">{guide.excerpt}</p>
+        </Container>
+      </section>
 
-      <Container className="max-w-3xl py-10">
-        <div className="mb-4 flex items-center gap-2">
-          <Badge tone="primary">{categoryLabel}</Badge>
-          <span className="text-xs text-muted">{formatDate(guide.date)}</span>
-        </div>
-        <h1 className="h1 !text-2xl md:!text-[32px]">{guide.title}</h1>
-        <p className="body-lg mt-4">{guide.excerpt}</p>
-
+      <Container className="max-w-3xl py-8">
         <ol className="mt-8 space-y-4 border-t border-border pt-8">
           {guide.content.map((step, idx) => (
             <li key={idx} className="flex gap-3.5">

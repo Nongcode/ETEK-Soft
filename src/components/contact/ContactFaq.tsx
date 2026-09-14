@@ -17,7 +17,7 @@ const FAQS: FaqItem[] = [
   {
     question: "ETEK-soft có cung cấp đầy đủ chứng chỉ CO/CQ và hóa đơn VAT hợp lệ không?",
     answer:
-      "100% license do ETEK-soft cung cấp (Microsoft 365, Windows Server, phần mềm diệt virus...) đều có chứng nhận xuất xứ CO (Certificate of Origin), chứng nhận chất lượng CQ (Certificate of Quality) từ chính hãng và hóa đơn giá trị gia tăng (VAT) đầy đủ, phục vụ kiểm toán tài chính và bảo hộ pháp lý tuyệt đối.",
+      "100% license do ETEK-soft cung cấp (Microsoft 365, Windows Server, phần mềm diệt virus...) đều có chứng nhận xuất xứ CO (Certificate of Origin), chứng nhận chất lượng CQ (Certificate of Quality) từ chính hãng và hóa đơn giá trị gia tăng (VAT) đầy đủ, phục vụ kiểm toán tài chính và đảm bảo an toàn pháp lý minh bạch.",
   },
   {
     question: "Doanh nghiệp có được trải nghiệm demo phần mềm HRM 4.0 & Chấm công FaceID trước khi mua không?",

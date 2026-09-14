@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   Sparkles,
@@ -33,6 +33,8 @@ import Container from "@/components/ui/Container";
 import Breadcrumb from "@/components/layout/Breadcrumb";
 import { Category, Product } from "@/types";
 import { cn } from "@/lib/utils";
+import HRMROICalculator from "@/components/solution/HRMROICalculator";
+import { Scale, Network, Database, CheckSquare } from "lucide-react";
 
 // Map dynamic icon name to Lucide Icon component
 const iconMap: Record<string, React.ElementType> = {
@@ -81,6 +83,47 @@ export default function SolutionDetailView({
   const processSteps = product.solutionProcess ?? [];
   const metrics = product.solutionHeroMetrics ?? [];
   const benefits = product.solutionBenefits ?? [];
+  const isHrm = product.slug === "giai-phap-quan-tri-nhan-su-toan-dien-hrm" || product.id === "sol-hrm";
+
+  const [activeSection, setActiveSection] = useState<string>("tong-quan");
+
+  const navItems = [
+    { id: "tong-quan", label: "Tổng quan" },
+    { id: "tinh-nang-cot-loi", label: "Tính năng phân hệ" },
+    ...(isHrm
+      ? [
+          { id: "tuan-thu-phap-ly", label: "Pháp lý 2026" },
+          { id: "kien-truc-tich-hop", label: "Tích hợp hệ thống" },
+        ]
+      : []),
+    { id: "quy-trinh-trien-khai", label: "Quy trình triển khai" },
+    { id: "loi-ich-kinh-doanh", label: "Hiệu quả & Lợi ích" },
+    ...(isHrm ? [{ id: "tinh-toan-roi", label: "Bảng tính ROI" }] : []),
+    { id: "hoi-dap-faq", label: "Hỏi & Đáp" },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 180;
+
+      for (let i = navItems.length - 1; i >= 0; i--) {
+        const item = navItems[i];
+        const section = document.getElementById(item.id);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          if (scrollPosition >= sectionTop) {
+            setActiveSection(item.id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHrm]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -88,9 +131,16 @@ export default function SolutionDetailView({
   };
 
   const scrollToSection = (id: string) => {
+    setActiveSection(id);
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      const headerOffset = 110;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -101,61 +151,34 @@ export default function SolutionDetailView({
       <span className="pointer-events-none absolute right-[5%] top-36 hidden h-10 w-10 rotate-12 rounded-2xl bg-gradient-to-tr from-cyan-400 to-blue-600 opacity-25 shadow-xl animate-balloon lg:block" />
       <span className="pointer-events-none absolute left-[4%] top-72 hidden h-8 w-8 -rotate-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-emerald-400 opacity-20 shadow-xl animate-balloon-slow lg:block" />
 
-      {/* Breadcrumb Navigation */}
-      <Breadcrumb
-        items={[
-          { label: "Trang chủ", href: "/" },
-          { label: "Sản phẩm", href: "/san-pham" },
-          ...(category ? [{ label: category.name, href: `/san-pham?category=${category.slug}` }] : []),
-          { label: product.name },
-        ]}
-      />
-
       {/* Quick Navigation Sticky Ribbon */}
       <div className="sticky top-16 z-30 hidden border-y border-slate-200/80 bg-white/95 backdrop-blur-md md:block shadow-xs">
         <Container className="flex items-center justify-between py-2.5">
           <div className="flex items-center gap-1 text-xs font-bold text-slate-600 overflow-x-auto">
-            <button
-              type="button"
-              onClick={() => scrollToSection("tong-quan")}
-              className="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-blue-600 transition-colors"
-            >
-              Tổng quan
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollToSection("tinh-nang-cot-loi")}
-              className="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-blue-600 transition-colors"
-            >
-              Tính năng phân hệ
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollToSection("quy-trinh-trien-khai")}
-              className="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-blue-600 transition-colors"
-            >
-              Quy trình triển khai
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollToSection("loi-ich-kinh-doanh")}
-              className="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-blue-600 transition-colors"
-            >
-              Hiệu quả & ROI
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollToSection("hoi-dap-faq")}
-              className="px-3 py-1.5 rounded-lg hover:bg-slate-100 hover:text-blue-600 transition-colors"
-            >
-              Hỏi & Đáp
-            </button>
+            {navItems.map((item) => {
+              const isActive = activeSection === item.id;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => scrollToSection(item.id)}
+                  className={cn(
+                    "px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap",
+                    isActive
+                      ? "bg-blue-600 text-white shadow-xs"
+                      : "text-slate-600 hover:bg-slate-100 hover:text-blue-600"
+                  )}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
           </div>
 
           <button
             type="button"
             onClick={() => scrollToSection("dang-ky-tu-van")}
-            className="inline-flex items-center gap-1.5 rounded-full bg-blue-600 px-4 py-1.5 text-xs font-bold text-white hover:bg-blue-700 transition-all shadow-sm"
+            className="inline-flex items-center gap-1.5 rounded-full bg-blue-600 px-4 py-1.5 text-xs font-bold text-white hover:bg-blue-700 transition-all shadow-sm shrink-0"
           >
             <Sparkles className="h-3.5 w-3.5" />
             <span>Đăng ký Demo</span>
@@ -164,8 +187,20 @@ export default function SolutionDetailView({
       </div>
 
       {/* 1. HERO SECTION */}
-      <section id="tong-quan" className="relative z-10 pt-8 pb-16 lg:pt-14 lg:pb-20">
+      <section id="tong-quan" className="relative z-10 pt-4 pb-16 lg:pt-6 lg:pb-20">
         <Container>
+          {/* Breadcrumb Navigation inside Hero */}
+          <div className="mb-6">
+            <Breadcrumb
+              noContainer
+              items={[
+                { label: "Sản phẩm", href: "/san-pham" },
+                ...(category ? [{ label: category.name, href: `/san-pham?category=${category.slug}` }] : []),
+                { label: product.name },
+              ]}
+            />
+          </div>
+
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
             {/* Left Content */}
             <div className="lg:col-span-7">
@@ -323,14 +358,14 @@ export default function SolutionDetailView({
       <section id="tinh-nang-cot-loi" className="relative z-10 py-16 bg-white border-y border-slate-200/80">
         <Container>
           <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-blue-700">
-              <Layers className="h-3.5 w-3.5" />
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3.5 py-1 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-blue-700">
+              <Layers className="h-4 w-4 text-blue-600" />
               HỆ THỐNG PHÂN HỆ CỐT LÕI
             </span>
             <h2 className="mt-3 text-2xl font-black text-slate-900 sm:text-3xl lg:text-4xl tracking-tight">
               Tính Năng Phân Hệ Chuyên Sâu Của Sản Phẩm
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+            <p className="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
               Được thiết kế module hóa linh hoạt, cho phép doanh nghiệp kích hoạt từng phân hệ theo nhu cầu thực tế hoặc triển khai đồng bộ toàn diện.
             </p>
           </div>
@@ -340,56 +375,207 @@ export default function SolutionDetailView({
             {modules.map((mod, idx) => (
               <div
                 key={idx}
-                className="group relative flex flex-col justify-between rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/10"
+                className="group relative flex flex-col justify-between rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/10"
               >
                 <div>
                   {/* Top Bar: Icon + Badge */}
                   <div className="flex items-center justify-between">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white shadow-xs">
+                    <span className="flex h-13 w-13 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white shadow-xs">
                       <SolutionIcon name={mod.icon} className="h-6 w-6" />
                     </span>
                     {mod.highlightBadge && (
-                      <span className="rounded-full bg-cyan-50 px-2.5 py-1 text-[11px] font-bold text-cyan-700 border border-cyan-200/60">
+                      <span className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-extrabold text-cyan-800 border border-cyan-200/80">
                         {mod.highlightBadge}
                       </span>
                     )}
                   </div>
 
                   {/* Title & Subtitle */}
-                  <h3 className="mt-5 text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  <h3 className="mt-5 text-xl sm:text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
                     {mod.title}
                   </h3>
                   {mod.subtitle && (
-                    <p className="text-xs font-semibold text-blue-600 mt-0.5">
+                    <p className="text-sm font-bold text-blue-700 mt-1">
                       {mod.subtitle}
                     </p>
                   )}
 
                   {/* Description */}
-                  <p className="mt-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
                     {mod.description}
                   </p>
 
                   {/* Feature Checkmarks */}
-                  <ul className="mt-4 space-y-2 border-t border-slate-100 pt-4 text-xs text-slate-700">
+                  <ul className="mt-5 space-y-2.5 border-t border-slate-100 pt-4 text-sm sm:text-base text-slate-700 font-medium">
                     {mod.features.map((item, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0 mt-0.5" />
-                        <span>{item}</span>
+                      <li key={fIdx} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-1" />
+                        <span className="leading-snug">{item}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-slate-50 flex items-center justify-between text-xs font-bold text-blue-600 group-hover:text-blue-700">
+                <div className="mt-6 pt-3.5 border-t border-slate-100 flex items-center justify-between text-sm font-extrabold text-blue-600 group-hover:text-blue-700">
                   <span>Khám phá phân hệ</span>
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
             ))}
           </div>
         </Container>
       </section>
+
+      {/* 2.5 COMPLIANCE & LEGAL SECTION (HRM ONLY) */}
+      {isHrm && (
+        <section id="tuan-thu-phap-ly" className="relative z-10 py-16 bg-gradient-to-b from-slate-50 to-blue-50/40 border-b border-slate-200/80 scroll-mt-20">
+          <Container>
+            <div className="text-center max-w-3xl mx-auto">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-100 text-blue-800 border border-blue-200 px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest">
+                <Scale className="h-3.5 w-3.5 text-blue-700" />
+                COMPLIANCE-BY-DESIGN • PHÁP LÝ VIỆT NAM 2026
+              </span>
+              <h2 className="mt-3 text-2xl font-black text-slate-900 sm:text-3xl lg:text-4xl tracking-tight">
+                Sẵn Sàng 100% Khung Pháp Lý Mới Nhất Năm 2026
+              </h2>
+              <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+                ETEK HRM tích hợp cơ chế Rule Table Versioned — mọi thay đổi về luật lao động, thuế TNCN và bảo hiểm xã hội đều được áp dụng chính xác theo ngày hiệu lực (Effective Date) mà không cần can thiệp mã nguồn.
+              </p>
+            </div>
+
+            {/* Legal Baseline Grid */}
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xs hover:shadow-md transition-shadow">
+                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                  <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">Quan hệ lao động</span>
+                  <span className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">BLLĐ 2019</span>
+                </div>
+                <h3 className="mt-3 font-bold text-slate-900 text-base">Bộ Luật Lao Động 45/2019/QH14</h3>
+                <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                  Quản lý chuẩn mực hợp đồng lao động, thời giờ làm việc/nghỉ ngơi, làm thêm giờ (hệ số OT ca đêm, ngày nghỉ x200%, lễ tết x300%), kỷ luật và quyết toán thôi việc (Final Settlement).
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-blue-200 bg-blue-50/50 p-6 shadow-xs hover:shadow-md transition-shadow">
+                <div className="flex items-center justify-between pb-3 border-b border-blue-100">
+                  <span className="text-xs font-bold text-blue-700 uppercase tracking-wider">Bảo hiểm xã hội & Y tế</span>
+                  <span className="text-[11px] font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded-md">Hiệu lực 01/07/2025</span>
+                </div>
+                <h3 className="mt-3 font-bold text-slate-900 text-base">Luật BHXH 41/2024 & NĐ 158/2025</h3>
+                <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                  Tự động xác định đối tượng và căn cứ tiền lương đóng BHXH bắt buộc, đồng bộ Luật BHYT 51/2024/QH15 và xuất báo cáo đối soát khớp 100% với dữ liệu cơ quan BHXH.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-emerald-200 bg-emerald-50/50 p-6 shadow-xs hover:shadow-md transition-shadow">
+                <div className="flex items-center justify-between pb-3 border-b border-emerald-100">
+                  <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider">Lương tối thiểu vùng</span>
+                  <span className="text-[11px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-md">Nghị định 293/2025</span>
+                </div>
+                <h3 className="mt-3 font-bold text-slate-900 text-base">Áp dụng từ 01/01/2026</h3>
+                <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                  Gắn Location/Site tự động kiểm soát mức lương sàn: Vùng I (5.310.000đ/tháng - 25.500đ/h), Vùng II (4.730.000đ), Vùng III (4.140.000đ), Vùng IV (3.700.000đ). Cảnh báo vi phạm ngưỡng.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-amber-200 bg-amber-50/50 p-6 shadow-xs hover:shadow-md transition-shadow">
+                <div className="flex items-center justify-between pb-3 border-b border-amber-100">
+                  <span className="text-xs font-bold text-amber-700 uppercase tracking-wider">Thuế thu nhập cá nhân</span>
+                  <span className="text-[11px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-md">Luật 109/2025/QH15</span>
+                </div>
+                <h3 className="mt-3 font-bold text-slate-900 text-base">Kỳ tính thuế 2026 Mới</h3>
+                <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                  Áp dụng biểu thuế 5 bậc và mức giảm trừ gia cảnh mới: Bản thân <strong>15,5 triệu đồng/tháng</strong> (186 triệu/năm), Người phụ thuộc <strong>6,2 triệu đồng/tháng/người</strong>.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-purple-200 bg-purple-50/50 p-6 shadow-xs hover:shadow-md transition-shadow">
+                <div className="flex items-center justify-between pb-3 border-b border-purple-100">
+                  <span className="text-xs font-bold text-purple-700 uppercase tracking-wider">Bảo vệ dữ liệu cá nhân</span>
+                  <span className="text-[11px] font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded-md">Luật 91/2025 & Luật 116/2025</span>
+                </div>
+                <h3 className="mt-3 font-bold text-slate-900 text-base">Data Privacy & An Ninh Mạng</h3>
+                <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                  Bảo vệ dữ liệu nhạy cảm theo mục đích (Purpose-based), che dấu trường nhạy cảm (Field masking), kiểm soát quyền truy cập chặt chẽ và ghi vết thao tác (Audit log 100%).
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xs hover:shadow-md transition-shadow">
+                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                  <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">Kiểm soát nội bộ (SoD)</span>
+                  <span className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">Internal Controls</span>
+                </div>
+                <h3 className="mt-3 font-bold text-slate-900 text-base">Phân tách nhiệm vụ & Maker-Checker</h3>
+                <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                  Triệt tiêu rủi ro gian lận lương: Người lập bảng lương không duyệt chi trả, kiểm tra phương sai (Variance check ±20%) và đối soát dân số lương (Population reconciliation).
+                </p>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* 2.6 INTEGRATION ARCHITECTURE (HRM ONLY) */}
+      {isHrm && (
+        <section id="kien-truc-tich-hop" className="relative z-10 py-16 bg-white border-b border-slate-200/80 scroll-mt-20">
+          <Container>
+            <div className="text-center max-w-3xl mx-auto">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-50 text-cyan-800 border border-cyan-200 px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest">
+                <Network className="h-3.5 w-3.5 text-cyan-600" />
+                HỆ SINH THÁI TÍCH HỢP MỞ • HRM 360°
+              </span>
+              <h2 className="mt-3 text-2xl font-black text-slate-900 sm:text-3xl lg:text-4xl tracking-tight">
+                Kiến Trúc Kết Nối Đa Nền Tảng Liền Mạch
+              </h2>
+              <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+                Được xây dựng trên nền tảng API Gateway hiện đại với cơ chế Idempotency và Retry thông minh, ETEK HRM dễ dàng đồng bộ 2 chiều với hạ tầng CNTT hiện có của doanh nghiệp.
+              </p>
+            </div>
+
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="rounded-3xl border border-slate-200 bg-slate-50/70 p-6 text-center hover:border-blue-300 hover:bg-blue-50/30 transition-all">
+                <div className="h-12 w-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mx-auto mb-4 font-black text-lg">
+                  1
+                </div>
+                <h3 className="font-bold text-slate-900 text-base">Máy Chấm Công & IoT</h3>
+                <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                  Đồng bộ Raw Punch thời gian thực qua LAN / Cloud API từ Hikvision, ZKTeco, Suprema, Ronald Jack & App di động GPS.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-slate-200 bg-slate-50/70 p-6 text-center hover:border-emerald-300 hover:bg-emerald-50/30 transition-all">
+                <div className="h-12 w-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 font-black text-lg">
+                  2
+                </div>
+                <h3 className="font-bold text-slate-900 text-base">ERP & Kế Toán</h3>
+                <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                  Tự động đẩy bút toán hạch toán chi phí lương (General Ledger) sang SAP, Oracle, MISA, FAST, Bravo theo Cost Center.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-slate-200 bg-slate-50/70 p-6 text-center hover:border-cyan-300 hover:bg-cyan-50/30 transition-all">
+                <div className="h-12 w-12 rounded-2xl bg-cyan-100 text-cyan-600 flex items-center justify-center mx-auto mb-4 font-black text-lg">
+                  3
+                </div>
+                <h3 className="font-bold text-slate-900 text-base">Cổng Ngân Hàng Chi Lương</h3>
+                <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                  Kết xuất file điện tử chuẩn hoặc kết nối Direct Corporate Banking (Vietcombank, Techcombank, BIDV...) chi lương chỉ với 1 click.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-slate-200 bg-slate-50/70 p-6 text-center hover:border-purple-300 hover:bg-purple-50/30 transition-all">
+                <div className="h-12 w-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mx-auto mb-4 font-black text-lg">
+                  4
+                </div>
+                <h3 className="font-bold text-slate-900 text-base">Hệ Thống Định Danh SSO</h3>
+                <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                  Đồng bộ người dùng với Microsoft Azure AD, Google Workspace, Okta; tự động cấp tài khoản khi vào làm và khóa quyền khi nghỉ việc.
+                </p>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* 3. IMPLEMENTATION WORKFLOW */}
       <section id="quy-trinh-trien-khai" className="relative z-10 py-16 lg:py-24">
@@ -469,20 +655,17 @@ export default function SolutionDetailView({
 
       {/* 4. BUSINESS BENEFITS & ROI */}
       {benefits.length > 0 && (
-        <section id="loi-ich-kinh-doanh" className="relative z-10 py-16 bg-slate-900 text-white overflow-hidden">
-          <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 -bottom-20 h-96 w-96 rounded-full bg-cyan-500/15 blur-3xl" />
-
+        <section id="loi-ich-kinh-doanh" className="relative z-10 py-16 bg-gradient-to-b from-white via-slate-50 to-blue-50/40 text-slate-800 border-b border-slate-200/80 scroll-mt-20">
           <Container className="relative z-10">
             <div className="text-center max-w-3xl mx-auto">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/20 px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-cyan-300 border border-cyan-400/30">
-                <TrendingUp className="h-3.5 w-3.5" />
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-100 px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest text-blue-800 border border-blue-200">
+                <TrendingUp className="h-3.5 w-3.5 text-blue-600" />
                 HIỆU QUẢ THỰC TẾ
               </span>
-              <h2 className="mt-3 text-2xl font-black sm:text-3xl lg:text-4xl tracking-tight">
+              <h2 className="mt-3 text-2xl font-black sm:text-3xl lg:text-4xl tracking-tight text-slate-900">
                 Giá Trị Khác Biệt Mang Lại Cho Doanh Nghiệp
               </h2>
-              <p className="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
+              <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
                 Được kiểm chứng qua hơn hàng trăm dự án chuyển đổi số trên khắp cả nước.
               </p>
             </div>
@@ -491,23 +674,32 @@ export default function SolutionDetailView({
               {benefits.map((b, idx) => (
                 <div
                   key={idx}
-                  className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all hover:bg-white/10 hover:border-blue-400/50"
+                  className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/10"
                 >
-                  <span className="inline-block rounded-full bg-blue-500/20 px-2.5 py-0.5 text-[11px] font-bold text-cyan-300">
+                  <span className="inline-block rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 border border-blue-200/60">
                     {b.tag}
                   </span>
-                  <p className="mt-4 text-3xl sm:text-4xl font-black font-mono text-cyan-400">
+                  <p className="mt-4 text-3xl sm:text-4xl font-black font-mono text-blue-600">
                     {b.metric}
                   </p>
-                  <h3 className="mt-2 text-base font-bold text-white">
+                  <h3 className="mt-2 text-base font-bold text-slate-900">
                     {b.title}
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-300">
+                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-600">
                     {b.description}
                   </p>
                 </div>
               ))}
             </div>
+          </Container>
+        </section>
+      )}
+
+      {/* 4.5 INTERACTIVE ROI CALCULATOR (HRM ONLY) */}
+      {isHrm && (
+        <section id="tinh-toan-roi" className="relative z-10 py-16 bg-gradient-to-b from-blue-50/40 via-slate-50 to-slate-100/70 border-b border-slate-200/80 scroll-mt-20">
+          <Container>
+            <HRMROICalculator onConsultClick={() => scrollToSection("dang-ky-tu-van")} />
           </Container>
         </section>
       )}
@@ -527,7 +719,7 @@ export default function SolutionDetailView({
                   Đăng Ký Tư Vấn & Trải Nghiệm Demo
                 </h2>
                 <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-                  Để lại thông tin để chuyên gia giải pháp của ETEK Softs liên hệ khảo sát thực tế và thiết lập tài khoản Demo phù hợp nhất với ngành nghề của bạn.
+                  Để lại thông tin để chuyên gia giải pháp của ETEK Softs liên hệ khảo sát thực tế và thiết lập tài khoản Demo phù hợp tối ưu với ngành nghề của bạn.
                 </p>
 
                 <div className="mt-8 space-y-4 text-xs font-semibold text-slate-700">

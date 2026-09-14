@@ -28,16 +28,19 @@ const capabilities = [
 export default function AboutPage() {
   return (
     <div className="pb-4">
-      <Breadcrumb items={[{ label: "Giới thiệu" }]} />
-
-      <section className="border-b border-border bg-white py-16 lg:py-20">
-        <Container className="max-w-3xl text-center">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.14em] text-primary">Về ETEK-soft</p>
-          <h1 className="h1">Công ty công nghệ đồng hành cùng chuyển đổi số doanh nghiệp</h1>
-          <p className="body-lg mt-5">
-            ETEK-soft là nhà cung cấp phần mềm bản quyền chính hãng và giải pháp công nghệ cho doanh nghiệp tại Việt Nam,
-            với sứ mệnh giúp doanh nghiệp vận hành an toàn, hiệu quả và tuân thủ pháp lý về bản quyền phần mềm.
-          </p>
+      <section className="border-b border-border bg-gradient-to-b from-[#ebf3fa]/70 to-white pt-5 pb-16 lg:pb-20">
+        <Container>
+          <div className="mb-8">
+            <Breadcrumb items={[{ label: "Giới thiệu" }]} noContainer />
+          </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.14em] text-primary">Về ETEK-soft</p>
+            <h1 className="h1">Công ty công nghệ đồng hành cùng chuyển đổi số doanh nghiệp</h1>
+            <p className="body-lg mt-5">
+              ETEK-soft là nhà cung cấp phần mềm bản quyền chính hãng và giải pháp công nghệ cho doanh nghiệp tại Việt Nam,
+              với sứ mệnh giúp doanh nghiệp vận hành an toàn, hiệu quả và tuân thủ pháp lý về bản quyền phần mềm.
+            </p>
+          </div>
         </Container>
       </section>
 
@@ -49,7 +52,7 @@ export default function AboutPage() {
             </span>
             <h2 className="h3 mt-4">Tầm nhìn</h2>
             <p className="mt-2.5 text-sm leading-relaxed text-muted">
-              Trở thành đối tác công nghệ tin cậy hàng đầu, giúp mọi doanh nghiệp Việt Nam tiếp cận phần mềm bản quyền
+              Trở thành đối tác công nghệ tin cậy, đồng hành cùng các doanh nghiệp Việt Nam tiếp cận phần mềm bản quyền
               một cách dễ dàng, minh bạch và tiết kiệm chi phí.
             </p>
           </div>

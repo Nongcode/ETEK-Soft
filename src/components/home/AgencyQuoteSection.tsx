@@ -148,7 +148,7 @@ export default function AgencyQuoteSection() {
                 NHẬN BÁO GIÁ & TƯ VẤN KIẾN TRÚC PHẦN MỀM
               </h3>
               <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                Điền thông tin quy mô doanh nghiệp để nhận ngay dự toán chi phí chi tiết và bản demo phần mềm phù hợp nhất trong vòng 15 phút.
+                Điền thông tin quy mô doanh nghiệp để nhận ngay dự toán chi phí chi tiết và bản demo phần mềm phù hợp tối ưu trong vòng 15 phút.
               </p>
 
               {submitted ? (

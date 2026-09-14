@@ -25,24 +25,29 @@ export default async function JobDetailPage({ params }: { params: Promise<{ slug
 
   return (
     <div className="pb-16">
-      <Breadcrumb items={[{ label: "Tuyển dụng", href: "/tuyen-dung" }, { label: job.title }]} />
+      <section className="border-b border-border bg-gradient-to-b from-[#ebf3fa]/60 to-white pt-5 pb-8">
+        <Container className="max-w-3xl">
+          <div className="mb-6">
+            <Breadcrumb items={[{ label: "Tuyển dụng", href: "/tuyen-dung" }, { label: job.title }]} noContainer />
+          </div>
+          <p className="text-xs font-semibold uppercase tracking-wide text-primary">{job.department}</p>
+          <h1 className="h1 mt-1 !text-2xl md:!text-[32px]">{job.title}</h1>
+
+          <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
+            <span className="flex items-center gap-1.5">
+              <MapPin className="h-4 w-4" aria-hidden /> {job.location}
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Briefcase className="h-4 w-4" aria-hidden /> {job.type}
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Calendar className="h-4 w-4" aria-hidden /> Hạn nộp: {formatDate(job.deadline)}
+            </span>
+          </div>
+        </Container>
+      </section>
 
       <Container className="max-w-3xl py-10">
-        <p className="text-xs font-semibold uppercase tracking-wide text-primary">{job.department}</p>
-        <h1 className="h1 mt-1 !text-2xl md:!text-[32px]">{job.title}</h1>
-
-        <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
-          <span className="flex items-center gap-1.5">
-            <MapPin className="h-4 w-4" aria-hidden /> {job.location}
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Briefcase className="h-4 w-4" aria-hidden /> {job.type}
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Calendar className="h-4 w-4" aria-hidden /> Hạn nộp: {formatDate(job.deadline)}
-          </span>
-        </div>
-
         <p className="body-lg mt-6">{job.description}</p>
 
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">

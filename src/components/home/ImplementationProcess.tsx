@@ -1,166 +1,183 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { CheckCircle2, ArrowRight, Sparkles, ChevronRight, ShieldCheck } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-const steps = [
+const phases = [
   {
-    step: "01",
-    title: "Khảo Sát & Tư Vấn Kiến Trúc",
-    desc: "Đội ngũ kỹ sư phân tích cơ cấu tổ chức, quy chế tính công lương 3P, hạ tầng máy chấm công hiện có và số lượng license cần cấp phép.",
-    deliverable: "Bản báo cáo giải pháp & Dự toán chi phí tối ưu",
+    phase: "PHA 1",
+    name: "KHẢO SÁT",
+    subtitle: "Khảo sát hiện trạng, nắm bắt bài toán thực tế",
+    stages: "GĐ0 → GĐ1 → GĐ2",
+    color: "#0284c7", // Sky blue
+    accentBg: "bg-sky-50 text-sky-700 border-sky-200",
+    glowBorder: "border-sky-500 ring-sky-500/20",
+    deliverable: "Báo cáo hiện trạng AS-IS & Thống nhất mục tiêu KPI",
+    keyItems: ["Tiếp cận & Sàng lọc (GĐ0)", "Khảo sát sơ bộ Discovery (GĐ1)", "Phân tích hiện trạng & Pain points (GĐ2)"],
   },
   {
-    step: "02",
-    title: "Cấp Phép & Cài Đặt Dưới 15 Phút",
-    desc: "Bàn giao key điện tử chính ngạch (Microsoft CSP/ESD, Server 2025). Khởi tạo máy chủ Cloud bảo mật hoặc cài đặt On-Premise theo yêu cầu.",
-    deliverable: "Tài khoản quản trị & Hệ thống sẵn sàng vận hành",
+    phase: "PHA 2",
+    name: "TƯ VẤN",
+    subtitle: "Tư vấn kiến trúc, chứng minh giải pháp tối ưu",
+    stages: "GĐ3 → GĐ4 → GĐ5",
+    color: "#16a34a", // Green
+    accentBg: "bg-emerald-50 text-emerald-700 border-emerald-200",
+    glowBorder: "border-emerald-500 ring-emerald-500/20",
+    deliverable: "Thiết kế mô hình TO-BE & Ký kết hợp đồng SOW",
+    keyItems: ["Tư vấn giải pháp & Fit-Gap (GĐ3)", "Demo thực tế & Dự toán ROI/TCO (GĐ4)", "POC thử nghiệm & Chốt hợp đồng (GĐ5)"],
   },
   {
-    step: "03",
-    title: "Tích Hợp Dữ Liệu & Máy Chấm Công",
-    desc: "Đấu nối thiết bị AI FaceID, vân tay và GPS di động. Nạp toàn bộ danh sách nhân sự, thiết lập công thức tính lương và phân quyền đa cấp bậc.",
-    deliverable: "Đồng bộ dữ liệu thời gian thực 100% tự động",
+    phase: "PHA 3",
+    name: "TRIỂN KHAI",
+    subtitle: "Hiện thực hóa hệ thống, đồng bộ & đào tạo",
+    stages: "GĐ6 → GĐ7",
+    color: "#ea580c", // Orange
+    accentBg: "bg-orange-50 text-orange-700 border-orange-200",
+    glowBorder: "border-orange-500 ring-orange-500/20",
+    deliverable: "Hệ thống chuẩn hóa & Nghiệm thu UAT đạt 100%",
+    keyItems: ["Kick-off, cấu hình & phân quyền (GĐ6)", "Di chuyển dữ liệu & Kiểm thử UAT (GĐ7)", "Đào tạo Admin & Người dùng cuối"],
   },
   {
-    step: "04",
-    title: "Đào Tạo Chuyển Giao Chuyên Sâu",
-    desc: "Tổ chức buổi đào tạo trực tiếp hoặc online cho bộ phận Nhân sự, Kế toán và hướng dẫn cán bộ công nhân viên sử dụng App điện thoại.",
-    deliverable: "Tài liệu hướng dẫn & Video quy trình chi tiết",
-  },
-  {
-    step: "05",
-    title: "Bàn Giao CO/CQ & Hỗ Trợ 24/7",
-    desc: "Xuất hóa đơn VAT điện tử, cung cấp văn bản chứng nhận CO/CQ từ hãng sản xuất và cam kết SLA hỗ trợ kỹ thuật phản hồi dưới 15 phút.",
-    deliverable: "Hồ sơ pháp lý hoàn chỉnh & Bảo hành trọn đời",
+    phase: "PHA 4",
+    name: "VẬN HÀNH",
+    subtitle: "Đưa vào sản xuất thực tế, đồng hành dài hạn",
+    stages: "GĐ8",
+    color: "#9333ea", // Purple
+    accentBg: "bg-purple-50 text-purple-700 border-purple-200",
+    glowBorder: "border-purple-500 ring-purple-500/20",
+    deliverable: "Vận hành Go-live thông suốt & Bảo hành kỹ thuật SLA",
+    keyItems: ["Chính thức chuyển đổi Go-live (GĐ8)", "Chế độ hỗ trợ đặc biệt Hypercare 24/7", "Bàn giao quản trị & Chăm sóc CS"],
   },
 ];
 
-const STEP_DURATION_SECONDS = 4; // 4 seconds per step strictly continuous
+const PHASE_DURATION_SECONDS = 4.5;
 
 export default function ImplementationProcess() {
-  const [selectedStep, setSelectedStep] = useState(0);
+  const [selectedPhase, setSelectedPhase] = useState(0);
 
-  // Pure, continuous, unstoppable auto-cycle strictly 0 -> 1 -> 2 -> 3 -> 4 -> 0
+  // Auto-cycle through the 4 phases
   useEffect(() => {
     const timer = setInterval(() => {
-      setSelectedStep((prev) => (prev + 1) % steps.length);
-    }, STEP_DURATION_SECONDS * 1000);
+      setSelectedPhase((prev) => (prev + 1) % phases.length);
+    }, PHASE_DURATION_SECONDS * 1000);
 
     return () => clearInterval(timer);
-  }, [selectedStep]);
-
-  const handleSelectStep = (idx: number) => {
-    setSelectedStep(idx);
-  };
+  }, [selectedPhase]);
 
   return (
     <section className="relative overflow-hidden bg-slate-100 py-16 sm:py-24 border-y border-slate-200">
       {/* Background Dot Matrix & Ambient Glows */}
       <div className="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] [background-size:24px_24px] opacity-35 pointer-events-none" />
-      <div className="absolute left-1/3 top-0 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
-      <div className="absolute right-1/3 bottom-0 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl pointer-events-none" />
+      <div className="absolute left-1/4 top-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
+      <div className="absolute right-1/4 bottom-0 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl 2xl:max-w-[1440px] px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
+        {/* Section Header */}
         <ScrollReveal direction="up">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/80 px-4 py-1.5 shadow-sm backdrop-blur-md">
               <Sparkles className="h-4 w-4 text-blue-600" />
               <span className="text-xs sm:text-sm font-extrabold uppercase tracking-[0.2em] text-blue-700 font-mono">
-                QUY TRÌNH CHUẨN HÓA DOANH NGHIỆP
+                QUY TRÌNH CHUẨN HÓA SỐ HÓA
               </span>
             </div>
 
             <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight uppercase leading-tight">
-              QUY TRÌNH TRIỂN KHAI PHẦN MỀM CHUYÊN NGHIỆP
+              TIẾN TRÌNH 4 PHA ĐỒNG HÀNH CHUYỂN ĐỔI SỐ
             </h2>
             <p className="mt-3 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed font-normal">
-              Cam kết tiến độ bàn giao chuẩn xác, không làm gián đoạn hoạt động kinh doanh của doanh nghiệp.
+              Phương pháp luận triển khai tiêu chuẩn với <strong>4 Pha toàn diện</strong> và <strong>9 Giai đoạn thẩm định Gate</strong> nghiêm ngặt, đảm bảo bàn giao đúng hạn và bảo toàn hiệu quả đầu tư.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* 5-Step Connected Process Flow */}
+        {/* 4-Phase Interactive Grid */}
         <ScrollReveal direction="up" delay={100} className="mt-10 sm:mt-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 lg:gap-4 xl:gap-5 relative">
-            {steps.map((s, idx) => {
-              const isCurrent = selectedStep === idx;
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative">
+            {phases.map((p, idx) => {
+              const isCurrent = selectedPhase === idx;
+
               return (
                 <div
-                  key={s.step}
-                  onClick={() => handleSelectStep(idx)}
-                  className={`group relative rounded-3xl p-5 sm:p-5 xl:p-6 transition-all duration-300 z-10 flex flex-col justify-between h-full min-h-[280px] cursor-pointer bg-white border-2 overflow-hidden ${
+                  key={p.phase}
+                  onClick={() => setSelectedPhase(idx)}
+                  className={`group relative rounded-3xl p-5 sm:p-6 transition-all duration-300 z-10 flex flex-col justify-between h-full min-h-[340px] cursor-pointer bg-white border-2 overflow-hidden ${
                     isCurrent
-                      ? "border-blue-600 shadow-[0_20px_45px_-10px_rgba(37,99,235,0.25)] -translate-y-1.5 ring-4 ring-blue-500/15 opacity-100"
-                      : "border-slate-200/90 hover:border-blue-300 hover:shadow-lg hover:-translate-y-1 opacity-90 hover:opacity-100"
+                      ? `shadow-[0_20px_45px_-10px_rgba(2,132,199,0.25)] -translate-y-1.5 ring-4 ${p.glowBorder} border-transparent opacity-100`
+                      : "border-slate-200/90 hover:border-slate-300 hover:shadow-lg hover:-translate-y-1 opacity-90 hover:opacity-100"
                   }`}
                 >
-                  {/* Subtle Top Active Glow */}
+                  {/* Top Active Gradient Bar */}
                   {isCurrent && (
-                    <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-600" />
+                    <div
+                      className="absolute top-0 inset-x-0 h-2"
+                      style={{ backgroundColor: p.color }}
+                    />
                   )}
 
                   <div>
+                    {/* Header Row: Phase Tag & Stage Range */}
                     <div className="flex items-center justify-between">
                       <span
-                        className={`flex h-11 w-11 items-center justify-center rounded-2xl font-mono text-sm sm:text-base font-extrabold transition-all duration-300 ${
-                          isCurrent
-                            ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md scale-105"
-                            : "bg-slate-100 text-slate-700 group-hover:bg-blue-50 group-hover:text-blue-600"
-                        }`}
+                        className="flex h-10 px-3 items-center justify-center rounded-xl font-mono text-xs font-black text-white shadow-sm uppercase tracking-wider"
+                        style={{ backgroundColor: p.color }}
                       >
-                        {s.step}
+                        {p.phase}
                       </span>
-                      {isCurrent ? (
-                        <span className="flex items-center gap-1 text-[11px] font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200">
-                          <span className="h-1.5 w-1.5 rounded-full bg-blue-600 animate-ping" />
-                          Đang xem
-                        </span>
-                      ) : (
-                        <span className="text-xs font-bold text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                          Bấm để xem
-                        </span>
-                      )}
+                      <span className="text-xs font-mono font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200">
+                        {p.stages}
+                      </span>
                     </div>
 
-                    <h3
-                      className={`mt-4 text-base sm:text-lg font-bold leading-snug transition-colors ${
-                        isCurrent ? "text-blue-950" : "text-slate-900 group-hover:text-blue-700"
-                      }`}
-                    >
-                      {s.title}
+                    {/* Phase Title */}
+                    <h3 className="mt-4 text-xl font-black tracking-tight text-slate-900 leading-snug">
+                      {p.name}
                     </h3>
-
-                    <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                      {s.desc}
+                    <p className="mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                      {p.subtitle}
                     </p>
+
+                    {/* 3 Key Stage Items */}
+                    <div className="mt-4 pt-3 border-t border-slate-100 space-y-1.5">
+                      {p.keyItems.map((item, itemIdx) => (
+                        <div key={itemIdx} className="flex items-center gap-2 text-xs text-slate-700">
+                          <CheckCircle2
+                            className="h-3.5 w-3.5 shrink-0"
+                            style={{ color: p.color }}
+                          />
+                          <span className="truncate font-medium">{item}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
-                  <div>
-                    <div className="mt-4 pt-3.5 border-t border-slate-100">
+                  {/* Bottom Deliverable & Countdown */}
+                  <div className="mt-5">
+                    <div className="pt-3 border-t border-slate-100">
                       <p className="text-[11px] font-mono font-bold text-slate-400 uppercase">
-                        Kết quả bàn giao
+                        Sản phẩm cốt lõi
                       </p>
                       <p
-                        className={`text-xs sm:text-sm font-semibold mt-0.5 line-clamp-2 transition-colors ${
-                          isCurrent ? "text-blue-700 font-bold" : "text-slate-700"
+                        className={`text-xs sm:text-sm font-bold mt-0.5 line-clamp-2 transition-colors ${
+                          isCurrent ? "text-slate-900" : "text-slate-700"
                         }`}
                       >
-                        {s.deliverable}
+                        {p.deliverable}
                       </p>
                     </div>
 
-                    {/* Continuous CSS-driven countdown bar */}
+                    {/* Progress Bar for Active Phase */}
                     {isCurrent && (
                       <div className="mt-3.5 w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
                         <div
-                          key={selectedStep}
-                          className="h-full bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full"
+                          key={selectedPhase}
+                          className="h-full rounded-full"
                           style={{
-                            animation: `stepProgress ${STEP_DURATION_SECONDS}s linear forwards`,
+                            backgroundColor: p.color,
+                            animation: `stepProgress ${PHASE_DURATION_SECONDS}s linear forwards`,
                           }}
                         />
                       </div>
@@ -172,22 +189,56 @@ export default function ImplementationProcess() {
           </div>
         </ScrollReveal>
 
-        {/* Bottom Step Dots Indicator */}
+        {/* Phase Indicators */}
         <div className="mt-8 flex items-center justify-center gap-2.5">
-          {steps.map((_, i) => (
+          {phases.map((_, i) => (
             <button
               key={i}
               type="button"
-              onClick={() => handleSelectStep(i)}
-              aria-label={`Chuyển tới bước ${i + 1}`}
+              onClick={() => setSelectedPhase(i)}
+              aria-label={`Chuyển tới pha ${i + 1}`}
               className={`h-2.5 rounded-full transition-all duration-300 ${
-                selectedStep === i
-                  ? "w-9 bg-blue-600 shadow-sm"
+                selectedPhase === i
+                  ? "w-10 bg-blue-600 shadow-sm"
                   : "w-2.5 bg-slate-300 hover:bg-slate-400"
               }`}
             />
           ))}
         </div>
+
+        {/* CTA Banner: Navigate to Detailed Page */}
+        <ScrollReveal direction="up" delay={200} className="mt-10 sm:mt-12">
+          <div className="rounded-3xl bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 p-6 sm:p-8 lg:p-10 shadow-xl border border-blue-900/50 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left max-w-2xl">
+              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-sky-400 mb-2">
+                <ShieldCheck className="h-4 w-4" />
+                Kiểm định nghiêm ngặt theo tiêu chuẩn Gate
+              </div>
+              <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                Tìm hiểu chi tiết 9 Giai đoạn & 27 Nghiệp vụ triển khai
+              </h3>
+              <p className="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Xem tường tận phân tích AS-IS, TO-BE, Fit-Gap, POC/Pilot, UAT, Hypercare và điều kiện vượt Gate tại trang chuyên đề.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0">
+              <Link
+                href="/quy-trinh-so-hoa"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-600/30 hover:bg-blue-500 hover:shadow-xl transition-all group"
+              >
+                <span>Xem chi tiết quy trình số hóa</span>
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/quy-trinh-so-hoa#consultation-anchor"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl bg-white/10 hover:bg-white/15 px-5 py-3.5 text-sm font-bold text-white border border-white/20 backdrop-blur-sm transition-all"
+              >
+                Đăng ký khảo sát
+              </Link>
+            </div>
+          </div>
+        </ScrollReveal>
 
       </div>
     </section>

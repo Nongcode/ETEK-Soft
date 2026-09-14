@@ -139,7 +139,7 @@ export default function TrustCountersAndQuote() {
                 NHẬN BÁO GIÁ & TƯ VẤN KIẾN TRÚC PHẦN MỀM
               </h3>
               <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-                Điền thông tin quy mô doanh nghiệp để nhận ngay dự toán chi phí chi tiết và bản demo phần mềm phù hợp nhất trong vòng 15 phút.
+                Điền thông tin quy mô doanh nghiệp để nhận ngay dự toán chi phí chi tiết và bản demo phần mềm phù hợp tối ưu trong vòng 15 phút.
               </p>
 
               <div className="mt-8 space-y-4">

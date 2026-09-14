@@ -34,7 +34,7 @@ export default function TechBentoGrid() {
               </span>
             </h2>
             <p className="mt-3.5 text-base text-slate-600 leading-relaxed font-medium">
-              Trải nghiệm các phân hệ được thiết kế với độ chuẩn xác tuyệt đối, bảo mật cấp doanh nghiệp và khả năng mở rộng cao.
+              Trải nghiệm các phân hệ được thiết kế với độ chuẩn xác cao, bảo mật cấp doanh nghiệp và khả năng mở rộng linh hoạt.
             </p>
           </div>
         </ScrollReveal>

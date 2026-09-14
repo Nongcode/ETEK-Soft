@@ -16,10 +16,7 @@ export default function NewsListPage() {
 
   return (
     <div className="relative min-h-screen overflow-x-clip bg-slate-50/40 text-slate-900 selection:bg-blue-100 selection:text-blue-900 pb-16">
-      {/* Standalone Top Breadcrumb Strip */}
-      <Breadcrumb items={[{ label: "Tin tức" }]} />
-
-      {/* 1. Hero Spotlight: Big Editorial Featured Article with Hot Keywords */}
+      {/* 1. Hero Spotlight with integrated Breadcrumb: Big Editorial Featured Article */}
       <NewsHeroFeatured article={featured} />
 
       {/* 2. Interactive Explore Section: Category Switcher, Search Bar, Bento Grid */}

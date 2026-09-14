@@ -139,7 +139,7 @@ export default function SolutionPortfolio() {
               NHỮNG HỆ THỐNG TIÊU BIỂU
             </h2>
             <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-2xl">
-              Khám phá các giải pháp công nghệ đã được triển khai thành công tại 500+ doanh nghiệp, bệnh viện và tập đoàn sản xuất hàng đầu Việt Nam.
+              Khám phá các giải pháp công nghệ đã được triển khai thành công tại 500+ doanh nghiệp, bệnh viện và tập đoàn sản xuất tại Việt Nam.
             </p>
           </div>
 

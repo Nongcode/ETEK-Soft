@@ -43,7 +43,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<UserProfile | null>(null);
-  const [cartCount, setCartCount] = useState(1);
+  const [cartCount, setCartCount] = useState(0);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [authModalView, setAuthModalView] = useState<"login" | "register">("login");
 
@@ -57,6 +57,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const storedCart = localStorage.getItem("etek_cart_count");
       if (storedCart) {
         setCartCount(parseInt(storedCart, 10));
+      } else {
+        setCartCount(0);
       }
     } catch (e) {
       console.warn("Could not read auth storage", e);

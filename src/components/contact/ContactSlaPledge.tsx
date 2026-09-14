@@ -7,7 +7,7 @@ const PLEDGES = [
     icon: ShieldCheck,
     tag: "BẢO CHỨNG PHÁP LÝ",
     title: "100% License CO/CQ Chính Ngạch & VAT",
-    desc: "Cung cấp đầy đủ giấy chứng nhận ủy quyền hãng, hóa đơn tài chính hợp pháp, an toàn tuyệt đối khi tiếp đoàn thanh tra bản quyền.",
+    desc: "Cung cấp đầy đủ giấy chứng nhận ủy quyền hãng, hóa đơn tài chính hợp pháp, an tâm và vững vàng khi làm việc với đoàn thanh tra bản quyền.",
     color: "blue",
     accent: "from-blue-600 to-indigo-600",
   },
@@ -57,7 +57,7 @@ export default function ContactSlaPledge() {
             </span>
           </h2>
           <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-            Hơn 20 năm phục vụ 500+ doanh nghiệp hàng đầu, ETEK-soft cam kết đem đến trải nghiệm dịch vụ tin cậy và minh bạch nhất.
+            Hơn 20 năm phục vụ 500+ đối tác doanh nghiệp, ETEK-soft cam kết đem đến trải nghiệm dịch vụ tin cậy, minh bạch và chuyên nghiệp.
           </p>
         </div>
 

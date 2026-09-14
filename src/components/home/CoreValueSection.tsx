@@ -57,7 +57,7 @@ const values = [
   {
     num: "04",
     title: "Kỹ Sư Đồng Hành Hỗ Trợ Dưới 15 Phút",
-    desc: "Cam kết SLA phản hồi kỹ thuật nhanh nhất thị trường. Hỗ trợ từ xa qua UltraView/TeamViewer hoặc kỹ sư đến tận nơi triển khai cho doanh nghiệp.",
+    desc: "Cam kết SLA phản hồi kỹ thuật nhanh chóng và chuẩn xác. Hỗ trợ từ xa qua UltraView/TeamViewer hoặc kỹ sư đến tận nơi triển khai cho doanh nghiệp.",
     icon: Zap,
     tag: "SLA < 15 Phút",
     accentGradient: "from-amber-500 via-orange-500 to-amber-400",
@@ -96,10 +96,10 @@ export default function CoreValueSection() {
 
             <div className="rounded-3xl bg-white p-6 sm:p-8 shadow-sm border border-slate-200/80">
               <p className="font-semibold text-slate-900 text-base sm:text-lg mb-2">
-                Hệ sinh thái ETEK mang lại sự an tâm tuyệt đối cho chủ doanh nghiệp
+                Hệ sinh thái ETEK mang lại sự an tâm toàn diện cho chủ doanh nghiệp
               </p>
               <p className="text-slate-600 text-xs sm:text-sm">
-                Với hơn 20 năm kinh nghiệm đồng hành cùng 500+ doanh nghiệp hàng đầu, ETEK cung cấp giải pháp kép: Chuẩn hóa quy trình vận hành nhân sự HRM 4.0 và cung ứng bản quyền phần mềm chính hãng có đầy đủ chứng nhận CO/CQ, xuất hóa đơn VAT trong ngày.
+                Với hơn 20 năm kinh nghiệm đồng hành cùng 500+ doanh nghiệp, ETEK cung cấp giải pháp kép: Chuẩn hóa quy trình vận hành nhân sự HRM 4.0 và cung ứng bản quyền phần mềm chính hãng có đầy đủ chứng nhận CO/CQ, xuất hóa đơn VAT trong ngày.
               </p>
             </div>
           </div>
@@ -199,7 +199,7 @@ export default function CoreValueSection() {
                       <Lock className="h-3.5 w-3.5 text-blue-600" />
                       <p className="text-xs font-bold text-blue-700 font-mono">100% GEOFENCING</p>
                     </div>
-                    <p className="text-[10px] text-slate-500">Chống gian lận vị trí tuyệt đối</p>
+                    <p className="text-[10px] text-slate-500">Kiểm soát chống gian lận vị trí hiệu quả</p>
                   </div>
                 </div>
 

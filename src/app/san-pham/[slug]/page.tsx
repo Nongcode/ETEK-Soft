@@ -77,16 +77,19 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       <span className="pointer-events-none absolute right-[7%] top-28 hidden h-8 w-8 rotate-12 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-500 opacity-35 shadow-lg animate-balloon lg:block" />
       <span className="pointer-events-none absolute left-[4%] top-56 hidden h-7 w-7 -rotate-12 rounded-2xl bg-gradient-to-tr from-blue-500 to-teal-400 opacity-25 shadow-lg animate-balloon-slow lg:block" />
 
-      {/* Breadcrumb Navigation */}
-      <Breadcrumb
-        items={[
-          { label: "Sản phẩm", href: "/san-pham" },
-          ...(category ? [{ label: category.name, href: `/san-pham?category=${category.slug}` }] : []),
-          { label: product.name },
-        ]}
-      />
+      <Container className="relative z-10 pt-4 pb-8">
+        {/* Breadcrumb Navigation */}
+        <div className="mb-6">
+          <Breadcrumb
+            noContainer
+            items={[
+              { label: "Sản phẩm", href: "/san-pham" },
+              ...(category ? [{ label: category.name, href: `/san-pham?category=${category.slug}` }] : []),
+              { label: product.name },
+            ]}
+          />
+        </div>
 
-      <Container className="relative z-10 py-8">
         {/* Main Product Hero Grid */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
           {/* Left: Interactive Image Gallery with 3s Autoplay */}
@@ -195,7 +198,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
               <SectionTitle
                 eyebrow="Gợi ý chuyên sâu"
                 title="Sản phẩm tương tự"
-                description="Các giải pháp bản quyền thay thế phù hợp nhất với cấu hình và ngân sách của bạn."
+                description="Các giải pháp bản quyền thay thế phù hợp tối ưu với cấu hình và ngân sách của bạn."
               />
               <div className="mt-8">
                 <ProductGrid products={similarProducts} columns={4} />

@@ -124,7 +124,7 @@ export default function ContactInteractiveTerminal() {
             </span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-            Chọn phân hệ cần hỗ trợ để kết nối trực tiếp đến đúng kỹ sư chuyên trách, nhận báo giá chi tiết và tài liệu demo phù hợp nhất.
+            Chọn phân hệ cần hỗ trợ để kết nối trực tiếp đến đúng kỹ sư chuyên trách, nhận báo giá chi tiết và tài liệu demo phù hợp tối ưu.
           </p>
         </div>
 

@@ -58,9 +58,9 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
     <div className="relative min-h-screen overflow-x-clip bg-slate-50/40 text-slate-900 selection:bg-blue-100 selection:text-blue-900 pb-20">
       
       {/* Header Container */}
-      <section className="bg-white border-b border-slate-200/80 pt-4 pb-12">
+      <section className="bg-gradient-to-b from-[#ebf3fa]/50 to-white border-b border-slate-200/80 pt-4 pb-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Breadcrumb items={[{ label: "Tin tức", href: "/tin-tuc" }, { label: article.title }]} />
+          <Breadcrumb items={[{ label: "Tin tức", href: "/tin-tuc" }, { label: article.title }]} noContainer />
 
           <div className="mt-8 max-w-4xl">
             {/* Category & Meta Badges */}

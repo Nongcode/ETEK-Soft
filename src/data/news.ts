@@ -2,6 +2,58 @@ import { NewsArticle } from "@/types";
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: "news-hrm-legal-2026",
+    slug: "thay-doi-phap-ly-bhxh-by-te-thue-tncn-2026-tac-dong-payroll",
+    title: "Toàn cảnh Thay đổi Pháp lý BHXH, BHYT & Thuế TNCN 2026: Tác động thế nào tới Hệ thống Tính lương Payroll?",
+    excerpt:
+      "Phân tích chuyên sâu từ ETEK Solutions về Luật BHXH 41/2024, Nghị định 293/2025 về lương tối thiểu 4 vùng, và quy định giảm trừ gia cảnh Thuế TNCN 15,5 triệu đồng áp dụng từ kỳ tính thuế 2026.",
+    content: [
+      "Quản trị nhân sự và tiền lương không đơn thuần là bài toán lập trình công thức số học, mà là một quy trình tài chính bắt buộc phải tuân thủ nghiêm ngặt khung pháp lý hiện hành theo nguyên tắc Compliance-by-Design. Năm 2026 chứng kiến hàng loạt văn bản quy phạm pháp luật quan trọng chính thức đi vào cuộc sống, đòi hỏi các nhà quản trị nhân sự và giám đốc CNTT phải chủ động rà soát, nâng cấp hệ thống phần mềm tính lương.",
+      "Thứ nhất, về chế độ bảo hiểm: Luật BHXH số 41/2024/QH15 và Nghị định 158/2025/NĐ-CP (hiệu lực từ 01/07/2025) cùng Luật sửa đổi Luật BHYT số 51/2024/QH15 đã chuẩn hóa căn cứ tiền lương đóng bảo hiểm bắt buộc và phương thức quản trị hồ sơ đối soát. Hệ thống HRM cần quản lý dữ liệu có ngày hiệu lực (Effective Dating) để đối soát khớp 100% với dữ liệu kê khai của cơ quan bảo hiểm.",
+      "Thứ hai, về mức lương tối thiểu vùng theo Nghị định 293/2025/NĐ-CP (áp dụng từ 01/01/2026): Mức sàn lương tối thiểu tháng được điều chỉnh lần lượt: Vùng I đạt 5.310.000 đồng; Vùng II đạt 4.730.000 đồng; Vùng III đạt 4.140.000 đồng; Vùng IV đạt 3.700.000 đồng. Với các doanh nghiệp đa chi nhánh, phần mềm phải tự động gắn Location/Site với từng vùng để cảnh báo vi phạm ngưỡng lương tối thiểu giờ và tháng.",
+      "Thứ ba, về thuế thu nhập cá nhân theo Luật 109/2025/QH15: Áp dụng từ kỳ tính thuế 2026, mức giảm trừ gia cảnh đối với người nộp thuế được nâng lên 15,5 triệu đồng/tháng (186 triệu đồng/năm), mức giảm trừ cho mỗi người phụ thuộc là 6,2 triệu đồng/tháng, đồng thời áp dụng biểu thuế lũy tiến từng phần 5 bậc mới. ETEK HRM đã đóng gói sẵn các rule table versioned, giúp doanh nghiệp tự động áp dụng công thức mới mà không cần can thiệp mã nguồn.",
+      "Thứ tư, về an toàn thông tin: Việc thi hành Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 và Luật An ninh mạng 116/2025/QH15 yêu cầu dữ liệu tiền lương, hồ sơ định danh của người lao động phải được phân quyền RBAC/ABAC nghiêm ngặt, thực hiện che dấu trường dữ liệu (Field masking) và lưu vết toàn bộ nhật ký truy cập (Audit Trail 100%).",
+    ],
+    category: "HRM & Pháp Lý",
+    date: "2026-09-08",
+    readTime: "6 phút đọc",
+    featured: true,
+    image: "/images/hrm.png",
+    author: {
+      name: "Trần Minh Tú",
+      role: "Chủ biên Handbook HRM 2026 • ETEK Solutions",
+      avatar: "/legacy-media/avatars/avatar-2.webp",
+    },
+    tags: ["Luật BHXH 2024", "Thuế TNCN 2026", "Lương tối thiểu vùng", "Payroll Compliance"],
+  },
+  {
+    id: "news-hrm-glossary-2026",
+    slug: "cam-nang-50-thuat-ngu-quan-tri-nhan-su-so-hoa-hrm",
+    title: "Cẩm nang 50 Thuật ngữ Quản trị Nhân sự Số hóa Chuẩn Quốc tế & Thực hành tại Việt Nam",
+    excerpt:
+      "Bản tra cứu toàn diện các khái niệm cốt lõi: Effective Dating, Retroactive, Compa-ratio, Proration, Segregation of Duties (SoD) và Single Source of Truth dành cho HR, BA và Ban Lãnh Đạo.",
+    content: [
+      "Trong kỷ nguyên chuyển đổi số, việc bất đồng ngôn ngữ giữa bộ phận Nghiệp vụ nhân sự (HR), Kế toán (Finance) và Công nghệ thông tin (IT) là một trong những nguyên nhân hàng đầu khiến các dự án phần mềm kéo dài hoặc thất bại. Trích xuất từ Phụ lục A & B của Bộ tài liệu Nghiên cứu & Tư vấn Giải pháp HRM (ETEK Solutions 2026), bài viết này tổng hợp các thuật ngữ then chốt giúp các bên cùng nhìn về một bức tranh chuẩn hóa.",
+      "1. Effective Dating (Ngày hiệu lực): Khả năng lưu trữ và truy vấn trạng thái dữ liệu tại một thời điểm cụ thể trong quá khứ hoặc tương lai. Khác với mô hình cập nhật đè (overwrite), hệ thống lưu rõ ngày bắt đầu (Effective Start) và ngày kết thúc (Effective End) cho từng biến động lương, chức danh và phòng ban.",
+      "2. Retroactive Transaction (Giao dịch hồi tố): Giao dịch phát sinh sau khi kỳ lương đã chốt nhưng có ngày hiệu lực lùi về quá khứ (ví dụ quyết định tăng lương ký ngày 15/09 nhưng hiệu lực từ 01/08). Payroll Engine của ETEK HRM tự động tính toán khoản chênh lệch Delta để bù trừ vào kỳ tiếp theo.",
+      "3. Proration (Tính tỷ lệ): Thuật toán chia tỷ lệ ngày công hoặc mức lương khi nhân viên vào làm, nghỉ việc giữa kỳ, hoặc có sự thay đổi mức lương giữa tháng dựa trên số ngày làm việc chuẩn (Standard Working Days).",
+      "4. Compa-ratio (Chỉ số định vị lương): Tỷ lệ giữa mức lương thực nhận của nhân sự so với điểm trung vị (Midpoint) của dải lương (Salary Band). Compa-ratio = 1.0 nghĩa là nhân viên nhận đúng mức tham chiếu thị trường.",
+      "5. Segregation of Duties - SoD (Phân tách nhiệm vụ): Nguyên tắc kiểm soát nội bộ ngăn ngừa rủi ro gian lận. Người khởi tạo thay đổi số tài khoản ngân hàng hoặc nhập liệu bảng lương không được đồng thời là người phê duyệt chi trả lương.",
+      "6. Single Source of Truth (Nguồn sự thật duy nhất): Nguyên tắc kiến trúc quy định mỗi trường dữ liệu chỉ có một hệ thống duy nhất chịu trách nhiệm làm chủ. Ví dụ: Core HR là nguồn chuẩn của thông tin nhân sự, trong khi Kế toán là nguồn chuẩn của Mã trung tâm chi phí (Cost Center).",
+    ],
+    category: "Cẩm Nang Số Hóa",
+    date: "2026-09-05",
+    readTime: "7 phút đọc",
+    featured: false,
+    image: "/images/workflow-hero-bright.jpg",
+    author: {
+      name: "Trần Minh Tú",
+      role: "Tác giả HRM Knowledge Series • ETEK Solutions",
+      avatar: "/legacy-media/avatars/avatar-1.webp",
+    },
+    tags: ["Thuật ngữ HRM", "Core HR", "Effective Dating", "Proration", "SoD Controls"],
+  },
+  {
     id: "news-1",
     slug: "microsoft-365-copilot-cho-doanh-nghiep-vua-va-nho",
     title: "Microsoft 365 Copilot: Trợ lý AI thế hệ mới đột phá năng suất doanh nghiệp vừa và nhỏ",
@@ -80,7 +132,7 @@ export const newsArticles: NewsArticle[] = [
       "Đầu tư vào phần mềm bản quyền chính hãng có chứng chỉ CO/CQ, số hóa luồng công việc và hạ tầng đám mây tiếp tục là đòn bẩy sống còn của doanh nghiệp hiện đại.",
     content: [
       "Báo cáo thị trường gần đây cho thấy hơn 72% doanh nghiệp tại Việt Nam đã xác định chuyển đổi số là ưu tiên ngân sách hàng đầu, trong đó trọng tâm là giải quyết bài toán kết nối rời rạc giữa các bộ phận hành chính, kế toán và vận hành.",
-      "Việc loại bỏ các công cụ rời rạc, không có bản quyền để thay thế bằng nền tảng quản trị tập trung giúp doanh nghiệp bảo vệ dữ liệu thương mại tuyệt đối trước nguy cơ tấn công ransomware tống tiền, đồng thời đảm bảo pháp lý kiểm toán khi làm việc cùng đối tác quốc tế.",
+      "Việc loại bỏ các công cụ rời rạc, không có bản quyền để thay thế bằng nền tảng quản trị tập trung giúp doanh nghiệp bảo vệ dữ liệu thương mại hiệu quả trước nguy cơ tấn công ransomware tống tiền, đồng thời đảm bảo pháp lý kiểm toán khi làm việc cùng đối tác quốc tế.",
       "Một lộ trình chuyển đổi số thành công cần bắt đầu từ việc chuẩn hóa hạ tầng hệ điều hành, cấp phép bộ công cụ cộng tác trực tuyến chuẩn mực và áp dụng phần mềm quản trị nguồn nhân lực tự động.",
     ],
     category: "Chuyển đổi số",
@@ -173,7 +225,7 @@ export const newsArticles: NewsArticle[] = [
     content: [
       "License bản quyền vĩnh viễn (Perpetual) phù hợp với các hệ thống ổn định, yêu cầu kiểm soát chi phí Capex một lần và không đòi hỏi cập nhật tính năng mới liên tục trong chu kỳ 3 đến 5 năm.",
       "Ngược lại, mô hình thuê bao (Subscription / Cloud) mang lại tính linh hoạt cao về chi phí Opex, cho phép mở rộng hoặc thu hẹp số lượng người dùng theo thời gian thực và luôn được hãng hỗ trợ phiên bản mới nhất.",
-      "ETEK-soft tư vấn mô hình kết hợp lai (Hybrid Licensing) độc quyền, giúp doanh nghiệp tiết kiệm đến 35% chi phí bản quyền hàng năm trong khi vẫn bảo toàn đầy đủ tính hợp pháp và quyền lợi hỗ trợ kỹ thuật 24/7.",
+      "ETEK-soft tư vấn mô hình kết hợp lai (Hybrid Licensing) chuyên sâu, giúp doanh nghiệp tối ưu đến 35% chi phí bản quyền hàng năm trong khi vẫn bảo toàn đầy đủ tính hợp pháp và quyền lợi hỗ trợ kỹ thuật 24/7.",
     ],
     category: "Doanh nghiệp",
     date: "2026-07-15",

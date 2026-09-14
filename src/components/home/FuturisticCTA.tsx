@@ -94,13 +94,13 @@ const TRUST_BADGES = [
   {
     icon: ShieldCheck,
     title: "100% License CO/CQ Chính Ngạch",
-    desc: "Đầy đủ chứng nhận ủy quyền hãng, hóa đơn tài chính VAT hợp lệ, an toàn kiểm toán tuyệt đối.",
+    desc: "Đầy đủ chứng nhận ủy quyền hãng, hóa đơn tài chính VAT hợp lệ, đảm bảo an toàn và minh bạch kiểm toán.",
     tag: "Bảo Hộ Pháp Lý",
   },
   {
     icon: Headphones,
     title: "Chuyên Gia Tư Vấn 1-Kèm-1",
-    desc: "Khảo sát tận nơi cơ cấu doanh nghiệp, thiết kế phương án tối ưu ngân sách tốt nhất.",
+    desc: "Khảo sát tận nơi cơ cấu doanh nghiệp, thiết kế phương án tối ưu ngân sách hiệu quả.",
     tag: "Kỹ Sư Đồng Hành",
   },
   {
@@ -158,7 +158,7 @@ export default function FuturisticCTA() {
             <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight uppercase">
               NÂNG TẦM DOANH NGHIỆP CÙNG{" "}
               <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 bg-clip-text text-transparent">
-                HẠ TẦNG PHẦN MỀM ĐỈNH CAO
+                HẠ TẦNG PHẦN MỀM TIÊN TIẾN
               </span>
             </h2>
             <p className="mt-3 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed">

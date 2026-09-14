@@ -52,7 +52,7 @@ export default function ContactHero() {
       <span className="pointer-events-none absolute right-[10%] top-36 hidden h-7 w-7 -rotate-12 rounded-xl bg-gradient-to-tr from-blue-500 to-indigo-500 opacity-35 shadow-lg animate-balloon-slow lg:block" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Breadcrumb items={[{ label: "Liên hệ" }]} />
+        <Breadcrumb items={[{ label: "Liên hệ" }]} noContainer />
 
         {/* Hero Header Content */}
         <div className="mt-8 text-center max-w-3xl mx-auto" data-reveal="fade">

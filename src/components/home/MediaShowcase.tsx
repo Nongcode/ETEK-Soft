@@ -131,7 +131,7 @@ export default function MediaShowcase() {
               </span>
             </h2>
             <p className="mt-3.5 text-base text-slate-600 leading-relaxed font-medium">
-              Khám phá 4 phân hệ giải pháp phần mềm và bản quyền cốt lõi được xây dựng qua hai thập kỷ phụng sự hơn 500+ doanh nghiệp hàng đầu Việt Nam.
+              Khám phá 4 phân hệ giải pháp phần mềm và bản quyền cốt lõi được xây dựng qua hai thập kỷ phụng sự hơn 500+ doanh nghiệp tại Việt Nam.
             </p>
           </div>
         </ScrollReveal>

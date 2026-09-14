@@ -34,7 +34,7 @@ const softwarePlans: SoftwarePlan[] = [
     name: "Microsoft 365 Business Standard",
     unitPrice: 2890000,
     cycle: "năm / user",
-    badge: "Phổ Biến Nhất",
+    badge: "Gói Phổ Biến",
     image: "/legacy-media/solutions/Ph_n_m_m_Microsoft_365_Bus_Std_Retail_All_Lng_APAC_EM_SubPKL_1YR_Onln_DwnLd_NR.webp",
     features: [
       "Bộ ứng dụng Office desktop cài 5 thiết bị / user",
@@ -68,7 +68,7 @@ const softwarePlans: SoftwarePlan[] = [
       "Bản quyền vĩnh viễn Word, Excel, PowerPoint, Outlook",
       "Không phát sinh phí gia hạn hàng năm",
       "Cấp phép thương mại hợp lệ cho doanh nghiệp",
-      "Tương thích hoàn hảo Windows 11 & macOS"
+      "Tương thích tối ưu Windows 11 & macOS"
     ]
   },
   {

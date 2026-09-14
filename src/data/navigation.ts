@@ -20,9 +20,9 @@ export const aboutMegaMenu: NavGroup[] = [
         icon: "Building2",
       },
       {
-        label: "Tư vấn giải pháp",
-        href: "/tu-van",
-        description: "Khảo sát kiến trúc công nghệ & dự toán chi phí tối ưu",
+        label: "Quy trình số hóa",
+        href: "/quy-trinh-so-hoa",
+        description: "Sơ đồ 4 pha & 9 giai đoạn khảo sát, tư vấn, triển khai giải pháp",
         icon: "Sparkles",
       },
       {

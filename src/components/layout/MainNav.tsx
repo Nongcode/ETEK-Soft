@@ -26,12 +26,14 @@ import { mainNav, productMegaMenu, guideMegaMenu, aboutMegaMenu } from "@/data/n
 import { buildProductSuggestions } from "@/lib/search";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/context/AuthContext";
+import { useCart } from "@/context/CartContext";
 
 const suggestions = buildProductSuggestions();
 
 export default function MainNav() {
   const pathname = usePathname();
-  const { user, cartCount, openLoginModal, openRegisterModal, logout } = useAuth();
+  const { user, openLoginModal, openRegisterModal, logout } = useAuth();
+  const { totalCount, openCart } = useCart();
 
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -242,13 +244,17 @@ export default function MainNav() {
           {/* Cart Icon for Commercial Software Store */}
           <Link
             href="/gio-hang"
-            aria-label="Giỏ hàng bản quyền"
-            className="relative flex h-8 w-8 items-center justify-center rounded-full text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-600"
+            onClick={(e) => {
+              e.preventDefault();
+              openCart();
+            }}
+            aria-label={`Giỏ hàng bản quyền${totalCount > 0 ? ` (${totalCount} sản phẩm)` : ""}`}
+            className="relative flex h-8 w-8 items-center justify-center rounded-full text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-600 cursor-pointer"
           >
             <ShoppingCart className="h-[18px] w-[18px]" />
-            {cartCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-blue-600 px-1 font-mono text-[9px] font-bold text-white shadow-sm">
-                {cartCount}
+            {totalCount > 0 && (
+              <span className="absolute -top-0.5 -right-0.5 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-blue-600 px-1 font-mono text-[9px] font-bold text-white shadow-sm transition-transform animate-scale-in">
+                {totalCount > 99 ? "99+" : totalCount}
               </span>
             )}
           </Link>
